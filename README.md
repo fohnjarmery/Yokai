@@ -1,2 +1,3 @@
 # Yokai
-Yokai Clan for Monster Train 2
+
+Yokai Clan
