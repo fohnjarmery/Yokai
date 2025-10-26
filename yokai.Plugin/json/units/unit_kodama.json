@@ -1,0 +1,121 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "cards": [
+        {
+            "id": "SpawnKodama",
+            "names": {
+                "english": "Kodama"
+            },
+            "card_art": "@Kodama",
+            "cost": 1,
+            "card_type": "monster",
+            "rarity": "common",
+            "class": "@ClassYokai",
+            "targets_room": true,
+            "pools": [
+                "StarterCardsOnly"
+            ],
+            "effects": [
+                {
+                    "id": "@SpawnKodama"
+                }
+            ],
+            "lore_tooltips": [
+                {
+                    "english": "Flavour Text"
+                }
+            ]
+        }
+    ],
+    "characters": [
+        {
+            "id": "Kodama",
+            "size": 1,
+            "attack_damage": 3,
+            "health": 3,
+            "names": {
+                "english": "Kodama"
+            },
+            "character_art": "@KodamaCharacterArt",
+            "subtypes": [
+                "@Sub_Spirit"
+            ],
+            "triggers": [
+                {
+                    "id": "@KodamaTrigger"
+                }
+            ]
+        }
+    ],
+    "character_triggers": [
+        {
+            "id": "KodamaTrigger",
+            "descriptions": {
+                "english": "Apply +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health] to friendly units."
+            },
+            "trigger": "on_death",
+            "effects": [
+                {
+                    "id": "@KodamaGiveStats"
+                }
+            ]
+        }
+    ],
+    "effects": [
+        {
+            "id": "SpawnKodama",
+            "name": "CardEffectSpawnMonster",
+            "target_mode": "room",
+            "param_character": "@Kodama"
+        },
+        {
+            "id": "KodamaGiveStats",
+            "name": "CardEffectAddTempCardUpgradeToUnits",
+            "target_mode": "room",
+            "target_team": "monsters",
+            "param_upgrade": "@KodamaThreeAttackOneHealth"
+        }
+    ],
+    "sprites": [
+        {
+            "id": "Kodama",
+            "path": "textures/KodamaCardArt.png"
+        },
+        {
+            "id": "KodamaCharacterArt",
+            "path": "textures/KodamaCharacterArt.png"
+        }
+    ],
+    "game_objects": [
+        {
+            "id": "Kodama",
+            "type": "card_art",
+            "extensions": {
+                "card_art": {
+                    "sprite": "@Kodama"
+                }
+            }
+        },
+        {
+            "id": "KodamaCharacterArt",
+            "type": "character_art",
+            "extensions": {
+                "character_art": {
+                    "sprite": "@KodamaCharacterArt",
+                    "transform": {
+                        "position": {
+                            "x": 0,
+                            "y": 0.3,
+                            "z": 0
+                        },
+                        "scale": {
+                            "x": 0.8,
+                            "y": 0.8,
+                            "z": 1
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,287 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "classes": [
+        {
+            "id": "ClassYokai",
+            "titles": {
+                "english": "Yokai"
+            },
+            "descriptions": {
+                "english": "The hundred-demon Parade of Yokai is marching through Heaven!"
+            },
+            "subclass_descriptions": {
+                "english": "Subclass description"
+            },
+            "icons": {
+                "small": "@YokaiLogo48",
+                "medium": "@YokaiLogo92",
+                "large": "@YokaiLogo128",
+                "silhouette": "@YokaiLogoOutline"
+            },
+            "card_style": "pyreborne",
+            "ui_color": {
+                "r": 0.91,
+                "g": 0.76,
+                "b": 0.24
+            },
+            "ui_color_dark": {
+                "r": 0.50,
+                "g": 0.42,
+                "b": 0.15
+            },
+            "ui_gradient": [
+                {
+                    "time": 0.0,
+                    "color": {
+                        "r": 1.0
+                    }
+                },
+                {
+                    "time": 1.0,
+                    "color": {
+                        "r": 0.91,
+                        "g": 0.76,
+                        "b": 0.24
+                    }
+                }
+            ],
+                        "champions": [
+                {
+                    "id": "KitsuneChampion",
+                    "card_data": "@SpawnKitsune",
+                    "starter_card": "@SpawnKodama",
+                    "upgrade_tree": [
+                        [
+                            "@upg_NineTailed1",
+                            "@upg_NineTailed2",
+                            "@upg_NineTailed3"
+                        ],
+                        [
+                            "@upg_Haunting1",
+                            "@upg_Haunting2",
+                            "@upg_Haunting3"
+                        ],
+                        [
+                            "@upg_Mischievous1",
+                            "@upg_Mischievous2",
+                            "@upg_Mischievous3"
+                        ]
+                    ],
+                    "icon": "@icon_Kitsune",
+                    "portrait": "@icon_Kitsune"
+                },
+                {
+                    "id": "TenguChampion",
+                    "card_data": "@SpawnTengu",
+                    "starter_card": "@Darkness",
+                    "upgrade_tree": [
+                        [
+                            "@upg_Fujin1",
+                            "@upg_Fujin2",
+                            "@upg_Fujin3"
+                        ],
+                        [
+                            "@upg_Raijin1",
+                            "@upg_Raijin2",
+                            "@upg_Raijin3"
+                        ],
+                        [
+                            "@upg_Shadow1",
+                            "@upg_Shadow2",
+                            "@upg_Shadow3"
+                        ]
+                    ],
+                    "icon": "@icon_Tengu",
+                    "portrait": "@icon_Tengu"
+                }
+            ],
+            "is_crew": false,
+            "class_select_character_displays": [
+                "@KitsuneClassDisplayCharacterArt",
+                "@TenguClassDisplayCharacterArt"
+            ]
+        }
+    ],
+    "map_nodes": [
+        {
+            "id": "RewardNodeUnitPackYokai",
+            "type": "reward",
+            "map_icon": "@YokaiLogo48",
+            "minimap_icon": "@YokaiLogo48",
+            "prefab": "@YokaiMapIcon",
+            "titles": {
+                "english": "Yokai Banner"
+            },
+            "descriptions": {
+                "english": "Summon a Yokai Unit"
+            },
+            "pools": [
+                "RandomChosenMainClassUnit",
+                "RandomChosenSubClassUnit"
+            ],
+            "is_banner_node": true,
+            "extensions": [
+                {
+                    "reward": {
+                        "class": "@ClassYokai",
+                        "rewards": [
+                            {
+                                "id": "@YokaiBannerReward"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+     "card_pools": [
+        {
+            "id": "YokaiBannerCardPool",
+            "cards": [
+                "@SpawnIpponDatara"
+            ]
+        }
+    ],
+     "rewards": [
+        {
+            "id": "YokaiBannerReward",
+            "type": "draft",
+            "costs": [
+                100
+            ],
+            "extensions": [
+                {
+                    "draft": {
+                        "draft_pool": "@YokaiBannerCardPool",
+                        "class_type": "main|subclass|nonclass",
+                        "draft_options_count": 2,
+                        "rarity_floor": "uncommon",
+                        "ignore_relic_rarity_override": true,
+                        "is_service_merchant_reward": true
+                    }
+                }
+            ]
+        }
+    ],
+     "subtypes": [
+        {
+            "id": "Sub_Spirit",
+            "names": {
+                "english": "Spirit"
+            }
+        },
+        {
+            "id": "Sub_Demon",
+            "names": {
+                "english": "Demon"
+            }
+        }
+    ],
+    "game_objects": [
+        {
+            "id": "YokaiMapIcon",
+            "type": "map_node_icon",
+            "extensions": {
+                "map_node_icon": {
+                    "disabled_sprite": "@Yokai_Disabled",
+                    "enabled_sprite": "@Yokai_Enabled",
+                    "frozen_sprite": "@Yokai_Frozen",
+                    "visited_sprite_disabled": "@Yokai_VisitedDisabled",
+                    "visited_sprite_enabled": "@Yokai_VisitedEnabled"
+                }
+            }
+        },
+        {
+            "id": "KitsuneClassDisplayCharacterArt",
+            "type": "character_art",
+            "extensions": {
+                "character_art": {
+                    "sprite": "@KitsuneCharacterArt",
+                    "transform": {
+                        "position": {
+                            "x": 1.7,
+                            "y": 0.9,
+                            "z": 0
+                        },
+                        "scale": {
+                            "x": 2.7,
+                            "y": 2.7,
+                            "z": 1
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "id": "TenguClassDisplayCharacterArt",
+            "type": "character_art",
+            "extensions": {
+                "character_art": {
+                    "sprite": "@TenguCharacterArt",
+                    "transform": {
+                        "position": {
+                            "x": 2.1,
+                            "y": 0.8,
+                            "z": 0
+                        },
+                        "scale": {
+                            "x": 2.5,
+                            "y": 2.5,
+                            "z": 1
+                        }
+                    }
+                }
+            }
+        }
+    ],
+    "sprites": [
+        {
+            "id": "Yokai_Disabled",
+            "path": "textures/ClanAssets/Yokai_Disabled.png"
+        },
+        {
+            "id": "Yokai_Enabled",
+            "path": "textures/ClanAssets/Yokai_Enabled.png"
+        },
+        {
+            "id": "Yokai_Frozen",
+            "path": "textures/ClanAssets/Yokai_Disabled.png"
+        },
+        {
+            "id": "Yokai_VisitedDisabled",
+            "path": "textures/ClanAssets/Yokai_VisitedDisabled.png"
+        },
+        {
+            "id": "Yokai_VisitedEnabled",
+            "path": "textures/ClanAssets/Yokai_VisitedEnabled.png"
+        },
+        {
+            "id": "YokaiLogo48",
+            "path": "textures/ClanAssets/YokaiLogo48.png"
+        },
+        {
+            "id": "YokaiLogo92",
+            "path": "textures/ClanAssets/YokaiLogo92.png"
+        },
+        {
+            "id": "YokaiLogoOutline",
+            "path": "textures/ClanAssets/YokaiLogoOutline.png"
+        },
+        {
+            "id": "YokaiLogo128",
+            "path": "textures/ClanAssets/YokaiLogo128.png"
+        },
+        {
+            "id": "YokaiLogoSilhouette",
+            "path": "textures/ClanAssets/YokaiLogoOutline.png"
+        },
+        {
+            "id": "icon_Kitsine",
+            "path": "textures/ClanAssets/icon_Kitsune.png"
+        },
+        {
+            "id": "icon_Tengu",
+            "path": "textures/ClanAssets/icon_Tengu.png"
+        }
+    ]
+}

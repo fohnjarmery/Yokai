@@ -1,0 +1,232 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/schemas/cards.json",
+    "cards": [
+        {
+            "id": "SpawnTengu",
+            "names": {
+                "english": "Tengu"
+            },
+            "card_art": "@Tengu",
+            "cost": 0,
+            "card_type": "monster",
+            "rarity": "champion",
+            "class": "@ClassYokai",
+            "targets_room": true,
+            "targetless": false,
+            "effects": [
+                "@SpawnTengu"
+            ],
+            "lore_tooltips": [
+                {
+                    "english": "A malevolent spirit bird that guards the mountains."
+                }
+]
+    }
+  ],
+  "characters": [
+        {
+            "id": "Tengu",
+            "names": {
+                "english": "Tengu"
+            },
+            "character_art": "@TenguCharacterArt",
+            "chatter": "@CTR_Tengu",
+            "size": 2,
+            "attack_damage": 25,
+            "health": 15,
+            "death_type": "large",
+            "subtypes": [
+                "SubtypesData_Champion_83f21cbe-9d9b-4566-a2c3-ca559ab8ff34"
+            ]
+        }
+    ],
+    "upgrades":[
+        {
+            "id": "upg_Fujin1",
+            "titles": {
+                "english": "Fujin"
+            },
+            "descriptions": {
+                "english": "Damage path"
+            },
+            "bonus_damage": 10,
+            "bonus_hp": 0
+        },
+         {
+            "id": "upg_Fujin2",
+            "titles": {
+                "english": "Fujin II"
+            },
+            "descriptions": {
+                "english": "Even more damage path"
+            },
+            "bonus_damage": 20,
+            "bonus_hp": 10
+        },
+        {
+            "id": "upg_Fujin3",
+            "titles": {
+                "english": "Fujin III"
+            },
+            "descriptions": {
+                "english": "So much damage path"
+            },
+            "bonus_damage": 50,
+            "bonus_hp": 10
+        },
+        {
+            "id": "upg_Raijin1",
+            "titles": {
+                "english": "Raijin"
+            },
+            "descriptions": {
+                "english": "Health path"
+            },
+            "bonus_damage": 0,
+            "bonus_hp": 20
+        },
+          {
+            "id": "upg_Raijin2",
+            "titles": {
+                "english": "Raijin II"
+            },
+            "descriptions": {
+                "english": "Even more health path"
+            },
+            "bonus_damage": 10,
+            "bonus_hp": 35
+        },
+        {
+            "id": "upg_Raijin3",
+            "titles": {
+                "english": "Raijin III"
+            },
+            "descriptions": {
+                "english": "So much health path"
+            },
+            "bonus_damage": 15,
+            "bonus_hp": 70
+        },
+        {
+            "id": "upg_Shadow1",
+            "titles": {
+                "english": "Shadow"
+            },
+            "descriptions": {
+                "english": "mixed path"
+            },
+            "bonus_damage": 10,
+            "bonus_hp": 10
+        },
+          {
+            "id": "upg_Shadow2",
+            "titles": {
+                "english": "Shadow II"
+            },
+            "descriptions": {
+                "english": "even more mixed path"
+            },
+            "bonus_damage": 18,
+            "bonus_hp": 18
+        },
+        {
+            "id": "upg_Shadow3",
+            "titles": {
+                "english": "Shadow III"
+            },
+            "descriptions": {
+                "english": "so much mixed path"
+            },
+            "bonus_damage": 26,
+            "bonus_hp": 26
+        }
+    ],
+    "effects": [
+        {
+            "id": "SpawnTengu",
+            "name": "CardEffectSpawnMonster",
+            "target_mode": "room",
+            "target_card_type": "spell",
+            "param_character": "@Tengu"
+        }
+    ],
+    "sprites": [
+        {
+            "id": "Tengu",
+            "path": "textures/TenguCardArt.png"
+        },
+        {
+            "id": "TenguCharacterArt",
+            "path": "textures/TenguCharacterArt.png"
+        }
+    ],
+    "game_objects": [
+        {
+            "id": "Tengu",
+            "type": "card_art",
+            "extensions": {
+                "card_art": {
+                    "sprite": "@Tengu"
+                }
+            }
+        },
+        {
+            "id": "TenguCharacterArt",
+            "type": "character_art",
+            "extensions": {
+                "character_art": {
+                    "sprite": "@TenguCharacterArt",
+                    "transform": {
+                        "position": {
+                            "x": 0.15,
+                            "y": 0.23,
+                            "z": 0
+                        },
+                        "scale": {
+                            "x": 1.1,
+                            "y": 1.1,
+                            "z": 1
+                        }
+                    }
+                }
+            }
+        }
+    ],
+    "chatter": [
+        {
+            "id": "CTR_Tengu",
+            "gender": "male",
+            "added_expressions": [
+                {
+                    "english": "SQUAWK"
+                },
+                {
+                    "english": "CA-CAWW!"
+                },
+                {
+                    "english": "I'm AM really a fighter..."
+                }
+            ],
+            "idle_expressions": [
+                {
+                    "english": "Aren't I scary?"
+                },
+                {
+                    "english": "I don't like all this ground."
+                },
+                {
+                    "english": "Wanna fight me?"
+                },
+                {
+                    "english": "Don't be scared now!"
+                },
+                {
+                    "english": "I want to slice off some wings."
+                },
+                {
+                    "english": "Are you feeling afraid?"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,232 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/schemas/cards.json",
+    "cards": [
+        {
+            "id": "SpawnKitsune",
+            "names": {
+                "english": "Kitsune"
+            },
+            "card_art": "@Kitsune",
+            "cost": 0,
+            "card_type": "monster",
+            "rarity": "champion",
+            "class": "@ClassYokai",
+            "targets_room": true,
+            "targetless": false,
+            "effects": [
+                "@SpawnKitsune"
+            ],
+            "lore_tooltips": [
+                {
+                    "english": "A cute little fox spirit, but don't be fooled."
+                }
+]
+    }
+  ],
+  "characters": [
+        {
+            "id": "Kitsune",
+            "names": {
+                "english": "Kitsune"
+            },
+            "character_art": "@KitsuneCharacterArt",
+            "chatter": "@CTR_Kitsune",
+            "size": 1,
+            "attack_damage": 15,
+            "health": 15,
+            "death_type": "large",
+            "subtypes": [
+                "SubtypesData_Champion_83f21cbe-9d9b-4566-a2c3-ca559ab8ff34"
+            ]
+        }
+    ],
+    "upgrades":[
+        {
+            "id": "upg_NineTailed1",
+            "titles": {
+                "english": "Nine Tailed"
+            },
+            "descriptions": {
+                "english": "Damage path"
+            },
+            "bonus_damage": 5,
+            "bonus_hp": 0
+        },
+         {
+            "id": "upg_NineTailed2",
+            "titles": {
+                "english": "Nine Tailed II"
+            },
+            "descriptions": {
+                "english": "Even more damage path"
+            },
+            "bonus_damage": 10,
+            "bonus_hp": 5
+        },
+        {
+            "id": "upg_NineTailed3",
+            "titles": {
+                "english": "Nine Tailed III"
+            },
+            "descriptions": {
+                "english": "So much damage path"
+            },
+            "bonus_damage": 25,
+            "bonus_hp": 10
+        },
+        {
+            "id": "upg_Haunting1",
+            "titles": {
+                "english": "Haunting"
+            },
+            "descriptions": {
+                "english": "Health path"
+            },
+            "bonus_damage": 0,
+            "bonus_hp": 10
+        },
+          {
+            "id": "upg_Haunting2",
+            "titles": {
+                "english": "Haunting II"
+            },
+            "descriptions": {
+                "english": "Even more health path"
+            },
+            "bonus_damage": 5,
+            "bonus_hp": 20
+        },
+        {
+            "id": "upg_Haunting3",
+            "titles": {
+                "english": "Haunting III"
+            },
+            "descriptions": {
+                "english": "So much health path"
+            },
+            "bonus_damage": 5,
+            "bonus_hp": 40
+        },
+        {
+            "id": "upg_Mischievous1",
+            "titles": {
+                "english": "Mischievous"
+            },
+            "descriptions": {
+                "english": "mixed path"
+            },
+            "bonus_damage": 5,
+            "bonus_hp": 5
+        },
+          {
+            "id": "upg_Mischievous2",
+            "titles": {
+                "english": "Mischievous II"
+            },
+            "descriptions": {
+                "english": "even more mixed path"
+            },
+            "bonus_damage": 10,
+            "bonus_hp": 10
+        },
+        {
+            "id": "upg_Mischievous3",
+            "titles": {
+                "english": "Mischievous III"
+            },
+            "descriptions": {
+                "english": "so much mixed path"
+            },
+            "bonus_damage": 20,
+            "bonus_hp": 20
+        }
+    ],
+    "effects": [
+        {
+            "id": "SpawnKitsune",
+            "name": "CardEffectSpawnMonster",
+            "target_mode": "room",
+            "target_card_type": "spell",
+            "param_character": "@Kitsune"
+        }
+    ],
+    "sprites": [
+        {
+            "id": "Kitsune",
+            "path": "textures/KitsuneCardArt.png"
+        },
+        {
+            "id": "KitsuneCharacterArt",
+            "path": "textures/KitsuneCharacterArt.png"
+        }
+    ],
+    "game_objects": [
+        {
+            "id": "Kitsune",
+            "type": "card_art",
+            "extensions": {
+                "card_art": {
+                    "sprite": "@Kitsune"
+                }
+            }
+        },
+        {
+            "id": "KitsuneCharacterArt",
+            "type": "character_art",
+            "extensions": {
+                "character_art": {
+                    "sprite": "@KitsuneCharacterArt",
+                    "transform": {
+                        "position": {
+                            "x": 0.15,
+                            "y": 0.23,
+                            "z": 0
+                        },
+                        "scale": {
+                            "x": 1.1,
+                            "y": 1.1,
+                            "z": 1
+                        }
+                    }
+                }
+            }
+        }
+    ],
+    "chatter": [
+        {
+            "id": "CTR_Kitsune",
+            "gender": "female",
+            "added_expressions": [
+                {
+                    "english": "You can trust me!"
+                },
+                {
+                    "english": "I'll lead the way!"
+                },
+                {
+                    "english": "I'm not really a fighter..."
+                }
+            ],
+            "idle_expressions": [
+                {
+                    "english": "Aren't I cute?"
+                },
+                {
+                    "english": "I don't like all this noise."
+                },
+                {
+                    "english": "Wanna pet me?"
+                },
+                {
+                    "english": "Don't be fooled now!"
+                },
+                {
+                    "english": "I want to chew on some wings."
+                },
+                {
+                    "english": "Are you feeling lost?"
+                }
+            ]
+        }
+    ]
+}

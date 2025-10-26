@@ -1,0 +1,142 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "cards": [
+        {
+            "id": "SpawnBoroboroton",
+            "names": {
+                "english": "Boroboroton"
+            },
+            "card_art": "@Boroboroton",
+            "cost": 1,
+            "card_type": "monster",
+            "rarity": "uncommon",
+            "class": "@ClassYokai",
+            "targets_room": true,
+            "effects": [
+                {
+                    "id": "@SpawnBoroboroton"
+                }
+            ],
+            "lore_tooltips": [
+                {
+                    "english": "Flavour Text"
+                }
+            ],
+            "pools": [
+                "MegaPool"
+            ]
+        }
+    ],
+    "characters": [
+        {
+            "id": "Boroboroton",
+            "size": 2,
+            "attack_damage": 5,
+            "health": 25,
+            "names": {
+                "english": "Boroboroton"
+            },
+            "character_art": "@BoroborotonCharacterArt",
+            "subtypes": [
+                "@Sub_Spirit"
+            ],
+            "triggers": [
+                {
+                    "id": "@BoroborotonTrigger"
+                }
+            ]
+        }
+    ],
+    "character_triggers": [
+        {
+            "id": "BoroborotonTrigger",
+            "descriptions": {
+                "english": "Gain +[effect0.upgrade.bonusdamage][attack] and [lifesteal] [effect1.status0.power]."
+            },
+            "trigger": "on_any_unit_death_on_floor",
+            "effects": [
+                {
+                    "id": "@BoroborotonGainAttack"
+                },
+                {
+                    "id": "@BoroborotonGainLifesteal"
+                }
+            ]
+        }
+    ],
+    "effects": [
+        {
+            "id": "SpawnBoroboroton",
+            "name": "CardEffectSpawnMonster",
+            "target_mode": "room",
+            "param_character": "@Boroboroton"
+        },
+        {
+            "id": "BoroborotonGainAttack",
+            "name": "CardEffectAddTempCardUpgradeToUnits",
+            "target_mode": "self",
+            "target_team": "none",
+            "param_upgrade": "@BoroborotonOneAttack"
+        },
+        {
+            "id": "BoroborotonGainLifesteal",
+            "name": "CardEffectAddStatusEffect",
+            "target_mode": "self",
+            "target_team": "none",
+            "param_status_effects": [
+                {
+                    "status": "lifesteal",
+                    "count": 1
+                }
+            ]
+        }
+    ],
+    "upgrades": [
+        {
+            "id": "BoroborotonOneAttack",
+            "bonus_damage": 1
+        }
+    ],
+    "sprites": [
+        {
+            "id": "Boroboroton",
+            "path": "textures/BoroborotonCardArt.png"
+        },
+        {
+            "id": "BoroborotonCharacterArt",
+            "path": "textures/BoroborotonCharacterArt.png"
+        }
+    ],
+    "game_objects": [
+        {
+            "id": "Boroboroton",
+            "type": "card_art",
+            "extensions": {
+                "card_art": {
+                    "sprite": "@Boroboroton"
+                }
+            }
+        },
+        {
+            "id": "BoroborotonCharacterArt",
+            "type": "character_art",
+            "extensions": {
+                "character_art": {
+                    "sprite": "@BoroborotonCharacterArt",
+                    "transform": {
+                        "position": {
+                            "x": 0.1,
+                            "y": 0.73,
+                            "z": 0
+                        },
+                        "scale": {
+                            "x": 0.9,
+                            "y": 0.9,
+                            "z": 1
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}

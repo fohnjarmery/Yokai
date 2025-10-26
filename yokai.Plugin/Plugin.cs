@@ -3,6 +3,8 @@ using BepInEx.Logging;
 using HarmonyLib;
 using TrainworksReloaded.Core;
 using TrainworksReloaded.Core.Extensions;
+using System.Collections;
+
 
 namespace yokai.Plugin
 {
@@ -24,7 +26,22 @@ namespace yokai.Plugin
                     // Be sure to include any new json files if you add more.
                     c.AddMergedJsonFile(
                         "json/plugin.json",
-                        "json/global.json"
+                        "json/global.json",
+
+                        // Class Stuff
+                        "json/class.json",
+
+                        //Champions
+                        "json/champions/champion_kitsune.json",
+                        "json/champions/champion_tengu.json",
+
+                        //Units
+                        "json/units/unit_boroboroton.json",
+                        "json/units/unit_ippondatara.json",
+                        "json/units/unit_kodama.json",
+
+                        //Spells
+                        "json/spells/spell_darkness.json"
                     );
                 }
             );
