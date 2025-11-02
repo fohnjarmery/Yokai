@@ -1,0 +1,64 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "DraconicTyphoon",
+      "names": {
+        "english": "Draconic Typhoon"
+      },
+      "descriptions": {
+        "english": "[descend]. Deal [effect1.power] damage."
+      },
+      "rarity": "rare",
+      "class": "@ClassYokai",
+      "card_art": "@DraconicTyphoonArt",
+      "targets_room": true,
+      "targetless": false,
+      "pools": [
+        "MegaPool"
+      ],
+      "cost": 1,
+      "effects": [
+        {
+          "id": "@DraconicTyphoonDescend"
+        },
+        {
+          "id": "@DraconicTyphoonDamage"
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "DraconicTyphoonDescend",
+      "name": "CardEffectBump",
+      "target_mode": "drop_target_character",
+      "target_team": "both",
+      "param_int": -1
+    },
+    {
+      "id": "DraconicTyphoonDamage",
+      "name": "CardEffectDamage",
+      "target_mode": "last_targeted_characters",
+      "target_team": "both",
+      "param_int": 5
+    }
+  ],
+  "sprites": [
+    {
+      "id": "DraconicTyphoonArt",
+      "path": "textures/DraconicTyphoonArt.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "DraconicTyphoonArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@DraconicTyphoonArt"
+        }
+      }
+    }
+  ]
+}

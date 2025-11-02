@@ -1,0 +1,64 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "relics": [
+    {
+      "id": "Fearstone",
+      "type": "enhancer",
+      "names": {
+        "english": "Fearstone"
+      },
+      "descriptions": {
+        "english": "Upgrade a unit with +[effect0.upgrade0.bonusdamage][attack]"
+      },
+      "relic_effects": [
+        "@FearstoneEnhancer"
+      ],
+      "icon": "@FearstoneIcon",
+      "extensions": [
+        {
+          "enhancer": {
+            "class": "@ClassYokai",
+            "pools": [
+              "UnitUpgradePoolCommon"
+            ],
+            "rarity": "common"
+          }
+        }
+      ]
+    }
+  ],
+  "relic_effects": [
+    {
+      "id": "FearstoneEnhancer",
+      "name": "RelicEffectCardUpgrade",
+      "param_card_type": "monster",
+      "param_upgrade": "@FearstoneUpgrade"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "FearstoneUpgrade",
+      "titles": {
+        "english": "Fearstone"
+      },
+      "descriptions": {
+        "english": "Gain +[bonusdamage][attack]."
+      },
+      "bonus_damage": 5,
+      "icon": "@FearstoneIcon",
+      "use_upgrade_hightlight_tags": true
+    }
+  ],
+  "sprites": [
+    {
+      "id": "FearstoneIcon",
+      "path": "textures/FearstoneIcon.png"
+    }
+  ],
+  "atlas_icons": [
+    {
+      "id": "FearstoneIcon",
+      "path": "textures/FearstoneIcon.png"
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "SpawnShogoro",
+      "names": {
+        "english": "Shogoro"
+      },
+      "card_art": "@Shogoro",
+      "cost": 2,
+      "card_type": "monster",
+      "rarity": "uncommon",
+      "class": "@ClassYokai",
+      "targets_room": true,
+      "effects": [
+        {
+          "id": "@SpawnShogoro"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "Flavour Text"
+        }
+      ],
+      "pools": [
+        "MegaPool"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "Shogoro",
+      "size": 1,
+      "attack_damage": 15,
+      "health": 25,
+      "names": {
+        "english": "Shogoro"
+      },
+      "character_art": "@ShogoroCharacterArt",
+      "subtypes": [
+        "@Sub_Spirit"
+      ],
+      "triggers": [
+        {
+          "id": "@ShogoroTrigger"
+        }
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "ShogoroTrigger",
+      "descriptions": {
+        "english": "Gain +[effect0.upgrade.bonusdamage][attack] and [lifesteal] [effect1.status0.power]."
+      },
+      "trigger": "on_any_unit_death_on_floor",
+      "effects": [
+        {
+          "id": "@ShogoroGainAttack"
+        },
+        {
+          "id": "@ShogoroGainLifesteal"
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnShogoro",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "room",
+      "param_character": "@Shogoro"
+    },
+    {
+      "id": "ShogoroGainAttack",
+      "name": "CardEffectAddTempCardUpgradeToUnits",
+      "target_mode": "self",
+      "target_team": "none",
+      "param_upgrade": "@ShogoroOneAttack"
+    },
+    {
+      "id": "ShogoroGainLifesteal",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "self",
+      "target_team": "none",
+      "param_status_effects": [
+        {
+          "status": "lifesteal",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "ShogoroOneAttack",
+      "bonus_damage": 1
+    }
+  ],
+  "sprites": [
+    {
+      "id": "Shogoro",
+      "path": "textures/ShogoroCardArt.png"
+    },
+    {
+      "id": "ShogoroCharacterArt",
+      "path": "textures/ShogoroCharacterArt.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "Shogoro",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@Shogoro"
+        }
+      }
+    },
+    {
+      "id": "ShogoroCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@ShogoroCharacterArt",
+          "transform": {
+            "position": {
+              "x": 0.1,
+              "y": 0.73,
+              "z": 0
+            },
+            "scale": {
+              "x": 0.9,
+              "y": 0.9,
+              "z": 1
+            }
+          }
+        }
+      }
+    }
+  ]
+}

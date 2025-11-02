@@ -1,0 +1,155 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "SpawnOni",
+      "names": {
+        "english": "Oni"
+      },
+      "card_art": "@Oni",
+      "cost": 2,
+      "card_type": "monster",
+      "rarity": "uncommon",
+      "class": "@ClassYokai",
+      "targets_room": true,
+      "effects": [
+        {
+          "id": "@SpawnOni"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "Flavour Text"
+        }
+      ],
+      "pools": [
+        "UnitsAllBanner"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "Oni",
+      "size": 2,
+      "attack_damage": 35,
+      "health": 25,
+      "names": {
+        "english": "Oni"
+      },
+      "character_art": "@OniCharacterArt",
+      "subtypes": [
+        "SubtypesData_BannerUnit",
+        "@Sub_Demon"
+      ],
+      "triggers": [
+        {
+          "id": "@OniDeathwishTrigger"
+        },
+        {
+          "id": "@OniLeaveDeathwishTrigger"
+        }
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "OniDeathwishTrigger",
+      "descriptions": {
+        "english": "Apply +20[attack] to self. On Retreating, regain 25 [health] and apply -15[attack] to self."
+      },
+      "trigger": "on_deathwish",
+      "effects": [
+        {
+          "id": "@OniGainAttack"
+        }
+      ]
+    },
+    {
+      "id": "OniLeaveDeathwishTrigger",
+      "trigger": "on_deathwish_lost",
+      "effects": [ "@OniHealHealth", "@OniLoseAttack" ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnOni",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "room",
+      "param_character": "@Oni"
+    },
+    {
+      "id": "OniHealHealth",
+      "name": "CardEffectHeal",
+      "target_mode": "self",
+      "target_team": "none",
+      "param_int": 25
+    },
+    {
+      "id": "OniGainAttack",
+      "name": "CardEffectAddTempCardUpgradeToUnits",
+      "target_mode": "self",
+      "target_team": "monsters",
+      "param_upgrade": "@OniAttackIncrease"
+    },
+    {
+      "id": "OniLoseAttack",
+      "name": "CardEffectAddTempCardUpgradeToUnits",
+      "target_mode": "self",
+      "target_team": "monsters",
+      "param_upgrade": "@OniAttackDecrease"
+    }
+
+  ],
+  "upgrades": [
+    {
+      "id": "OniAttackIncrease",
+      "bonus_damage": 20
+    },
+    {
+      "id": "OniAttackDecrease",
+      "bonus_damage": -15
+    }
+  ],
+  "sprites": [
+    {
+      "id": "Oni",
+      "path": "textures/OniCardArt.png"
+    },
+    {
+      "id": "OniCharacterArt",
+      "path": "textures/OniCharacterArt.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "Oni",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@Oni"
+        }
+      }
+    },
+    {
+      "id": "OniCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@OniCharacterArt",
+          "transform": {
+            "position": {
+              "x": 0.1,
+              "y": 0.73,
+              "z": 0
+            },
+            "scale": {
+              "x": 0.9,
+              "y": 0.9,
+              "z": 1
+            }
+          }
+        }
+      }
+    }
+  ]
+}

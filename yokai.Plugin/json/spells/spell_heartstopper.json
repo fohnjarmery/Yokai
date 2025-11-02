@@ -1,0 +1,64 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "Heartstopper",
+      "names": {
+        "english": "Heartstopper"
+      },
+      "descriptions": {
+        "english": "[descend]. Deal [effect1.power] damage."
+      },
+      "rarity": "rare",
+      "class": "@ClassYokai",
+      "card_art": "@HeartstopperArt",
+      "targets_room": true,
+      "targetless": false,
+      "pools": [
+        "MegaPool"
+      ],
+      "cost": 1,
+      "effects": [
+        {
+          "id": "@HeartstopperDescend"
+        },
+        {
+          "id": "@HeartstopperDamage"
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "HeartstopperDescend",
+      "name": "CardEffectBump",
+      "target_mode": "drop_target_character",
+      "target_team": "both",
+      "param_int": -1
+    },
+    {
+      "id": "HeartstopperDamage",
+      "name": "CardEffectDamage",
+      "target_mode": "last_targeted_characters",
+      "target_team": "both",
+      "param_int": 5
+    }
+  ],
+  "sprites": [
+    {
+      "id": "HeartstopperArt",
+      "path": "textures/HeartstopperArt.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "HeartstopperArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@HeartstopperArt"
+        }
+      }
+    }
+  ]
+}

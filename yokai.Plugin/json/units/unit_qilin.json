@@ -1,0 +1,174 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.deref.json",
+  "cards": [
+    {
+      "id": "SpawnQilin",
+      "names": {
+        "english": "Qilin"
+      },
+      "card_art": "@Qilin",
+      "cost": 2,
+      "card_type": "monster",
+      "rarity": "uncommon",
+      "class": "@ClassYokai",
+      "targets_room": true,
+      "effects": [
+        {
+          "id": "@SpawnQilin"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "Flavour Text"
+        }
+      ],
+      "pools": [
+        "UnitsAllBanner"
+      ]
+    },
+    {
+      "id": "QilinAbility",
+      "names": {
+        "english": "Blessing of Protection"
+      },
+      "descriptions": {
+        "english": "Share all status effects with friendly units."
+      },
+      "card_art": "@Qilin",
+      "is_an_ability": true,
+      "cooldown": 3,
+      "targetless": true,
+      "targets_room": false,
+      "card_type": "spell",
+      "effects": [
+        {
+          "id": "@QilinAbilityEffect"
+        }
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "Qilin",
+      "size": 3,
+      "attack_damage": 40,
+      "health": 35,
+      "names": {
+        "english": "Qilin"
+      },
+      "character_art": "@QilinCharacterArt",
+      "subtypes": [
+        "SubtypesData_BannerUnit",
+        "@Sub_Spirit"
+      ],
+      "triggers": [
+        {
+          "id": "@QilinTrigger"
+        }
+      ],
+      "ability": "@QilinAbility"
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "QilinTrigger",
+      "descriptions": {
+        "english": "Gain 2 [regen] and 2 [rage]."
+      },
+      "trigger": "post_combat",
+      "effects": [
+        {
+          "id": "@QilinGainRegen"
+        },
+        {
+          "id": "@QilinGainRage"
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnQilin",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "room",
+      "param_character": "@Qilin"
+    },
+    {
+      "id": "QilinGainRegen",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "self",
+      "target_team": "none",
+      "param_status_effects": [
+        {
+          "status": "regen",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": "QilinGainRage",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "self",
+      "target_team": "none",
+      "param_status_effects": [
+        {
+          "status": "buff",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": "QilinAbilityEffect",
+      "name": "CardEffectTransferAllStatusEffectsFromUnit",
+      "target_mode": "room",
+      "target_team": "monsters",
+      "param_int": 7,
+      "param_int_2":  2,
+      "use_status_effect_multiplier":  false,
+      "param_bool":  false,
+      "param_bool_2": true
+    }
+  ],
+  "sprites": [
+    {
+      "id": "Qilin",
+      "path": "textures/QilinCardArt.png"
+    },
+    {
+      "id": "QilinCharacterArt",
+      "path": "textures/QilinCharacterArt.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "Qilin",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@Qilin"
+        }
+      }
+    },
+    {
+      "id": "QilinCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@QilinCharacterArt",
+          "transform": {
+            "position": {
+              "x": 0.1,
+              "y": 0.73,
+              "z": 0
+            },
+            "scale": {
+              "x": 0.9,
+              "y": 0.9,
+              "z": 1
+            }
+          }
+        }
+      }
+    }
+  ]
+}

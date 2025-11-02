@@ -8,7 +8,7 @@
         "descriptions": {
             "english": "[descend]. Deal [effect1.power] damage."
         },
-        "rarity": "uncommon",
+        "rarity": "common",
         "class": "@ClassYokai",
         "card_art": "@DarknessArt",
         "targets_room": true,

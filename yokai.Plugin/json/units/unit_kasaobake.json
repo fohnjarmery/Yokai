@@ -1,0 +1,151 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.deref.json",
+  "cards": [
+    {
+      "id": "SpawnKasaObake",
+      "names": {
+        "english": "Kasa-Obake"
+      },
+      "card_art": "@KasaObake",
+      "cost": 1,
+      "card_type": "monster",
+      "rarity": "uncommon",
+      "class": "@ClassYokai",
+      "descriptions": {
+        "english": "+5 attack per stack of Stealth on self."
+      },
+      "targets_room": true,
+      "effects": [
+        {
+          "id": "@SpawnKasaObake"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "Flavour Text"
+        }
+      ],
+      "pools": [
+        "UnitsAllBanner"
+      ]
+    },
+    {
+      "id": "KasaAbility",
+      "names": {
+        "english": "In The Shade"
+      },
+      "descriptions": {
+        "english": "Apply Stealth 2 to allied units."
+      },
+      "card_art": "@KasaObake",
+      "is_an_ability": true,
+      "cooldown": 4,
+      "targetless": true,
+      "targets_room": false,
+      "card_type": "spell",
+      "effects": [
+        {
+          "id": "@KasaAbilityEffect"
+        }
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "KasaObake",
+      "size": 1,
+      "attack_damage": 3,
+      "health": 10,
+      "names": {
+        "english": "KasaObake"
+      },
+      "character_art": "@KasaObakeCharacterArt",
+      "subtypes": [
+        "SubtypesData_BannerUnit",
+        "@Sub_Spirit"
+      ],
+      "ability": "@KasaAbility",
+      "room_modifiers": [
+        "@KasaScalingRoomModifier"
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnKasaObake",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "room",
+      "param_character": "@KasaObake"
+    },
+    {
+      "id": "KasaAbilityEffect",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "room",
+      "target_team": "monsters",
+      "param_status_effects": [
+        {
+          "status": "stealth",
+          "count": 2
+        }
+      ]
+    }
+  ],
+  "room_modifiers": [
+    {
+      "id": "KasaScalingRoomModifier",
+      "name": "RoomStateSelfDamagePerStatusEffectStack",
+      "in_play_descriptions": {
+        "english": "+[power][attack] per Stealth stacks on self."
+      },
+      "param_int": 5,
+      "param_status_effects": [
+        {
+          "status": "stealth",
+          "count": 0
+        }
+      ]
+    }
+  ],
+  "sprites": [
+    {
+      "id": "KasaObake",
+      "path": "textures/KasaObakeCardArt.png"
+    },
+    {
+      "id": "KasaObakeCharacterArt",
+      "path": "textures/KasaObakeCharacterArt.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "KasaObake",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@KasaObake"
+        }
+      }
+    },
+    {
+      "id": "KasaObakeCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@KasaObakeCharacterArt",
+          "transform": {
+            "position": {
+              "x": 0.1,
+              "y": 0.73,
+              "z": 0
+            },
+            "scale": {
+              "x": 0.9,
+              "y": 0.9,
+              "z": 1
+            }
+          }
+        }
+      }
+    }
+  ]
+}

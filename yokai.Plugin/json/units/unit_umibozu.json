@@ -1,0 +1,143 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "SpawnUmibozu",
+      "names": {
+        "english": "Umibozu"
+      },
+      "card_art": "@Umibozu",
+      "cost": 2,
+      "card_type": "monster",
+      "rarity": "rare",
+      "class": "@ClassYokai",
+      "targets_room": true,
+      "effects": [
+        {
+          "id": "@SpawnUmibozu"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "Flavour Text"
+        }
+      ],
+      "pools": [
+        "UnitsAllBanner"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "Umibozu",
+      "size": 2,
+      "attack_damage": 5,
+      "health": 25,
+      "names": {
+        "english": "Umibozu"
+      },
+      "character_art": "@UmibozuCharacterArt",
+      "subtypes": [
+        "SubtypesData_BannerUnit",
+        "@Sub_Demon"
+      ],
+      "triggers": [
+        {
+          "id": "@UmibozuTrigger"
+        }
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "UmibozuTrigger",
+      "descriptions": {
+        "english": "Gain +[effect0.upgrade.bonusdamage][attack] and [lifesteal] [effect1.status0.power]."
+      },
+      "trigger": "on_any_unit_death_on_floor",
+      "effects": [
+        {
+          "id": "@UmibozuGainAttack"
+        },
+        {
+          "id": "@UmibozuGainLifesteal"
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnUmibozu",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "room",
+      "param_character": "@Umibozu"
+    },
+    {
+      "id": "UmibozuGainAttack",
+      "name": "CardEffectAddTempCardUpgradeToUnits",
+      "target_mode": "self",
+      "target_team": "none",
+      "param_upgrade": "@UmibozuOneAttack"
+    },
+    {
+      "id": "UmibozuGainLifesteal",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "self",
+      "target_team": "none",
+      "param_status_effects": [
+        {
+          "status": "lifesteal",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "UmibozuOneAttack",
+      "bonus_damage": 1
+    }
+  ],
+  "sprites": [
+    {
+      "id": "Umibozu",
+      "path": "textures/UmiBozuCardArt.png"
+    },
+    {
+      "id": "UmibozuCharacterArt",
+      "path": "textures/UmiBozuCharacterArt.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "Umibozu",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@Umibozu"
+        }
+      }
+    },
+    {
+      "id": "UmibozuCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@UmibozuCharacterArt",
+          "transform": {
+            "position": {
+              "x": 0.1,
+              "y": 0.73,
+              "z": 0
+            },
+            "scale": {
+              "x": 0.9,
+              "y": 0.9,
+              "z": 1
+            }
+          }
+        }
+      }
+    }
+  ]
+}

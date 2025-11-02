@@ -1,0 +1,92 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "Kusarigama",
+      "names": {
+        "english": "Kusarigama"
+      },
+      "lore_tooltips": [
+        {
+          "english": "A dangerous blade oh no."
+        }
+      ],
+      "card_type": "equipment",
+      "rarity": "uncommon",
+      "class": "@ClassYokai",
+      "unlock_level": 4,
+      "card_art": "@KusarigamaArt",
+      "targets_room": true,
+      "targetless": false,
+      "pools": [
+        "MegaPool",
+        "RoomAndEquipmentMerchant_EquipmentPool",
+        "RoomAndEquipmentDraftPool",
+        "EquipmentPoolNonEnemy",
+        "FreeEquipmentMutatorPool"
+      ],
+      "cost": 1,
+      "effects": [
+        "@Equip_Kusarigama"
+      ]
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "upg_Kusarigama",
+      "bonus_damage": 15,
+      "bonus_hp": 0,
+      "status_effect_upgrades": [
+        {
+          "status": "undying",
+          "count": 3
+        }
+      ],
+      "trigger_upgrades": [
+        "@KusarigamaResolveTrigger"
+      ],
+      "icon": "@KusarigamaArt"
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "KusarigamaResolveTrigger",
+      "trigger": "post_combat",
+      "descriptions": {
+        "english": "Die."
+      },
+      "effects": [ "@KusarigamaDie" ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "Equip_Kusarigama",
+      "name": "CardEffectAttachEquipment",
+      "target_mode": "drop_target_character",
+      "target_team": "monsters",
+      "param_upgrade": "@upg_Kusarigama"
+    },
+    {
+      "id": "KusarigamaDie",
+      "name": "CardEffectKill",
+      "target_mode": "self"
+    }
+  ],
+  "sprites": [
+    {
+      "id": "KusarigamaArt",
+      "path": "textures/KusarigamaArt.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "KusarigamaArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@KusarigamaArt"
+        }
+      }
+    }
+  ]
+}

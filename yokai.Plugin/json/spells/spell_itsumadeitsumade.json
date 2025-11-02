@@ -1,0 +1,64 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "ItsumadeItsumade",
+      "names": {
+        "english": "Itsumade Itsumade!"
+      },
+      "descriptions": {
+        "english": "[descend]. Deal [effect1.power] damage."
+      },
+      "rarity": "rare",
+      "class": "@ClassYokai",
+      "card_art": "@ItsumadeItsumadeArt",
+      "targets_room": true,
+      "targetless": false,
+      "pools": [
+        "MegaPool"
+      ],
+      "cost": 1,
+      "effects": [
+        {
+          "id": "@ItsumadeItsumadeDescend"
+        },
+        {
+          "id": "@ItsumadeItsumadeDamage"
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "ItsumadeItsumadeDescend",
+      "name": "CardEffectBump",
+      "target_mode": "drop_target_character",
+      "target_team": "both",
+      "param_int": -1
+    },
+    {
+      "id": "ItsumadeItsumadeDamage",
+      "name": "CardEffectDamage",
+      "target_mode": "last_targeted_characters",
+      "target_team": "both",
+      "param_int": 5
+    }
+  ],
+  "sprites": [
+    {
+      "id": "ItsumadeItsumadeArt",
+      "path": "textures/ItsumadeItsumadeArt.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "ItsumadeItsumadeArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@ItsumadeItsumadeArt"
+        }
+      }
+    }
+  ]
+}

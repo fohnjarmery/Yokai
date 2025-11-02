@@ -7,7 +7,7 @@
                 "english": "Ippon Datara"
             },
             "card_art": "@IpponDatara",
-            "cost": 1,
+            "cost": 2,
             "card_type": "monster",
             "rarity": "uncommon",
             "class": "@ClassYokai",
@@ -28,25 +28,31 @@
         }
     ],
     "characters": [
-        {
-            "id": "IpponDatara",
-            "size": 2,
-            "attack_damage": 5,
-            "health": 25,
-            "names": {
-                "english": "IpponDatara"
-            },
-            "character_art": "@IpponDataraCharacterArt",
-            "subtypes": [
-                "SubtypesData_BannerUnit",
-                "@Sub_Demon"
-            ],
-            "triggers": [
-                {
-                    "id": "@IpponDataraTrigger"
-                }
-            ]
-        }
+      {
+        "id": "IpponDatara",
+        "size": 2,
+        "attack_damage": 5,
+        "health": 15,
+        "names": {
+          "english": "IpponDatara"
+        },
+        "character_art": "@IpponDataraCharacterArt",
+        "subtypes": [
+          "SubtypesData_BannerUnit",
+          "@Sub_Demon"
+        ],
+        "triggers": [
+          {
+            "id": "@IpponDataraTrigger"
+          }
+        ],
+        "starting_status_effects": [
+          {
+            "status": "sweep",
+            "count": 1
+          }
+        ]
+      }
     ],
     "character_triggers": [
         {

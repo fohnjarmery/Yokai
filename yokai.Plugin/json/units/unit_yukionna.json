@@ -1,0 +1,143 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "SpawnYukiOnna",
+      "names": {
+        "english": "Yuki-Onna"
+      },
+      "card_art": "@YukiOnna",
+      "cost": 1,
+      "card_type": "monster",
+      "rarity": "rare",
+      "class": "@ClassYokai",
+      "targets_room": true,
+      "effects": [
+        {
+          "id": "@SpawnYukiOnna"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "Flavour Text"
+        }
+      ],
+      "pools": [
+        "UnitsAllBanner"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "YukiOnna",
+      "size": 2,
+      "attack_damage": 25,
+      "health": 25,
+      "names": {
+        "english": "YukiOnna"
+      },
+      "character_art": "@YukiOnnaCharacterArt",
+      "subtypes": [
+        "SubtypesData_BannerUnit",
+        "@Sub_Spirit"
+      ],
+      "triggers": [
+        {
+          "id": "@YukiOnnaTrigger"
+        }
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "YukiOnnaTrigger",
+      "descriptions": {
+        "english": "Gain +[effect0.upgrade.bonusdamage][attack] and [lifesteal] [effect1.status0.power]."
+      },
+      "trigger": "on_any_unit_death_on_floor",
+      "effects": [
+        {
+          "id": "@YukiOnnaGainAttack"
+        },
+        {
+          "id": "@YukiOnnaGainLifesteal"
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnYukiOnna",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "room",
+      "param_character": "@YukiOnna"
+    },
+    {
+      "id": "YukiOnnaGainAttack",
+      "name": "CardEffectAddTempCardUpgradeToUnits",
+      "target_mode": "self",
+      "target_team": "none",
+      "param_upgrade": "@YukiOnnaOneAttack"
+    },
+    {
+      "id": "YukiOnnaGainLifesteal",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "self",
+      "target_team": "none",
+      "param_status_effects": [
+        {
+          "status": "lifesteal",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "YukiOnnaOneAttack",
+      "bonus_damage": 1
+    }
+  ],
+  "sprites": [
+    {
+      "id": "YukiOnna",
+      "path": "textures/YukiOnnaCardArt.png"
+    },
+    {
+      "id": "YukiOnnaCharacterArt",
+      "path": "textures/YukiOnnaCharacterArt.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "YukiOnna",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@YukiOnna"
+        }
+      }
+    },
+    {
+      "id": "YukiOnnaCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@YukiOnnaCharacterArt",
+          "transform": {
+            "position": {
+              "x": 0.1,
+              "y": 0.73,
+              "z": 0
+            },
+            "scale": {
+              "x": 0.9,
+              "y": 0.9,
+              "z": 1
+            }
+          }
+        }
+      }
+    }
+  ]
+}

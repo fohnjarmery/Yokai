@@ -1,0 +1,143 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "SpawnWanyudo",
+      "names": {
+        "english": "Wanyudo"
+      },
+      "card_art": "@Wanyudo",
+      "cost": 1,
+      "card_type": "monster",
+      "rarity": "uncommon",
+      "class": "@ClassYokai",
+      "targets_room": true,
+      "effects": [
+        {
+          "id": "@SpawnWanyudo"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "Flavour Text"
+        }
+      ],
+      "pools": [
+        "UnitsAllBanner"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "Wanyudo",
+      "size": 2,
+      "attack_damage": 18,
+      "health": 18,
+      "names": {
+        "english": "Wanyudo"
+      },
+      "character_art": "@WanyudoCharacterArt",
+      "subtypes": [
+        "SubtypesData_BannerUnit",
+        "@Sub_Demon"
+      ],
+      "triggers": [
+        {
+          "id": "@WanyudoTrigger"
+        }
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "WanyudoTrigger",
+      "descriptions": {
+        "english": "Gain +[effect0.upgrade.bonusdamage][attack] and [lifesteal] [effect1.status0.power]."
+      },
+      "trigger": "on_any_unit_death_on_floor",
+      "effects": [
+        {
+          "id": "@WanyudoGainAttack"
+        },
+        {
+          "id": "@WanyudoGainLifesteal"
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnWanyudo",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "room",
+      "param_character": "@Wanyudo"
+    },
+    {
+      "id": "WanyudoGainAttack",
+      "name": "CardEffectAddTempCardUpgradeToUnits",
+      "target_mode": "self",
+      "target_team": "none",
+      "param_upgrade": "@WanyudoOneAttack"
+    },
+    {
+      "id": "WanyudoGainLifesteal",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "self",
+      "target_team": "none",
+      "param_status_effects": [
+        {
+          "status": "lifesteal",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "WanyudoOneAttack",
+      "bonus_damage": 1
+    }
+  ],
+  "sprites": [
+    {
+      "id": "Wanyudo",
+      "path": "textures/WanyudoCardArt.png"
+    },
+    {
+      "id": "WanyudoCharacterArt",
+      "path": "textures/WanyudoCharacterArt.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "Wanyudo",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@Wanyudo"
+        }
+      }
+    },
+    {
+      "id": "WanyudoCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@WanyudoCharacterArt",
+          "transform": {
+            "position": {
+              "x": 0.1,
+              "y": 0.73,
+              "z": 0
+            },
+            "scale": {
+              "x": 0.9,
+              "y": 0.9,
+              "z": 1
+            }
+          }
+        }
+      }
+    }
+  ]
+}

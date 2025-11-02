@@ -1,0 +1,64 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "TanukiCharm",
+      "names": {
+        "english": "Tanuki Charm"
+      },
+      "descriptions": {
+        "english": "[descend]. Deal [effect1.power] damage."
+      },
+      "rarity": "common",
+      "class": "@ClassYokai",
+      "card_art": "@TanukiCharmArt",
+      "targets_room": true,
+      "targetless": false,
+      "pools": [
+        "MegaPool"
+      ],
+      "cost": 1,
+      "effects": [
+        {
+          "id": "@TanukiCharmDescend"
+        },
+        {
+          "id": "@TanukiCharmDamage"
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "TanukiCharmDescend",
+      "name": "CardEffectBump",
+      "target_mode": "drop_target_character",
+      "target_team": "both",
+      "param_int": -1
+    },
+    {
+      "id": "TanukiCharmDamage",
+      "name": "CardEffectDamage",
+      "target_mode": "last_targeted_characters",
+      "target_team": "both",
+      "param_int": 5
+    }
+  ],
+  "sprites": [
+    {
+      "id": "TanukiCharmArt",
+      "path": "textures/TanukiCharmArt.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "TanukiCharmArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@TanukiCharmArt"
+        }
+      }
+    }
+  ]
+}

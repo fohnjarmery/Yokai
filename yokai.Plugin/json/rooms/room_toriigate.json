@@ -1,0 +1,116 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "ToriiGate",
+      "names": {
+        "english": "Torii Gate"
+      },
+      "descriptions": {
+        "english": "+[effect0.upgrade.roommodifier0.power][capacity]. When a friendly unit dies, apply +[effect0.upgrade.charactertrigger0.effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.charactertrigger0.effect0.upgrade.bonushp][health] to friendly units."
+      },
+      "lore_tooltips": [
+        {
+          "english": "Lore stuff."
+        }
+      ],
+      "card_art": "@ToriiGateArt",
+      "cost": 1,
+      "card_type": "room",
+      "rarity": "uncommon",
+      "class": "@ClassYokai",
+      "targets_room": true,
+      "targetless": true,
+      "effects": [
+        "@ToriiGateRoomEffect"
+      ],
+      "pools": [
+        "MegaPool",
+        "RoomAndEquipmentMerchant_RoomPool",
+        "RoomAndEquipmentDraftPool",
+        "TrainRoomPool"
+      ]
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "ToriiGateRoomUpgrade",
+      "titles": {
+        "english": "ToriiGate"
+      },
+      "descriptions": {
+        "english": "+[roommodifier0.power][capacity]. When a friendly unit dies, apply +[charactertrigger0.effect0.upgrade.bonusdamage][attack] and +[charactertrigger0.effect0.upgrade.bonushp][health] to friendly units."
+      },
+      "trigger_upgrades": [
+        "@ToriiGateTrigger"
+      ],
+      "room_modifier_upgrades": [
+        "@ToriiGateRoomModifier"
+      ],
+      "hide_icon_on_card": true,
+      "icon": "@ToriiGateArt"
+    },
+    {
+      "id": "ToriiGateThreeAttackOneHealth",
+      "bonus_damage": 3,
+      "bonus_hp": 1
+    }
+  ],
+  "room_modifiers": [
+    {
+      "id": "ToriiGateRoomModifier",
+      "name": "RoomStateCapacityModifier",
+      "disallow_in_deployment": false,
+      "target_mode": "room",
+      "param_int": 1
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "ToriiGateTrigger",
+      "descriptions": {
+        "english": "When a friendly unit dies, apply +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health] to friendly units."
+      },
+      "trigger": "on_death",
+      "hide_visual_and_ignore_silence": true,
+      "effects": [
+        "@ApplyToriiGateUpgrade"
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "ToriiGateRoomEffect",
+      "name": "CardEffectAttachTrainRoomAttachment",
+      "target_mode": "room",
+      "param_upgrade": "@ToriiGateRoomUpgrade",
+      "param_bool": false,
+      "param_bool_2": false,
+      "target_team": "monsters"
+    },
+    {
+      "id": "ApplyToriiGateUpgrade",
+      "name": "CardEffectAddTempCardUpgradeToUnits",
+      "target_mode": "room",
+      "target_team": "monsters",
+      "param_upgrade": "@ToriiGateThreeAttackOneHealth"
+    }
+  ],
+  "sprites": [
+    {
+      "id": "ToriiGateArt",
+      "path": "textures/ToriiGateArt.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "ToriiGateArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@ToriiGateArt"
+        }
+      }
+    }
+  ]
+}

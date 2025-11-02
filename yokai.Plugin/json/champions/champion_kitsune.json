@@ -1,232 +1,485 @@
 {
-    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/schemas/cards.json",
-    "cards": [
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.deref.json",
+  "cards": [
+    {
+      "id": "SpawnKitsune",
+      "names": {
+        "english": "Kitsune"
+      },
+      "card_art": "@Kitsune",
+      "cost": 0,
+      "card_type": "monster",
+      "rarity": "champion",
+      "class": "@ClassYokai",
+      "targets_room": true,
+      "targetless": false,
+      "effects": [
+        "@SpawnKitsune"
+      ],
+      "lore_tooltips": [
         {
-            "id": "SpawnKitsune",
-            "names": {
-                "english": "Kitsune"
-            },
-            "card_art": "@Kitsune",
-            "cost": 0,
-            "card_type": "monster",
-            "rarity": "champion",
-            "class": "@ClassYokai",
-            "targets_room": true,
-            "targetless": false,
-            "effects": [
-                "@SpawnKitsune"
-            ],
-            "lore_tooltips": [
-                {
-                    "english": "A cute little fox spirit, but don't be fooled."
-                }
-]
+          "english": "A cute little fox spirit, but don't be fooled."
+        }
+      ]
+    },
+    {
+      "id": "FoxCharm1Ability",
+      "names": {
+        "english": "Fox Charm"
+      },
+      "descriptions": {
+        "english": "Move the rearmost non-boss enemy unit forward."
+      },
+      "card_art": "@Kitsune",
+      "is_an_ability": true,
+      "cooldown": 1,
+      "targetless": false,
+      "targets_room": true,
+      "card_type": "spell",
+      "effects": [
+        "@FoxCharmPull"
+      ]
+    },
+    {
+      "id": "FoxCharm2Ability",
+      "names": {
+        "english": "Fox Charm II"
+      },
+      "descriptions": {
+        "english": "Move the rearmost non-boss enemy unit forward and deal 10 Damage."
+      },
+      "card_art": "@Kitsune",
+      "is_an_ability": true,
+      "cooldown": 1,
+      "targetless": false,
+      "targets_room": true,
+      "card_type": "spell",
+      "effects": [
+        "@FoxCharmPull2",
+        "@FoxCharmDamage1"
+      ]
+    },
+    {
+      "id": "FoxCharm3Ability",
+      "names": {
+        "english": "Fox Charm III"
+      },
+      "descriptions": {
+        "english": "Move the rearmost non-boss enemy unit forward and deal 30 Damage."
+      },
+      "card_art": "@Kitsune",
+      "is_an_ability": true,
+      "cooldown": 1,
+      "targetless": false,
+      "targets_room": true,
+      "card_type": "spell",
+      "effects": [
+        "@FoxCharmPull3",
+        "@FoxCharmDamage2"
+      ]
     }
   ],
   "characters": [
+    {
+      "id": "Kitsune",
+      "names": {
+        "english": "Kitsune"
+      },
+      "character_art": "@KitsuneCharacterArt",
+      "chatter": "@CTR_Kitsune",
+      "size": 1,
+      "attack_damage": 15,
+      "health": 5,
+      "death_type": "large",
+      "subtypes": [
+        "SubtypesData_Champion_83f21cbe-9d9b-4566-a2c3-ca559ab8ff34"
+      ]
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "upg_NineTailed1",
+      "titles": {
+        "english": "Nine Tailed"
+      },
+      "descriptions": {
+        "english": "Damage path"
+      },
+      "bonus_damage": 15,
+      "bonus_hp": 0,
+      "status_effect_upgrades": [
         {
-            "id": "Kitsune",
-            "names": {
-                "english": "Kitsune"
-            },
-            "character_art": "@KitsuneCharacterArt",
-            "chatter": "@CTR_Kitsune",
-            "size": 1,
-            "attack_damage": 15,
-            "health": 15,
-            "death_type": "large",
-            "subtypes": [
-                "SubtypesData_Champion_83f21cbe-9d9b-4566-a2c3-ca559ab8ff34"
-            ]
+          "status": "ambush",
+          "count": 1
         }
-    ],
-    "upgrades":[
+      ],
+      "trigger_upgrades": [
+        "@Ninetailed1Trigger"
+      ]
+    },
+    {
+      "id": "upg_NineTailed2",
+      "titles": {
+        "english": "Nine Tailed II"
+      },
+      "descriptions": {
+        "english": "Even more damage path"
+      },
+      "bonus_damage": 40,
+      "bonus_hp": 5,
+      "status_effect_upgrades": [
         {
-            "id": "upg_NineTailed1",
-            "titles": {
-                "english": "Nine Tailed"
-            },
-            "descriptions": {
-                "english": "Damage path"
-            },
-            "bonus_damage": 5,
-            "bonus_hp": 0
-        },
-         {
-            "id": "upg_NineTailed2",
-            "titles": {
-                "english": "Nine Tailed II"
-            },
-            "descriptions": {
-                "english": "Even more damage path"
-            },
-            "bonus_damage": 10,
-            "bonus_hp": 5
-        },
-        {
-            "id": "upg_NineTailed3",
-            "titles": {
-                "english": "Nine Tailed III"
-            },
-            "descriptions": {
-                "english": "So much damage path"
-            },
-            "bonus_damage": 25,
-            "bonus_hp": 10
-        },
-        {
-            "id": "upg_Haunting1",
-            "titles": {
-                "english": "Haunting"
-            },
-            "descriptions": {
-                "english": "Health path"
-            },
-            "bonus_damage": 0,
-            "bonus_hp": 10
-        },
-          {
-            "id": "upg_Haunting2",
-            "titles": {
-                "english": "Haunting II"
-            },
-            "descriptions": {
-                "english": "Even more health path"
-            },
-            "bonus_damage": 5,
-            "bonus_hp": 20
-        },
-        {
-            "id": "upg_Haunting3",
-            "titles": {
-                "english": "Haunting III"
-            },
-            "descriptions": {
-                "english": "So much health path"
-            },
-            "bonus_damage": 5,
-            "bonus_hp": 40
-        },
-        {
-            "id": "upg_Mischievous1",
-            "titles": {
-                "english": "Mischievous"
-            },
-            "descriptions": {
-                "english": "mixed path"
-            },
-            "bonus_damage": 5,
-            "bonus_hp": 5
-        },
-          {
-            "id": "upg_Mischievous2",
-            "titles": {
-                "english": "Mischievous II"
-            },
-            "descriptions": {
-                "english": "even more mixed path"
-            },
-            "bonus_damage": 10,
-            "bonus_hp": 10
-        },
-        {
-            "id": "upg_Mischievous3",
-            "titles": {
-                "english": "Mischievous III"
-            },
-            "descriptions": {
-                "english": "so much mixed path"
-            },
-            "bonus_damage": 20,
-            "bonus_hp": 20
+          "status": "ambush",
+          "count": 1
         }
-    ],
-    "effects": [
+      ],
+      "trigger_upgrades": [
+        "@Ninetailed2Trigger"
+      ]
+    },
+    {
+      "id": "upg_NineTailed3",
+      "titles": {
+        "english": "Nine Tailed III"
+      },
+      "descriptions": {
+        "english": "So much damage path"
+      },
+      "bonus_damage": 75,
+      "bonus_hp": 10,
+      "status_effect_upgrades": [
         {
-            "id": "SpawnKitsune",
-            "name": "CardEffectSpawnMonster",
-            "target_mode": "room",
-            "target_card_type": "spell",
-            "param_character": "@Kitsune"
+          "status": "ambush",
+          "count": 1
         }
-    ],
-    "sprites": [
+      ],
+      "trigger_upgrades": [
+        "@Ninetailed3Trigger"
+      ]
+    },
+    {
+      "id": "upg_Haunting1",
+      "titles": {
+        "english": "Haunting"
+      },
+      "descriptions": {
+        "english": "Health path"
+      },
+      "bonus_damage": 10,
+      "bonus_hp": 15,
+      "trigger_upgrades": [ "@Haunting1Trigger" ]
+    },
+    {
+      "id": "upg_Haunting2",
+      "titles": {
+        "english": "Haunting II"
+      },
+      "descriptions": {
+        "english": "Even more health path"
+      },
+      "bonus_damage": 15,
+      "bonus_hp": 25,
+      "trigger_upgrades": [ "@Haunting2Trigger" ]
+    },
+    {
+      "id": "upg_Haunting3",
+      "titles": {
+        "english": "Haunting III"
+      },
+      "descriptions": {
+        "english": "So much health path"
+      },
+      "bonus_damage": 35,
+      "bonus_hp": 40,
+      "trigger_upgrades": [ "@Haunting3Trigger" ]
+    },
+    {
+      "id": "upg_Mischievous1",
+      "titles": {
+        "english": "Mischievous"
+      },
+      "descriptions": {
+        "english": "mixed path"
+      },
+      "bonus_damage": 10,
+      "bonus_hp": 10,
+      "ability_upgrade": "@FoxCharm1Ability"
+    },
+    {
+      "id": "upg_Mischievous2",
+      "titles": {
+        "english": "Mischievous II"
+      },
+      "descriptions": {
+        "english": "even more mixed path"
+      },
+      "bonus_damage": 25,
+      "bonus_hp": 25,
+      "ability_upgrade": "@Foxcharm2Ability"
+    },
+    {
+      "id": "upg_Mischievous3",
+      "titles": {
+        "english": "Mischievous III"
+      },
+      "descriptions": {
+        "english": "so much mixed path"
+      },
+      "bonus_damage": 45,
+      "bonus_hp": 55,
+      "ability_upgrade": "@Foxcharm3Ability"
+    }
+  ],
+
+  "character_triggers": [
+    {
+      "id": "Haunting1Trigger",
+      "trigger": "after_spawn_enchant",
+      "descriptions": {
+        "english": "Apply 5 Frostbite to enemy units."
+      },
+      "effects": [
+        "@Haunting1Enchant"
+      ]
+    },
+    {
+      "id": "Haunting2Trigger",
+      "trigger": "after_spawn_enchant",
+      "descriptions": {
+        "english": "Apply 15 Frostbite to enemy units."
+      },
+      "effects": [
+        "@Haunting2Enchant"
+      ]
+    },
+    {
+      "id": "Haunting3Trigger",
+      "trigger": "after_spawn_enchant",
+      "descriptions": {
+        "english": "Apply 30 Frostbite to enemy units."
+      },
+      "effects": [
+        "@Haunting3Enchant"
+      ]
+    },
+    {
+      "id": "Ninetailed1Trigger",
+      "trigger": "on_attacking",
+      "descriptions": {
+        "english": "Enemy Units Propagate 2. Does not effect bosses."
+      },
+      "effects": [
+        "@Ninetailed1Strike"
+      ]
+    },
+    {
+      "id": "Ninetailed2Trigger",
+      "trigger": "on_attacking",
+      "descriptions": {
+        "english": "Enemy Units Propagate 3. Does not effect bosses."
+      },
+      "effects": [
+        "@Ninetailed2Strike"
+      ]
+    },
+    {
+      "id": "Ninetailed3Trigger",
+      "trigger": "on_attacking",
+      "descriptions": {
+        "english": "All Units Propagate 3. Does not effect bosses."
+      },
+      "effects": [
+        "@Ninetailed3Strike"
+      ]
+    }
+  ],
+
+  "effects": [
+    {
+      "id": "SpawnKitsune",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "room",
+      "target_card_type": "spell",
+      "param_character": "@Kitsune"
+    },
+    {
+      "id": "FoxCharmPull",
+      "name": "CardEffectFloorRearrange",
+      "target_mode": "back_in_room",
+      "target_team": "heroes",
+      "param_int": 0
+    },
+    {
+      "id": "FoxCharmPull2",
+      "name": "CardEffectFloorRearrange",
+      "target_mode": "back_in_room",
+      "target_team": "heroes",
+      "param_int": 0
+    },
+    {
+      "id": "FoxCharmPull3",
+      "name": "CardEffectFloorRearrange",
+      "target_mode": "back_in_room",
+      "target_team": "heroes",
+      "param_int": 0
+    },
+    {
+      "id": "FoxCharmDamage1",
+      "name": "CardEffectDamage",
+      "target_mode": "last_targeted_characters",
+      "target_team": "heroes",
+      "param_int": 10
+    },
+    {
+      "id": "FoxCharmDamage2",
+      "name": "CardEffectDamage",
+      "target_mode": "last_targeted_characters",
+      "target_team": "heroes",
+      "param_int": 30
+    },
+    {
+      "id": "Haunting1Enchant",
+      "name": "CardEffectEnchant",
+      "target_mode": "room",
+      "target_team": "heroes",
+      "param_status_effects": [
         {
-            "id": "Kitsune",
-            "path": "textures/KitsuneCardArt.png"
-        },
-        {
-            "id": "KitsuneCharacterArt",
-            "path": "textures/KitsuneCharacterArt.png"
+          "status": "poison",
+          "count": 5
         }
-    ],
-    "game_objects": [
+      ]
+    },
+    {
+      "id": "Haunting2Enchant",
+      "name": "CardEffectEnchant",
+      "target_mode": "room",
+      "target_team": "heroes",
+      "param_status_effects": [
         {
-            "id": "Kitsune",
-            "type": "card_art",
-            "extensions": {
-                "card_art": {
-                    "sprite": "@Kitsune"
-                }
+          "status": "poison",
+          "count": 15
+        }
+      ]
+    },
+    {
+      "id": "Haunting3Enchant",
+      "name": "CardEffectEnchant",
+      "target_mode": "room",
+      "target_team": "heroes",
+      "param_status_effects": [
+        {
+          "status": "poison",
+          "count": 30
+        }
+      ]
+    },
+    {
+      "id": "Ninetailed1Strike",
+      "name": "CardEffectAdjustAllStatusEffects",
+      "target_mode": "room",
+      "target_team": "heroes",
+      "param_int": 2,
+      "param_int_2": 1,
+      "target_ignore_bosses": true
+    },
+    {
+      "id": "Ninetailed2Strike",
+      "name": "CardEffectAdjustAllStatusEffects",
+      "target_mode": "room",
+      "target_team": "heroes",
+      "param_int": 3,
+      "param_int_2": 1,
+      "target_ignore_bosses": true
+    },
+    {
+      "id": "Ninetailed3Strike",
+      "name": "CardEffectAdjustAllStatusEffects",
+      "target_mode": "room",
+      "target_team": "both",
+      "param_int": 3,
+      "param_int_2": 1,
+      "target_ignore_bosses": true
+    }
+
+
+  ],
+  "sprites": [
+    {
+      "id": "Kitsune",
+      "path": "textures/KitsuneCardArt.png"
+    },
+    {
+      "id": "KitsuneCharacterArt",
+      "path": "textures/KitsuneCharacterArt.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "Kitsune",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@Kitsune"
+        }
+      }
+    },
+    {
+      "id": "KitsuneCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@KitsuneCharacterArt",
+          "transform": {
+            "position": {
+              "x": 0.15,
+              "y": 0.23,
+              "z": 0
+            },
+            "scale": {
+              "x": 1.1,
+              "y": 1.1,
+              "z": 1
             }
+          }
+        }
+      }
+    }
+  ],
+  "chatter": [
+    {
+      "id": "CTR_Kitsune",
+      "gender": "female",
+      "added_expressions": [
+        {
+          "english": "You can trust me!"
         },
         {
-            "id": "KitsuneCharacterArt",
-            "type": "character_art",
-            "extensions": {
-                "character_art": {
-                    "sprite": "@KitsuneCharacterArt",
-                    "transform": {
-                        "position": {
-                            "x": 0.15,
-                            "y": 0.23,
-                            "z": 0
-                        },
-                        "scale": {
-                            "x": 1.1,
-                            "y": 1.1,
-                            "z": 1
-                        }
-                    }
-                }
-            }
-        }
-    ],
-    "chatter": [
+          "english": "I'll lead the way!"
+        },
         {
-            "id": "CTR_Kitsune",
-            "gender": "female",
-            "added_expressions": [
-                {
-                    "english": "You can trust me!"
-                },
-                {
-                    "english": "I'll lead the way!"
-                },
-                {
-                    "english": "I'm not really a fighter..."
-                }
-            ],
-            "idle_expressions": [
-                {
-                    "english": "Aren't I cute?"
-                },
-                {
-                    "english": "I don't like all this noise."
-                },
-                {
-                    "english": "Wanna pet me?"
-                },
-                {
-                    "english": "Don't be fooled now!"
-                },
-                {
-                    "english": "I want to chew on some wings."
-                },
-                {
-                    "english": "Are you feeling lost?"
-                }
-            ]
+          "english": "I'm not really a fighter..."
         }
-    ]
+      ],
+      "idle_expressions": [
+        {
+          "english": "Aren't I cute?"
+        },
+        {
+          "english": "I don't like all this noise."
+        },
+        {
+          "english": "Wanna pet me?"
+        },
+        {
+          "english": "Don't be fooled now!"
+        },
+        {
+          "english": "I want to chew on some wings."
+        },
+        {
+          "english": "Are you feeling lost?"
+        }
+      ]
+    }
+  ]
 }

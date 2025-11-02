@@ -31,6 +31,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="textures\character_art\" />
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties json_4units_4unit_3boroboroton_1json__JsonSchema="https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.deref.json" /></VisualStudio></ProjectExtensions>
 </Project>
 
 

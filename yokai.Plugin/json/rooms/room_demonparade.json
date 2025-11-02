@@ -1,0 +1,116 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "DemonParade",
+      "names": {
+        "english": "Demon Parade"
+      },
+      "descriptions": {
+        "english": "+[effect0.upgrade.roommodifier0.power][capacity]. When a friendly unit dies, apply +[effect0.upgrade.charactertrigger0.effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.charactertrigger0.effect0.upgrade.bonushp][health] to friendly units."
+      },
+      "lore_tooltips": [
+        {
+          "english": "Lore stuff."
+        }
+      ],
+      "card_art": "@DemonParadeArt",
+      "cost": 1,
+      "card_type": "room",
+      "rarity": "rare",
+      "class": "@ClassYokai",
+      "targets_room": true,
+      "targetless": true,
+      "effects": [
+        "@DemonParadeRoomEffect"
+      ],
+      "pools": [
+        "MegaPool",
+        "RoomAndEquipmentMerchant_RoomPool",
+        "RoomAndEquipmentDraftPool",
+        "TrainRoomPool"
+      ]
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "DemonParadeRoomUpgrade",
+      "titles": {
+        "english": "DemonParade"
+      },
+      "descriptions": {
+        "english": "+[roommodifier0.power][capacity]. When a friendly unit dies, apply +[charactertrigger0.effect0.upgrade.bonusdamage][attack] and +[charactertrigger0.effect0.upgrade.bonushp][health] to friendly units."
+      },
+      "trigger_upgrades": [
+        "@DemonParadeTrigger"
+      ],
+      "room_modifier_upgrades": [
+        "@DemonParadeRoomModifier"
+      ],
+      "hide_icon_on_card": true,
+      "icon": "@DemonParadeArt"
+    },
+    {
+      "id": "DemonParadeThreeAttackOneHealth",
+      "bonus_damage": 3,
+      "bonus_hp": 1
+    }
+  ],
+  "room_modifiers": [
+    {
+      "id": "DemonParadeRoomModifier",
+      "name": "RoomStateCapacityModifier",
+      "disallow_in_deployment": false,
+      "target_mode": "room",
+      "param_int": 1
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "DemonParadeTrigger",
+      "descriptions": {
+        "english": "When a friendly unit dies, apply +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health] to friendly units."
+      },
+      "trigger": "on_death",
+      "hide_visual_and_ignore_silence": true,
+      "effects": [
+        "@ApplyDemonParadeUpgrade"
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "DemonParadeRoomEffect",
+      "name": "CardEffectAttachTrainRoomAttachment",
+      "target_mode": "room",
+      "param_upgrade": "@DemonParadeRoomUpgrade",
+      "param_bool": false,
+      "param_bool_2": false,
+      "target_team": "monsters"
+    },
+    {
+      "id": "ApplyDemonParadeUpgrade",
+      "name": "CardEffectAddTempCardUpgradeToUnits",
+      "target_mode": "room",
+      "target_team": "monsters",
+      "param_upgrade": "@DemonParadeThreeAttackOneHealth"
+    }
+  ],
+  "sprites": [
+    {
+      "id": "DemonParadeArt",
+      "path": "textures/HundredDemonParadeArt.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "DemonParadeArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@DemonParadeArt"
+        }
+      }
+    }
+  ]
+}

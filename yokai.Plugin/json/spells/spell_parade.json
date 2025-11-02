@@ -1,0 +1,64 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "Parade",
+      "names": {
+        "english": "Parade"
+      },
+      "descriptions": {
+        "english": "[descend]. Deal [effect1.power] damage."
+      },
+      "rarity": "common",
+      "class": "@ClassYokai",
+      "card_art": "@ParadeArt",
+      "targets_room": true,
+      "targetless": false,
+      "pools": [
+        "MegaPool"
+      ],
+      "cost": 1,
+      "effects": [
+        {
+          "id": "@ParadeDescend"
+        },
+        {
+          "id": "@ParadeDamage"
+        }
+      ]
+    }
+  ],
+    "effects": [
+      {
+        "id": "ParadeDescend",
+        "name": "CardEffectBump",
+        "target_mode": "drop_target_character",
+        "target_team": "both",
+        "param_int": -1
+      },
+      {
+        "id": "ParadeDamage",
+        "name": "CardEffectDamage",
+        "target_mode": "last_targeted_characters",
+        "target_team": "both",
+        "param_int": 5
+      }
+    ],
+  "sprites": [
+    {
+      "id": "ParadeArt",
+      "path": "textures/ParadeArt.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "ParadeArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@ParadeArt"
+        }
+      }
+    }
+  ]
+}

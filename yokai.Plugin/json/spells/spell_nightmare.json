@@ -1,0 +1,64 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "Nightmare",
+      "names": {
+        "english": "Nightmare"
+      },
+      "descriptions": {
+        "english": "[descend]. Deal [effect1.power] damage."
+      },
+      "rarity": "uncommon",
+      "class": "@ClassYokai",
+      "card_art": "@NightmareArt",
+      "targets_room": true,
+      "targetless": false,
+      "pools": [
+        "MegaPool"
+      ],
+      "cost": 1,
+      "effects": [
+        {
+          "id": "@NightmareDescend"
+        },
+        {
+          "id": "@NightmareDamage"
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "NightmareDescend",
+      "name": "CardEffectBump",
+      "target_mode": "drop_target_character",
+      "target_team": "both",
+      "param_int": -1
+    },
+    {
+      "id": "NightmareDamage",
+      "name": "CardEffectDamage",
+      "target_mode": "last_targeted_characters",
+      "target_team": "both",
+      "param_int": 5
+    }
+  ],
+  "sprites": [
+    {
+      "id": "NightmareArt",
+      "path": "textures/NightmareArt.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "NightmareArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@NightmareArt"
+        }
+      }
+    }
+  ]
+}

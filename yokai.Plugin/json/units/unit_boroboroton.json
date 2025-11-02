@@ -9,7 +9,7 @@
             "card_art": "@Boroboroton",
             "cost": 1,
             "card_type": "monster",
-            "rarity": "uncommon",
+            "rarity": "rare",
             "class": "@ClassYokai",
             "targets_room": true,
             "effects": [
@@ -30,9 +30,9 @@
     "characters": [
         {
             "id": "Boroboroton",
-            "size": 2,
-            "attack_damage": 5,
-            "health": 25,
+            "size": 1,
+            "attack_damage": 15,
+            "health": 5,
             "names": {
                 "english": "Boroboroton"
             },

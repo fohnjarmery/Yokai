@@ -1,0 +1,64 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "FrightfulLaughter",
+      "names": {
+        "english": "Frightful Laughter"
+      },
+      "descriptions": {
+        "english": "[descend]. Deal [effect1.power] damage."
+      },
+      "rarity": "uncommon",
+      "class": "@ClassYokai",
+      "card_art": "@FrightfulLaughterArt",
+      "targets_room": true,
+      "targetless": false,
+      "pools": [
+        "MegaPool"
+      ],
+      "cost": 1,
+      "effects": [
+        {
+          "id": "@FrightfulLaughterDescend"
+        },
+        {
+          "id": "@FrightfulLaughterDamage"
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "FrightfulLaughterDescend",
+      "name": "CardEffectBump",
+      "target_mode": "drop_target_character",
+      "target_team": "both",
+      "param_int": -1
+    },
+    {
+      "id": "FrightfulLaughterDamage",
+      "name": "CardEffectDamage",
+      "target_mode": "last_targeted_characters",
+      "target_team": "both",
+      "param_int": 5
+    }
+  ],
+  "sprites": [
+    {
+      "id": "FrightfulLaughterArt",
+      "path": "textures/FrightfulLaughterArt.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "FrightfulLaughterArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@FrightfulLaughterArt"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "Possession",
+      "names": {
+        "english": "Possession"
+      },
+      "descriptions": {
+        "english": "[descend]. Deal [effect1.power] damage."
+      },
+      "rarity": "common",
+      "class": "@ClassYokai",
+      "card_art": "@PossessionArt",
+      "targets_room": true,
+      "targetless": false,
+      "pools": [
+        "MegaPool"
+      ],
+      "cost": 1,
+      "effects": [
+        {
+          "id": "@PossessionDescend"
+        },
+        {
+          "id": "@PossessionDamage"
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "PossessionDescend",
+      "name": "CardEffectBump",
+      "target_mode": "drop_target_character",
+      "target_team": "both",
+      "param_int": -1
+    },
+    {
+      "id": "PossessionDamage",
+      "name": "CardEffectDamage",
+      "target_mode": "last_targeted_characters",
+      "target_team": "both",
+      "param_int": 5
+    }
+  ],
+  "sprites": [
+    {
+      "id": "PossessionArt",
+      "path": "textures/PossessionArt.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "PossessionArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@PossessionArt"
+        }
+      }
+    }
+  ]
+}

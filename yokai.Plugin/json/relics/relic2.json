@@ -1,0 +1,55 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "relic_effects": [
+    {
+      "id": "Relic2Effect",
+      "name": "RelicEffectEnergyOnCardPlay",
+      "param_int": 2,
+      "param_card_type": "room"
+    }
+  ],
+  "relics": [
+    {
+      "id": "Relic2",
+      "type": "collectable",
+      "names": {
+        "english": "Relic 2"
+      },
+      "descriptions": {
+        "english": "Whenever you play a room, gain [effect0.power] [ember]."
+      },
+      "relic_activated": {
+        "english": "Backup Generator activated!"
+      },
+      "lore_tooltips": [
+        {
+          "english": "A secondary power source that activates whenever new systems come online."
+        }
+      ],
+      "lore_style": "herzal",
+      "relic_effects": [ "@Relic2Effect" ],
+      "icon": "@YokaiRelicIcon2",
+      "icon_small": "@YokaiRelicIconSmall2",
+      "extensions": [
+        {
+          "collectable": {
+            "class": "@ClassYokai",
+            "pools": [ "MegaRelicPool" ],
+            "rarity": "common",
+            "deprioritize_in_ftue_drafts": true
+          }
+        }
+      ]
+    }
+  ],
+  "sprites": [
+    {
+      "id": "YokaiRelicIcon2",
+      "path": "textures/YokaiRelicIcon2.png"
+    },
+    {
+      "id": "YokaiRelicIconSmall2",
+      "path": "textures/YokaiRelicIconIconSmall2.png"
+    }
+  ]
+}

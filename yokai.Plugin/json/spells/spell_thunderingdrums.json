@@ -1,0 +1,64 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "ThunderingDrums",
+      "names": {
+        "english": "Thundering Drums"
+      },
+      "descriptions": {
+        "english": "[descend]. Deal [effect1.power] damage."
+      },
+      "rarity": "uncommon",
+      "class": "@ClassYokai",
+      "card_art": "@ThunderingDrumsArt",
+      "targets_room": true,
+      "targetless": false,
+      "pools": [
+        "MegaPool"
+      ],
+      "cost": 1,
+      "effects": [
+        {
+          "id": "@ThunderingDrumsDescend"
+        },
+        {
+          "id": "@ThunderingDrumsDamage"
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "ThunderingDrumsDescend",
+      "name": "CardEffectBump",
+      "target_mode": "drop_target_character",
+      "target_team": "both",
+      "param_int": -1
+    },
+    {
+      "id": "ThunderingDrumsDamage",
+      "name": "CardEffectDamage",
+      "target_mode": "last_targeted_characters",
+      "target_team": "both",
+      "param_int": 5
+    }
+  ],
+  "sprites": [
+    {
+      "id": "ThunderingDrumsArt",
+      "path": "textures/ThunderingDrumsArt.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "ThunderingDrumsArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@ThunderingDrumsArt"
+        }
+      }
+    }
+  ]
+}

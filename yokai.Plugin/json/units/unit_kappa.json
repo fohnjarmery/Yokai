@@ -1,0 +1,148 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "SpawnKappa",
+      "names": {
+        "english": "Kappa"
+      },
+      "card_art": "@Kappa",
+      "cost": 1,
+      "card_type": "monster",
+      "rarity": "common",
+      "class": "@ClassYokai",
+      "targets_room": true,
+      "effects": [
+        {
+          "id": "@SpawnKappa"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "Flavour Text"
+        }
+      ],
+      "pools": [
+        "MegaPool"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "Kappa",
+      "size": 1,
+      "attack_damage": 15,
+      "health": 15,
+      "names": {
+        "english": "Kappa"
+      },
+      "character_art": "@KappaCharacterArt",
+      "subtypes": [
+        "@Sub_Demon"
+      ],
+      "triggers": [
+        {
+          "id": "@KappaTrigger"
+        }
+      ],
+      "starting_status_effects": [
+        {
+          "status": "stealth",
+          "count": 3
+        }
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "KappaTrigger",
+      "descriptions": {
+        "english": "Gain +[effect0.upgrade.bonusdamage][attack] and [lifesteal] [effect1.status0.power]."
+      },
+      "trigger": "on_any_unit_death_on_floor",
+      "effects": [
+        {
+          "id": "@KappaGainAttack"
+        },
+        {
+          "id": "@KappaGainLifesteal"
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnKappa",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "room",
+      "param_character": "@Kappa"
+    },
+    {
+      "id": "KappaGainAttack",
+      "name": "CardEffectAddTempCardUpgradeToUnits",
+      "target_mode": "self",
+      "target_team": "none",
+      "param_upgrade": "@KappaFiveAttack"
+    },
+    {
+      "id": "KappaGainLifesteal",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "self",
+      "target_team": "none",
+      "param_status_effects": [
+        {
+          "status": "lifesteal",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "KappaFiveAttack",
+      "bonus_damage": 5
+    }
+  ],
+  "sprites": [
+    {
+      "id": "Kappa",
+      "path": "textures/KappaCardArt.png"
+    },
+    {
+      "id": "KappaCharacterArt",
+      "path": "textures/KappaCharacterArt.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "Kappa",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@Kappa"
+        }
+      }
+    },
+    {
+      "id": "KappaCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@KappaCharacterArt",
+          "transform": {
+            "position": {
+              "x": 0.1,
+              "y": 0.73,
+              "z": 0
+            },
+            "scale": {
+              "x": 0.9,
+              "y": 0.9,
+              "z": 1
+            }
+          }
+        }
+      }
+    }
+  ]
+}

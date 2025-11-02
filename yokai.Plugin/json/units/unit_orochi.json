@@ -1,0 +1,149 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "SpawnOrochi",
+      "names": {
+        "english": "Orochi"
+      },
+      "card_art": "@Orochi",
+      "cost": 1,
+      "card_type": "monster",
+      "rarity": "rare",
+      "class": "@ClassYokai",
+      "targets_room": true,
+      "effects": [
+        {
+          "id": "@SpawnOrochi"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "Flavour Text"
+        }
+      ],
+      "pools": [
+        "UnitsAllBanner"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "Orochi",
+      "size": 3,
+      "attack_damage": 33,
+      "health": 33,
+      "names": {
+        "english": "Orochi"
+      },
+      "character_art": "@OrochiCharacterArt",
+      "subtypes": [
+        "SubtypesData_BannerUnit",
+        "@Sub_Demon"
+      ],
+      "triggers": [
+        {
+          "id": "@OrochiTrigger"
+        }
+      ],
+      "starting_status_effects": [
+        {
+          "status": "multistrike",
+          "count": 2
+        }
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "OrochiTrigger",
+      "descriptions": {
+        "english": "Gain +[effect0.upgrade.bonusdamage][attack] and [lifesteal] [effect1.status0.power]."
+      },
+      "trigger": "on_any_unit_death_on_floor",
+      "effects": [
+        {
+          "id": "@OrochiGainAttack"
+        },
+        {
+          "id": "@OrochiGainLifesteal"
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnOrochi",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "room",
+      "param_character": "@Orochi"
+    },
+    {
+      "id": "OrochiGainAttack",
+      "name": "CardEffectAddTempCardUpgradeToUnits",
+      "target_mode": "self",
+      "target_team": "none",
+      "param_upgrade": "@OrochiOneAttack"
+    },
+    {
+      "id": "OrochiGainLifesteal",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "self",
+      "target_team": "none",
+      "param_status_effects": [
+        {
+          "status": "lifesteal",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "OrochiOneAttack",
+      "bonus_damage": 1
+    }
+  ],
+  "sprites": [
+    {
+      "id": "Orochi",
+      "path": "textures/OrochiCardArt.png"
+    },
+    {
+      "id": "OrochiCharacterArt",
+      "path": "textures/OrochiCharacterArt.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "Orochi",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@Orochi"
+        }
+      }
+    },
+    {
+      "id": "OrochiCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@OrochiCharacterArt",
+          "transform": {
+            "position": {
+              "x": 0.1,
+              "y": 0.73,
+              "z": 0
+            },
+            "scale": {
+              "x": 0.9,
+              "y": 0.9,
+              "z": 1
+            }
+          }
+        }
+      }
+    }
+  ]
+}

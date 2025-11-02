@@ -1,0 +1,64 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "ShrineDance",
+      "names": {
+        "english": "Shrine Dance"
+      },
+      "descriptions": {
+        "english": "[descend]. Deal [effect1.power] damage."
+      },
+      "rarity": "uncommon",
+      "class": "@ClassYokai",
+      "card_art": "@ShrineDanceArt",
+      "targets_room": true,
+      "targetless": false,
+      "pools": [
+        "MegaPool"
+      ],
+      "cost": 1,
+      "effects": [
+        {
+          "id": "@ShrineDanceDescend"
+        },
+        {
+          "id": "@ShrineDanceDamage"
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "ShrineDanceDescend",
+      "name": "CardEffectBump",
+      "target_mode": "drop_target_character",
+      "target_team": "both",
+      "param_int": -1
+    },
+    {
+      "id": "ShrineDanceDamage",
+      "name": "CardEffectDamage",
+      "target_mode": "last_targeted_characters",
+      "target_team": "both",
+      "param_int": 5
+    }
+  ],
+  "sprites": [
+    {
+      "id": "ShrineDanceArt",
+      "path": "textures/ShrineDanceArt.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "ShrineDanceArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@ShrineDanceArt"
+        }
+      }
+    }
+  ]
+}

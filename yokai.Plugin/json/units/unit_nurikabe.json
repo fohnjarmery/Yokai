@@ -1,0 +1,160 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.deref.json",
+  "cards": [
+    {
+      "id": "SpawnNurikabe",
+      "names": {
+        "english": "Nurikabe"
+      },
+      "card_art": "@Nurikabe",
+      "cost": 2,
+      "card_type": "monster",
+      "rarity": "uncommon",
+      "class": "@ClassYokai",
+      "targets_room": true,
+      "effects": [
+        {
+          "id": "@SpawnNurikabe"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "Flavour Text"
+        }
+      ],
+      "pools": [
+        "UnitsAllBanner"
+      ]
+    },
+    {
+      "id": "NurikabeAbility",
+      "names": {
+        "english": "Structural Damage"
+      },
+      "descriptions": {
+        "english": "Deal 25 damage to enemy units and 50 damage to self."
+      },
+      "card_art": "@Nurikabe",
+      "is_an_ability": true,
+      "cooldown": 1,
+      "targetless": true,
+      "targets_room": false,
+      "card_type": "spell",
+      "effects": [
+        "@NurikabeAbilitySelf",
+        "@NurikabeAbilityHeroes"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "Nurikabe",
+      "size": 3,
+      "attack_damage": 30,
+      "health": 100,
+      "names": {
+        "english": "Nurikabe"
+      },
+      "character_art": "@NurikabeCharacterArt",
+      "subtypes": [
+        "SubtypesData_BannerUnit",
+        "@Sub_Demon"
+      ],
+      "triggers": [
+        {
+          "id": "@NurikabeTrigger"
+        }
+      ],
+      "ability": "@NurikabeAbility"
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "NurikabeTrigger",
+      "descriptions": {
+        "english": "Restore 15 health."
+      },
+      "trigger": {
+        "id": "@Evoke",
+        "mod_reference": "Conductor"
+      },
+      "effects": [
+        {
+          "id": "@NurikabeGainHealth"
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnNurikabe",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "room",
+      "param_character": "@Nurikabe"
+    },
+    {
+      "id": "NurikabeGainHealth",
+      "name": "CardEffectHeal",
+      "target_mode": "self",
+      "target_team": "monsters",
+      "param_int": 15
+    },
+    {
+      "id": "NurikabeAbilitySelf",
+      "name": "CardEffectDamage",
+      "target_mode": "self",
+      "target_team": "monsters",
+      "param_int": 50
+    },
+    {
+      "id": "NurikabeAbilityHeroes",
+      "name": "CardEffectDamage",
+      "target_mode": "room",
+      "target_team": "heroes",
+      "param_int": 25
+    }
+  ],
+  "sprites": [
+    {
+      "id": "Nurikabe",
+      "path": "textures/NurikabeCardArt.png"
+    },
+    {
+      "id": "NurikabeCharacterArt",
+      "path": "textures/NurikabeCharacterArt.png"
+    }
+  ],
+
+  "game_objects": [
+    {
+      "id": "Nurikabe",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@Nurikabe"
+        }
+      }
+    },
+    {
+      "id": "NurikabeCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@NurikabeCharacterArt",
+          "transform": {
+            "position": {
+              "x": 0.1,
+              "y": 0.73,
+              "z": 0
+            },
+            "scale": {
+              "x": 0.9,
+              "y": 0.9,
+              "z": 1
+            }
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "DivineBranch",
+      "names": {
+        "english": "Divine Branch"
+      },
+      "lore_tooltips": [
+        {
+          "english": "A branch from the Divine Tree."
+        }
+      ],
+      "card_type": "equipment",
+      "rarity": "uncommon",
+      "class": "@ClassYokai",
+      "unlock_level": 4,
+      "card_art": "@DivineBranchArt",
+      "targets_room": true,
+      "targetless": false,
+      "pools": [
+        "MegaPool",
+        "RoomAndEquipmentMerchant_EquipmentPool",
+        "RoomAndEquipmentDraftPool",
+        "EquipmentPoolNonEnemy",
+        "FreeEquipmentMutatorPool"
+      ],
+      "cost": 1,
+      "effects": [
+        "@Equip_DivineBranch"
+      ]
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "upg_DivineBranch",
+      "bonus_damage": 15,
+      "bonus_hp": 0,
+      "status_effect_upgrades": [
+        {
+          "status": "undying",
+          "count": 3
+        }
+      ],
+      "trigger_upgrades": [
+        "@DivineBranchResolveTrigger"
+      ],
+      "icon": "@DivineBranchArt"
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "DivineBranchResolveTrigger",
+      "trigger": "post_combat",
+      "descriptions": {
+        "english": "Die."
+      },
+      "effects": [ "@DivineBranchDie" ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "Equip_DivineBranch",
+      "name": "CardEffectAttachEquipment",
+      "target_mode": "drop_target_character",
+      "target_team": "monsters",
+      "param_upgrade": "@upg_DivineBranch"
+    },
+    {
+      "id": "DivineBranchDie",
+      "name": "CardEffectKill",
+      "target_mode": "self"
+    }
+  ],
+  "sprites": [
+    {
+      "id": "DivineBranchArt",
+      "path": "textures/DivineBranchArt.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "DivineBranchArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@DivineBranchArt"
+        }
+      }
+    }
+  ]
+}

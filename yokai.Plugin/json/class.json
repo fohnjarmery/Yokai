@@ -1,106 +1,107 @@
 {
     "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
     "classes": [
-        {
-            "id": "ClassYokai",
-            "titles": {
-                "english": "Yokai"
-            },
-            "descriptions": {
-                "english": "The hundred-demon Parade of Yokai is marching through Heaven!"
-            },
-            "subclass_descriptions": {
-                "english": "Subclass description"
-            },
-            "icons": {
-                "small": "@YokaiLogo48",
-                "medium": "@YokaiLogo92",
-                "large": "@YokaiLogo128",
-                "silhouette": "@YokaiLogoOutline"
-            },
-            "card_style": "pyreborne",
-            "ui_color": {
-                "r": 0.91,
-                "g": 0.76,
-                "b": 0.24
-            },
-            "ui_color_dark": {
-                "r": 0.50,
-                "g": 0.42,
-                "b": 0.15
-            },
-            "ui_gradient": [
-                {
-                    "time": 0.0,
-                    "color": {
-                        "r": 1.0
-                    }
-                },
-                {
-                    "time": 1.0,
-                    "color": {
-                        "r": 0.91,
-                        "g": 0.76,
-                        "b": 0.24
-                    }
-                }
+      {
+        "id": "ClassYokai",
+        "titles": {
+          "english": "Yokai"
+        },
+        "descriptions": {
+          "english": "The hundred-demon Parade of Yokai is marching through Heaven!"
+        },
+        "subclass_descriptions": {
+          "english": "Subclass description"
+        },
+        "icons": {
+          "small": "@YokaiLogo48",
+          "medium": "@YokaiLogo92",
+          "large": "@YokaiLogo128",
+          "silhouette": "@YokaiLogoOutline"
+        },
+        "card_draft_icon": "@CardDraftIcon",
+        "card_style": "pyreborne",
+        "ui_color": {
+          "r": 0.91,
+          "g": 0.76,
+          "b": 0.24
+        },
+        "ui_color_dark": {
+          "r": 0.50,
+          "g": 0.42,
+          "b": 0.15
+        },
+        "ui_gradient": [
+          {
+            "time": 0.0,
+            "color": {
+              "r": 1.0
+            }
+          },
+          {
+            "time": 1.0,
+            "color": {
+              "r": 0.91,
+              "g": 0.76,
+              "b": 0.24
+            }
+          }
+        ],
+        "champions": [
+          {
+            "id": "KitsuneChampion",
+            "card_data": "@SpawnKitsune",
+            "starter_card": "@SpawnKodama",
+            "upgrade_tree": [
+              [
+                "@upg_NineTailed1",
+                "@upg_NineTailed2",
+                "@upg_NineTailed3"
+              ],
+              [
+                "@upg_Haunting1",
+                "@upg_Haunting2",
+                "@upg_Haunting3"
+              ],
+              [
+                "@upg_Mischievous1",
+                "@upg_Mischievous2",
+                "@upg_Mischievous3"
+              ]
             ],
-                        "champions": [
-                {
-                    "id": "KitsuneChampion",
-                    "card_data": "@SpawnKitsune",
-                    "starter_card": "@SpawnKodama",
-                    "upgrade_tree": [
-                        [
-                            "@upg_NineTailed1",
-                            "@upg_NineTailed2",
-                            "@upg_NineTailed3"
-                        ],
-                        [
-                            "@upg_Haunting1",
-                            "@upg_Haunting2",
-                            "@upg_Haunting3"
-                        ],
-                        [
-                            "@upg_Mischievous1",
-                            "@upg_Mischievous2",
-                            "@upg_Mischievous3"
-                        ]
-                    ],
-                    "icon": "@icon_Kitsune",
-                    "portrait": "@icon_Kitsune"
-                },
-                {
-                    "id": "TenguChampion",
-                    "card_data": "@SpawnTengu",
-                    "starter_card": "@Darkness",
-                    "upgrade_tree": [
-                        [
-                            "@upg_Fujin1",
-                            "@upg_Fujin2",
-                            "@upg_Fujin3"
-                        ],
-                        [
-                            "@upg_Raijin1",
-                            "@upg_Raijin2",
-                            "@upg_Raijin3"
-                        ],
-                        [
-                            "@upg_Shadow1",
-                            "@upg_Shadow2",
-                            "@upg_Shadow3"
-                        ]
-                    ],
-                    "icon": "@icon_Tengu",
-                    "portrait": "@icon_Tengu"
-                }
+            "icon": "@icon_Kitsune",
+            "portrait": "@icon_Kitsune"
+          },
+          {
+            "id": "TenguChampion",
+            "card_data": "@SpawnTengu",
+            "starter_card": "@Darkness",
+            "upgrade_tree": [
+              [
+                "@upg_Fujin1",
+                "@upg_Fujin2",
+                "@upg_Fujin3"
+              ],
+              [
+                "@upg_Raijin1",
+                "@upg_Raijin2",
+                "@upg_Raijin3"
+              ],
+              [
+                "@upg_Shadow1",
+                "@upg_Shadow2",
+                "@upg_Shadow3"
+              ]
             ],
-            "is_crew": false,
-            "class_select_character_displays": [
-                "@KitsuneClassDisplayCharacterArt",
-                "@TenguClassDisplayCharacterArt"
-            ]
-        }
+            "icon": "@icon_Tengu",
+            "portrait": "@icon_Tengu"
+          }
+        ],
+        "is_crew": false,
+        "class_select_character_displays": [
+          "@KitsuneClassDisplayCharacterArt",
+          "@TenguClassDisplayCharacterArt"
+        ]
+      }
     ],
     "map_nodes": [
         {
@@ -137,9 +138,17 @@
      "card_pools": [
         {
             "id": "YokaiBannerCardPool",
-            "cards": [
-                "@SpawnIpponDatara"
-            ]
+          "cards": [
+            "@SpawnOni",
+            "@SpawnWanyudo",
+            "@SpawnQilin",
+            "@SpawnKasaObake",
+            "@SpawnNurikabe",
+            "@SpawnUmibozu",
+            "@SpawnYukiOnna",
+            "@SpawnOrochi",
+            "@SpawnIpponDatara"
+          ]
         }
     ],
      "rewards": [
@@ -276,12 +285,16 @@
             "path": "textures/ClanAssets/YokaiLogoOutline.png"
         },
         {
-            "id": "icon_Kitsine",
+            "id": "icon_Kitsune",
             "path": "textures/ClanAssets/icon_Kitsune.png"
         },
         {
-            "id": "icon_Tengu",
-            "path": "textures/ClanAssets/icon_Tengu.png"
+        "id": "icon_Tengu",
+        "path": "textures/ClanAssets/icon_Tengu.png"
+        },
+        {
+        "id": "CardDraftIcon",
+        "path": "textures/BasicClanCardDraft.png"
         }
-    ]
+     ]
 }
