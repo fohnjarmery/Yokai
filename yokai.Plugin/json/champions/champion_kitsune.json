@@ -236,7 +236,7 @@
       "id": "Haunting1Trigger",
       "trigger": "after_spawn_enchant",
       "descriptions": {
-        "english": "Apply 5 Frostbite to enemy units."
+        "english": "Apply 2 Haunt to all units."
       },
       "effects": [
         "@Haunting1Enchant"
@@ -246,7 +246,7 @@
       "id": "Haunting2Trigger",
       "trigger": "after_spawn_enchant",
       "descriptions": {
-        "english": "Apply 15 Frostbite to enemy units."
+        "english": "Apply 5 Haunt to all units."
       },
       "effects": [
         "@Haunting2Enchant"
@@ -256,7 +256,7 @@
       "id": "Haunting3Trigger",
       "trigger": "after_spawn_enchant",
       "descriptions": {
-        "english": "Apply 30 Frostbite to enemy units."
+        "english": "Apply 10 Haunt to all units."
       },
       "effects": [
         "@Haunting3Enchant"
@@ -341,11 +341,11 @@
       "id": "Haunting1Enchant",
       "name": "CardEffectEnchant",
       "target_mode": "room",
-      "target_team": "heroes",
+      "target_team": "both",
       "param_status_effects": [
         {
-          "status": "poison",
-          "count": 5
+          "status": "@haunt",
+          "count": 2
         }
       ]
     },
@@ -353,11 +353,11 @@
       "id": "Haunting2Enchant",
       "name": "CardEffectEnchant",
       "target_mode": "room",
-      "target_team": "heroes",
+      "target_team": "both",
       "param_status_effects": [
         {
-          "status": "poison",
-          "count": 15
+          "status": "@haunt",
+          "count": 5
         }
       ]
     },
@@ -365,11 +365,11 @@
       "id": "Haunting3Enchant",
       "name": "CardEffectEnchant",
       "target_mode": "room",
-      "target_team": "heroes",
+      "target_team": "both",
       "param_status_effects": [
         {
-          "status": "poison",
-          "count": 30
+          "status": "@haunt",
+          "count": 10
         }
       ]
     },

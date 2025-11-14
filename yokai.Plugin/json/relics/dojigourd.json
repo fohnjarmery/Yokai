@@ -1,33 +1,36 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.deref.json",
   "relic_effects": [
     {
-      "id": "Relic1Effect",
-      "name": "RelicEffectEnergyOnCardPlay",
-      "param_int": 2,
-      "param_card_type": "room"
+      "id": "DojiGourdEffect",
+      "name": "RelicEffectEmberOnUnitTrigger",
+      "source_team": "monsters",
+      "param_int": 1,
+      "param_subtype": "@Sub_Demon",
+      "param_trigger": "on_own_ability_activated",
+      "param_card_type": "spell"
     }
   ],
   "relics": [
     {
-      "id": "Relic1",
+      "id": "DojiGourd",
       "type": "collectable",
       "names": {
-        "english": "Relic 1"
+        "english": "Shuten Doji's Gourd'"
       },
       "descriptions": {
-        "english": "Whenever you play a room, gain [effect0.power] [ember]."
+        "english": "Whenever a Demon unit activates their Ability, gain 1 [ember]."
       },
       "relic_activated": {
-        "english": "Backup Generator activated!"
+        "english": "Drank from the Gourd!"
       },
       "lore_tooltips": [
         {
-          "english": "A secondary power source that activates whenever new systems come online."
+          "english": "Chug chug chug."
         }
       ],
       "lore_style": "herzal",
-      "relic_effects": [ "@Relic1Effect" ],
+      "relic_effects": [ "@DojiGourdEffect" ],
       "icon": "@YokaiRelicIcon1",
       "icon_small": "@YokaiRelicIconSmall1",
       "extensions": [

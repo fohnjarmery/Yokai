@@ -2,32 +2,40 @@
   "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
   "relic_effects": [
     {
-      "id": "Relic9Effect",
-      "name": "RelicEffectEnergyOnCardPlay",
-      "param_int": 2,
-      "param_card_type": "room"
+      "id": "GrudgeEffect",
+      "name": "RelicEffectAddStatusEffectOnStatusApplied",
+      "target_mode": "front_in_room",
+      "source_team": "none",
+      "param_int": 1,
+      "param_bool": true,
+      "param_status_effects": [
+        {
+          "status": "@panic",
+          "count": 1
+        }
+      ]
     }
   ],
   "relics": [
     {
-      "id": "Relic9",
+      "id": "Grudge",
       "type": "collectable",
       "names": {
-        "english": "Relic 9"
+        "english": "Grudge"
       },
       "descriptions": {
-        "english": "Whenever you play a room, gain [effect0.power] [ember]."
+        "english": "Whenever a unit gains Panic, they gain one more."
       },
       "relic_activated": {
-        "english": "Backup Generator activated!"
+        "english": "Grudge!"
       },
       "lore_tooltips": [
         {
-          "english": "A secondary power source that activates whenever new systems come online."
+          "english": "Like the movie."
         }
       ],
       "lore_style": "herzal",
-      "relic_effects": [ "@Relic9Effect" ],
+      "relic_effects": [ "@GrudgeEffect" ],
       "icon": "@YokaiRelicIcon9",
       "icon_small": "@YokaiRelicIconSmall9",
       "extensions": [

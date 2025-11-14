@@ -1,33 +1,38 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.deref.json",
   "relic_effects": [
     {
-      "id": "Relic5Effect",
-      "name": "RelicEffectEnergyOnCardPlay",
-      "param_int": 2,
-      "param_card_type": "room"
+      "id": "YokaiIncenseEffect",
+      "name": "RelicEffectModifyTriggerCount",
+      "target_mode": "front_in_room",
+      "source_team": "monsters",
+      "param_int": 1,
+      "param_trigger": {
+        "id": "@Evoke",
+        "mod_reference": "Conductor"
+      }
     }
   ],
   "relics": [
     {
-      "id": "Relic5",
+      "id": "YokaiIncense",
       "type": "collectable",
       "names": {
-        "english": "Relic 5"
+        "english": "Yokai Incense"
       },
       "descriptions": {
-        "english": "Whenever you play a room, gain [effect0.power] [ember]."
+        "english": "<b>Evoke</b> triggers an additional time."
       },
       "relic_activated": {
-        "english": "Backup Generator activated!"
+        "english": "It stirs"
       },
       "lore_tooltips": [
         {
-          "english": "A secondary power source that activates whenever new systems come online."
+          "english": "sniffu."
         }
       ],
-      "lore_style": "herzal",
-      "relic_effects": [ "@Relic5Effect" ],
+      "lore_style": "malicka",
+      "relic_effects": [ "@YokaiIncenseEffect" ],
       "icon": "@YokaiRelicIcon5",
       "icon_small": "@YokaiRelicIconSmall5",
       "extensions": [

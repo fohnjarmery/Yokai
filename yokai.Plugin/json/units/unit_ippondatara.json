@@ -1,38 +1,56 @@
 {
-    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.deref.json",
     "cards": [
-        {
-            "id": "SpawnIpponDatara",
-            "names": {
-                "english": "Ippon Datara"
-            },
-            "card_art": "@IpponDatara",
-            "cost": 2,
-            "card_type": "monster",
-            "rarity": "uncommon",
-            "class": "@ClassYokai",
-            "targets_room": true,
-            "effects": [
-                {
-                    "id": "@SpawnIpponDatara"
-                }
-            ],
-            "lore_tooltips": [
-                {
-                    "english": "Flavour Text"
-                }
-            ],
-            "pools": [
-                "UnitsAllBanner"
-            ]
-        }
+      {
+        "id": "SpawnIpponDatara",
+        "names": {
+          "english": "Ippon Datara"
+        },
+        "card_art": "@IpponDatara",
+        "cost": 2,
+        "card_type": "monster",
+        "rarity": "uncommon",
+        "class": "@ClassYokai",
+        "targets_room": true,
+        "effects": [
+          {
+            "id": "@SpawnIpponDatara"
+          }
+        ],
+        "lore_tooltips": [
+          {
+            "english": "Flavour Text"
+          }
+        ],
+        "pools": [
+          "UnitsAllBanner"
+        ]
+      },
+      {
+        "id": "IpponDataraAbility",
+        "names": {
+          "english": "Reinforce"
+        },
+        "descriptions": {
+          "english": "Apply 2 Damage Shield to the front allied unit."
+        },
+        "card_art": "@IpponDatara",
+        "is_an_ability": true,
+        "cooldown": 3,
+        "targetless": true,
+        "targets_room": false,
+        "card_type": "spell",
+        "effects": [
+          "@IpponDataraApplyShield"
+        ]
+      }
     ],
     "characters": [
       {
         "id": "IpponDatara",
         "size": 2,
-        "attack_damage": 5,
-        "health": 15,
+        "attack_damage": 12,
+        "health": 20,
         "names": {
           "english": "IpponDatara"
         },
@@ -46,30 +64,25 @@
             "id": "@IpponDataraTrigger"
           }
         ],
-        "starting_status_effects": [
-          {
-            "status": "sweep",
-            "count": 1
-          }
-        ]
+        "ability": "@IpponDataraAbility"
       }
     ],
     "character_triggers": [
-        {
-            "id": "IpponDataraTrigger",
-            "descriptions": {
-                "english": "Gain +[effect0.upgrade.bonusdamage][attack] and [lifesteal] [effect1.status0.power]."
-            },
-            "trigger": "on_any_unit_death_on_floor",
-            "effects": [
-                {
-                    "id": "@IpponDataraGainAttack"
-                },
-                {
-                    "id": "@IpponDataraGainLifesteal"
-                }
-            ]
-        }
+      {
+        "id": "IpponDataraTrigger",
+        "descriptions": {
+          "english": "Apply +10 attack to self."
+        },
+        "trigger": {
+          "id": "@Evoke",
+          "mod_reference": "Conductor"
+        },
+        "effects": [
+          {
+            "id": "@IpponDataraGainAttack"
+          }
+        ]
+      }
     ],
     "effects": [
         {
@@ -83,25 +96,25 @@
             "name": "CardEffectAddTempCardUpgradeToUnits",
             "target_mode": "self",
             "target_team": "none",
-            "param_upgrade": "@IpponDataraOneAttack"
+            "param_upgrade": "@IpponDataraTenAttack"
         },
         {
-            "id": "IpponDataraGainLifesteal",
+            "id": "IpponDataraApplyShield",
             "name": "CardEffectAddStatusEffect",
-            "target_mode": "self",
-            "target_team": "none",
+            "target_mode": "front_in_room",
+            "target_team": "monsters",
             "param_status_effects": [
                 {
-                    "status": "lifesteal",
-                    "count": 1
+                    "status": "damage shield",
+                    "count": 2
                 }
             ]
         }
     ],
     "upgrades": [
         {
-            "id": "IpponDataraOneAttack",
-            "bonus_damage": 1
+            "id": "IpponDataraTenAttack",
+            "bonus_damage": 10
         }
     ],
     "sprites": [

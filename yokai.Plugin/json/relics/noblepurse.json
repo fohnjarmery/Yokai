@@ -1,33 +1,38 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.deref.json",
   "relic_effects": [
     {
-      "id": "Relic2Effect",
-      "name": "RelicEffectEnergyOnCardPlay",
+      "id": "NoblePurseEffect",
+      "name": "RelicEffectGoldOnTrigger",
       "param_int": 2,
-      "param_card_type": "room"
+      "param_trigger": {
+        "id": "@Evoke",
+        "mod_reference": "Conductor"
+      },
+      "source_team": "monsters"
+
     }
   ],
   "relics": [
     {
-      "id": "Relic2",
+      "id": "NoblePurse",
       "type": "collectable",
       "names": {
-        "english": "Relic 2"
+        "english": "Noble's Purse'"
       },
       "descriptions": {
-        "english": "Whenever you play a room, gain [effect0.power] [ember]."
+        "english": "Whenever a unit triggers Evoke, gain 2 Gold."
       },
       "relic_activated": {
-        "english": "Backup Generator activated!"
+        "english": "The purse spills!"
       },
       "lore_tooltips": [
         {
-          "english": "A secondary power source that activates whenever new systems come online."
+          "english": "Jingle Jangle."
         }
       ],
       "lore_style": "herzal",
-      "relic_effects": [ "@Relic2Effect" ],
+      "relic_effects": [ "@NoblePurseEffect" ],
       "icon": "@YokaiRelicIcon2",
       "icon_small": "@YokaiRelicIconSmall2",
       "extensions": [

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.deref.json",
   "cards": [
     {
       "id": "SpawnWanyudo",
@@ -25,6 +25,26 @@
       "pools": [
         "UnitsAllBanner"
       ]
+    },
+    {
+      "id": "WanyudoAbility",
+      "names": {
+        "english": "Hot Headed"
+      },
+      "descriptions": {
+        "english": "Apply Rage 4 to self."
+      },
+      "card_art": "@Wanyudo",
+      "is_an_ability": true,
+      "cooldown": 3,
+      "targetless": true,
+      "targets_room": false,
+      "card_type": "spell",
+      "effects": [
+        {
+          "id": "@WanyudoAbilityEffect"
+        }
+      ]
     }
   ],
   "characters": [
@@ -45,22 +65,20 @@
         {
           "id": "@WanyudoTrigger"
         }
-      ]
+      ],
+      "ability": "@WanyudoAbility"
     }
   ],
   "character_triggers": [
     {
       "id": "WanyudoTrigger",
       "descriptions": {
-        "english": "Gain +[effect0.upgrade.bonusdamage][attack] and [lifesteal] [effect1.status0.power]."
+        "english": "Reduce allied cooldowns by 1."
       },
-      "trigger": "on_any_unit_death_on_floor",
+      "trigger": "on_kill",
       "effects": [
         {
           "id": "@WanyudoGainAttack"
-        },
-        {
-          "id": "@WanyudoGainLifesteal"
         }
       ]
     }
@@ -74,28 +92,27 @@
     },
     {
       "id": "WanyudoGainAttack",
-      "name": "CardEffectAddTempCardUpgradeToUnits",
-      "target_mode": "self",
-      "target_team": "none",
-      "param_upgrade": "@WanyudoOneAttack"
-    },
-    {
-      "id": "WanyudoGainLifesteal",
-      "name": "CardEffectAddStatusEffect",
-      "target_mode": "self",
-      "target_team": "none",
+      "name": "CardEffectRemoveStatusEffect",
+      "target_mode": "room",
+      "target_team": "monsters",
       "param_status_effects": [
         {
-          "status": "lifesteal",
+          "status": "cooldown",
           "count": 1
         }
       ]
-    }
-  ],
-  "upgrades": [
+    },
     {
-      "id": "WanyudoOneAttack",
-      "bonus_damage": 1
+      "id": "WanyudoAbilityEffect",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "self",
+      "target_team": "monsters",
+      "param_status_effects": [
+        {
+          "status": "buff",
+          "count": 4
+        }
+      ]
     }
   ],
   "sprites": [

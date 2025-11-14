@@ -1,33 +1,39 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.deref.json",
   "relic_effects": [
     {
-      "id": "Relic4Effect",
-      "name": "RelicEffectEnergyOnCardPlay",
-      "param_int": 2,
-      "param_card_type": "room"
+      "id": "TenguFeatherEffect",
+      "name": "RelicEffectAddStatusEffectOnUnitMoved",
+      "source_team": "heroes",
+      "param_status_effects": [
+        {
+          "status": "debuff",
+          "count": 1
+        }
+      ],
+      "param_card_type": "invalid"     
     }
   ],
   "relics": [
     {
-      "id": "Relic4",
+      "id": "TenguFeather4",
       "type": "collectable",
       "names": {
-        "english": "Relic 4"
+        "english": "Tengu Feather Fan"
       },
       "descriptions": {
-        "english": "Whenever you play a room, gain [effect0.power] [ember]."
+        "english": "Whenever an enemy unit moves, apply 1 Sap."
       },
       "relic_activated": {
-        "english": "Backup Generator activated!"
+        "english": "Confusion!"
       },
       "lore_tooltips": [
         {
-          "english": "A secondary power source that activates whenever new systems come online."
+          "english": "Jet-black feathers of a Tengu."
         }
       ],
       "lore_style": "herzal",
-      "relic_effects": [ "@Relic4Effect" ],
+      "relic_effects": [ "@TenguFeatherEffect" ],
       "icon": "@YokaiRelicIcon4",
       "icon_small": "@YokaiRelicIconSmall4",
       "extensions": [

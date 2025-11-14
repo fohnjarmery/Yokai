@@ -1,0 +1,87 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.deref.json",
+  "relic_effects": [
+    {
+      "id": "HannyaMaskEffect",
+      "name": "RelicEffectAddTrigger",
+      "target_mode": "room",
+      "source_team": "monsters",
+      "param_bool": true,
+      "param_int": 2,
+      "triggers": [ "@HannyaMaskResolveTrigger" ]
+    }
+  ],
+  "relics": [
+    {
+      "id": "HannyaMask",
+      "type": "collectable",
+      "names": {
+        "english": "Hannya Mask"
+      },
+      "descriptions": {
+        "english": "Your units apply Panic 2 to enemy units at the end of combat."
+      },
+      "relic_activated": {
+        "english": "Spooked!"
+      },
+      "lore_tooltips": [
+        {
+          "english": "Creepy Mask."
+        }
+      ],
+      "lore_style": "herzal",
+      "relic_effects": [ "@HannyaMaskEffect" ],
+      "icon": "@YokaiRelicIcon8",
+      "icon_small": "@YokaiRelicIconSmall8",
+      "extensions": [
+        {
+          "collectable": {
+            "class": "@ClassYokai",
+            "pools": [ "MegaRelicPool" ],
+            "rarity": "common",
+            "deprioritize_in_ftue_drafts": true
+          }
+        }
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "HannyaMaskResolveTrigger",
+      "trigger": "post_combat",
+      "descriptions": {
+        "english": "Doesn't need to be here"
+      },
+      "hide_visual_and_ignore_silence": true,
+      "effects": [
+        {
+          "id": "@HannyaMaskApplyPanic"
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "HannyaMaskApplyPanic",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "room",
+      "target_team": "heroes",
+      "param_status_effects": [
+        {
+          "status": "@panic",
+          "count": 2
+        }
+      ]
+    }
+  ],
+  "sprites": [
+    {
+      "id": "YokaiRelicIcon8",
+      "path": "textures/YokaiRelicIcon8.png"
+    },
+    {
+      "id": "YokaiRelicIconSmall8",
+      "path": "textures/YokaiRelicIconIconSmall8.png"
+    }
+  ]
+}

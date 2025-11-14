@@ -41,6 +41,68 @@
         "@StormAttack",
         "@StormDaze"
       ]
+    },
+    {
+      "id": "Fujin1Ability",
+      "names": {
+        "english": "Hurricane Leap"
+      },
+      "descriptions": {
+        "english": "Advance. Attack immediately and Apply 1 Dazed to self. Pushes attacked enemy back."
+      },
+      "card_art": "@Tengu",
+      "is_an_ability": true,
+      "cooldown": 1,
+      "targetless": false,
+      "targets_room": true,
+      "card_type": "spell",
+      "effects": [
+        "@StormLeap",
+        "@StormAttack",
+        "@StormPush",
+        "@StormDaze"
+      ]
+    },
+    {
+      "id": "Fujin2Ability",
+      "names": {
+        "english": "Hurricane Leap II"
+      },
+      "descriptions": {
+        "english": "Advance. Attack immediately and Apply 1 Dazed to self. Pushes attacked enemy back."
+      },
+      "card_art": "@Tengu",
+      "is_an_ability": true,
+      "cooldown": 1,
+      "targetless": false,
+      "targets_room": true,
+      "card_type": "spell",
+      "effects": [
+        "@StormLeap",
+        "@StormAttack",
+        "@StormPush",
+        "@StormDaze"
+      ]
+    },
+    {
+      "id": "Fujin3Ability",
+      "names": {
+        "english": "Hurricane Leap III"
+      },
+      "descriptions": {
+        "english": "Advance. Attack immediately. Pushes attacked enemy back."
+      },
+      "card_art": "@Tengu",
+      "is_an_ability": true,
+      "cooldown": 1,
+      "targetless": false,
+      "targets_room": true,
+      "card_type": "spell",
+      "effects": [
+        "@StormLeap",
+        "@StormAttack",
+        "@StormPush"
+      ]
     }
   ],
 
@@ -78,7 +140,8 @@
         "english": "Damage path"
       },
       "bonus_damage": 8,
-      "bonus_hp": 0
+      "bonus_hp": 0,
+      "ability_upgrade": "@Fujin1Ability"
     },
     {
       "id": "upg_Fujin2",
@@ -89,7 +152,8 @@
         "english": "Even more damage path"
       },
       "bonus_damage": 20,
-      "bonus_hp": 10
+      "bonus_hp": 10,
+      "ability_upgrade": "@Fujin2Ability"
     },
     {
       "id": "upg_Fujin3",
@@ -100,7 +164,8 @@
         "english": "So much damage path"
       },
       "bonus_damage": 45,
-      "bonus_hp": 10
+      "bonus_hp": 10,
+      "ability_upgrade": "@Fujin3Ability"
     },
     {
       "id": "upg_Raijin1",
@@ -153,7 +218,10 @@
         "english": "mixed path"
       },
       "bonus_damage": 4,
-      "bonus_hp": 20
+      "bonus_hp": 20,
+      "trigger_upgrades": [
+        "@Shadow1Trigger"
+      ]
     },
     {
       "id": "upg_Shadow2",
@@ -164,7 +232,10 @@
         "english": "even more mixed path"
       },
       "bonus_damage": 13,
-      "bonus_hp": 35
+      "bonus_hp": 35,
+      "trigger_upgrades": [
+        "@Shadow2Trigger"
+      ]
     },
     {
       "id": "upg_Shadow3",
@@ -175,7 +246,10 @@
         "english": "so much mixed path"
       },
       "bonus_damage": 30,
-      "bonus_hp": 65
+      "bonus_hp": 65,
+      "trigger_upgrades": [
+        "@Shadow3Trigger"
+      ]
     }
   ],
   "character_triggers": [
@@ -217,6 +291,38 @@
       "effects": [
         "@Raijin3Evoke"
       ]
+    },
+    {
+      "id": "Shadow1Trigger",
+      "trigger": "on_own_ability_activated",
+      "descriptions": {
+        "english": "Apply 1 [Stealth] to allied units except self."
+      },
+      "effects": [
+        "@Shadow1ConjureStealth"
+      ]
+    },
+    {
+      "id": "Shadow2Trigger",
+      "trigger": "on_own_ability_activated",
+      "descriptions": {
+        "english": "Apply 1 [Stealth] and +5 Attack to allied units except self."
+      },
+      "effects": [
+        "@Shadow1ConjureStealth",
+        "@Shadow2ConjureAttack"
+      ]
+    },
+    {
+      "id": "Shadow3Trigger",
+      "trigger": "on_own_ability_activated",
+      "descriptions": {
+        "english": "Apply 1 [Stealth] and +10 Attack to allied units except self."
+      },
+      "effects": [
+        "@Shadow1ConjureStealth",
+        "@Shadow3ConjureAttack"
+      ]
     }
   ],
   "effects": [
@@ -253,6 +359,13 @@
       ]
     },
     {
+      "id": "StormPush",
+      "name": "CardEffectFloorRearrange",
+      "target_mode": "last_attacked_character",
+      "target_team": "heroes",
+      "param_int": 1
+    },
+    {
       "id": "Raijin1Evoke",
       "name": "CardEffectBuffDamage",
       "target_mode": "self",
@@ -272,6 +385,35 @@
       "target_mode": "self",
       "target_team": "monsters",
       "param_int": 5
+    },
+    {
+      "id": "Shadow1ConjureStealth",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "room",
+      "target_team": "monsters",
+      "param_status_effects": [
+        {
+          "status": "stealth",
+          "count": 1
+        }
+      ],
+      "target_character_excluded_subtypes": ["SubtypesData_Champion_83f21cbe-9d9b-4566-a2c3-ca559ab8ff34"]
+    },
+    {
+      "id": "Shadow2ConjureAttack",
+      "name": "CardEffectBuffDamage",
+      "target_mode": "room",
+      "target_team": "monsters",
+      "param_int": 5,
+      "target_character_excluded_subtypes": [ "SubtypesData_Champion_83f21cbe-9d9b-4566-a2c3-ca559ab8ff34" ]
+    },
+    {
+      "id": "Shadow3ConjureAttack",
+      "name": "CardEffectBuffDamage",
+      "target_mode": "room",
+      "target_team": "monsters",
+      "param_int":  10,
+      "target_character_excluded_subtypes": [ "SubtypesData_Champion_83f21cbe-9d9b-4566-a2c3-ca559ab8ff34" ]
     }
   ],
   "sprites": [

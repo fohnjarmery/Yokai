@@ -1,33 +1,42 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.deref.json",
   "relic_effects": [
     {
-      "id": "Relic7Effect",
-      "name": "RelicEffectEnergyOnCardPlay",
-      "param_int": 2,
-      "param_card_type": "room"
+      "id": "ScampussEffect",
+      "name": "RelicEffectDrawOnPreOpeningDraw",
+      "param_int": 1,
+      "param_card_filter": "OnlyUnit",
+      "param_bool": true,
+      "param_upgrade": "@ScampussUpgrade"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "ScampussUpgrade",
+      "bonus_damage": 10,
+      "cost_reduction": 1
     }
   ],
   "relics": [
     {
-      "id": "Relic7",
+      "id": "Scampuss",
       "type": "collectable",
       "names": {
-        "english": "Relic 7"
+        "english": "Friendly Scampuss"
       },
       "descriptions": {
-        "english": "Whenever you play a room, gain [effect0.power] [ember]."
+        "english": "On Deployment Phase, draw a non-Banner unit and apply +10[attack] and -1[ember]."
       },
       "relic_activated": {
-        "english": "Backup Generator activated!"
+        "english": "Meow~"
       },
       "lore_tooltips": [
         {
-          "english": "A secondary power source that activates whenever new systems come online."
+          "english": "Pretty cute."
         }
       ],
-      "lore_style": "herzal",
-      "relic_effects": [ "@Relic7Effect" ],
+      "lore_style": "heph",
+      "relic_effects": [ "@ScampussEffect" ],
       "icon": "@YokaiRelicIcon7",
       "icon_small": "@YokaiRelicIconSmall7",
       "extensions": [

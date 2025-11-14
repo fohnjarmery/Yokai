@@ -1,33 +1,40 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.deref.json",
   "relic_effects": [
     {
-      "id": "Relic10Effect",
-      "name": "RelicEffectEnergyOnCardPlay",
-      "param_int": 2,
-      "param_card_type": "room"
+      "id": "OniMaskEffect",
+      "name": "RelicEffectAddStatusEffectOnSpawn",
+      "source_team": "both",
+      "param_bool": false,
+      "param_status_effects": [
+        {
+          "status": "@haunt",
+          "count": 1
+        }
+      ]
     }
   ],
   "relics": [
     {
-      "id": "Relic10",
+      "id": "OniMask",
       "type": "collectable",
       "names": {
-        "english": "Relic 10"
+        "english": "Oni Mask"
       },
       "descriptions": {
-        "english": "Whenever you play a room, gain [effect0.power] [ember]."
+        "english": "All units enter with 1 Haunt."
       },
       "relic_activated": {
-        "english": "Backup Generator activated!"
+        "english": "Haunted!"
       },
       "lore_tooltips": [
         {
-          "english": "A secondary power source that activates whenever new systems come online."
+          "english": "Lots of haunt applies to allies and enemies."
         }
       ],
+      "disallow_in_deployment": false,
       "lore_style": "herzal",
-      "relic_effects": [ "@Relic10Effect" ],
+      "relic_effects": [ "@OniMaskEffect" ],
       "icon": "@YokaiRelicIcon10",
       "icon_small": "@YokaiRelicIconSmall10",
       "extensions": [

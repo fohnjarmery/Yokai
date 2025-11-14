@@ -1,12 +1,12 @@
 {
-    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.deref.json",
     "cards": [{
         "id": "Darkness",
         "names": {
             "english": "Darkness"
         },
         "descriptions": {
-            "english": "[descend]. Deal [effect1.power] damage."
+            "english": "[Shuffle] enemy units. Apply 2 Panic."
         },
         "rarity": "common",
         "class": "@ClassYokai",
@@ -19,27 +19,34 @@
         "cost": 1,
         "effects": [
             {
-                "id":"@DarknessDescend"
+                "id":"@DarknessShuffle"
             },
             {
-                "id": "@DarknessDamage"
+                "id":"@DarknessStatus"
             }
         ]
     }],
     "effects": [
-        {
-            "id": "DarknessDescend",
-            "name": "CardEffectBump",
-            "target_mode": "drop_target_character",
-            "target_team": "both",
-            "param_int": -1
+      {
+          "id": "DarknessShuffle",
+          "name": {
+            "id": "@CardEffectShuffleUnits",
+            "mod_reference": "Conductor"
+               },
+          "target_mode": "room",
+          "target_team": "heroes"
         },
         {
-            "id": "DarknessDamage",
-            "name": "CardEffectDamage",
-            "target_mode": "last_targeted_characters",
-            "target_team": "both",
-            "param_int": 5
+          "id": "DarknessStatus",
+          "name": "CardEffectAddStatusEffect",
+          "target_mode": "room",
+          "target_team": "heroes",
+          "param_status_effects": [
+            {
+              "status": "@panic",
+              "count": 2
+            }
+          ]
         }
     ],
     "sprites": [{

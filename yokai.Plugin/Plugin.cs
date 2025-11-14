@@ -45,7 +45,6 @@ namespace yokai.Plugin
                 {
                     // Be sure to include any new json files if you add more.
                     c.AddMergedJsonFile(
-                        "json/plugin.json",
                         "json/global.json",
 
                         // Class Stuff
@@ -107,16 +106,16 @@ namespace yokai.Plugin
                         "json/rooms/room_toriigate.json",
 
                         //Artifacts
-                        "json/relics/relic1.json",
-                        "json/relics/relic2.json",
-                        "json/relics/relic3.json",
-                        "json/relics/relic4.json",
-                        "json/relics/relic5.json",
-                        "json/relics/relic6.json",
-                        "json/relics/relic7.json",
-                        "json/relics/relic8.json",
+                        "json/relics/dojigourd.json",
+                        "json/relics/noblepurse.json",
+                        "json/relics/sudamaseal.json",
+                        "json/relics/tengufeather.json",
+                        "json/relics/yokaiincense.json",
+                        "json/relics/paradebanner.json",
+                        "json/relics/scampuss.json",
+                        "json/relics/hannyamask.json",
                         "json/relics/relic9.json",
-                        "json/relics/relic10.json",
+                        "json/relics/onimask.json",
                         "json/relics/relic11.json"
                     );
                 }

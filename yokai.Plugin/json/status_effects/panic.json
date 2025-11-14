@@ -1,0 +1,50 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.deref.json",
+  "status_effects": [
+    {
+      "id": "panic",
+      "class_name": "@StatusEffectPanicState",
+      "names": {
+        "english": "Panic"
+      },
+      "stackable_names": {
+        "english": "<nobr>Panic {0}</nobr>"
+      },
+      "card_tooltips": {
+        "english": "Unit takes [codeint0] damage per stack each time it moves.<br>Decreases every turn."
+      },
+      "character_tooltips": {
+        "english": "Takes [codeint0] damage each time it moves.<br>Decreases every turn."
+      },
+      "replacement_texts": {
+        "english": "<b>Panic</b>"
+      },
+      "notifications": {
+        "english": "Panic"
+      },
+      "display_category": "negative",
+      "trigger_stage": {
+        "id": "@on_shift",
+        "mod_reference": "Conductor"
+      },
+      "remove_stack_at_end_of_turn": true,
+      "is_stackable": true,
+      "is_propagatable": true,
+      "exclude_monster_propagation": true,
+      "param_int": 1,
+      "icon": "@Panic"
+    }
+  ],
+  "sprites": [
+    {
+      "id": "Panic",
+      "path": "textures/status_panic.png"
+    }
+  ],
+  "atlas_icons": [
+    {
+      "id": "Panic",
+      "path": "textures/status_panic_tooltip.png"
+    }
+  ]
+}

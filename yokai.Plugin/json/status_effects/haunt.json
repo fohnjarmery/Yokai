@@ -1,0 +1,42 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "status_effects": [
+    {
+      "id": "haunt",
+      "class_name": "@StatusEffectHauntState",
+      "names": {
+        "english": "Haunt"
+      },
+      "stackable_names": {
+        "english": "Haunt {0}"
+      },
+      "card_tooltips": {
+        "english": "Allied units have +[codeint0][attack] per stack."
+      },
+      "character_tooltips": {
+        "english": "Allied units have +[codeint0][attack] (+[codeint1][attack] per stack)."
+      },
+      "replacement_texts": {
+        "english": "<b>Haunt</b>"
+      },
+      "param_int": 1,
+      "is_propagatable": true,
+      "display_category": "positive",
+      "exclude_hero_propagation": true,
+      "is_stackable": true,
+      "icon": "@Haunt"
+    }
+  ],
+  "sprites": [
+    {
+      "id": "Haunt",
+      "path": "textures/status_Haunt.png"
+    }
+  ],
+  "atlas_icons": [
+    {
+      "id": "Haunt",
+      "path": "textures/status_Haunt_tooltip.png"
+    }
+  ]
+}

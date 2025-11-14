@@ -32,7 +32,7 @@
         "english": "Spirits Up!"
       },
       "descriptions": {
-        "english": "Apply Frostbite 2 to a random enemy unit."
+        "english": "Apply Haunt 2 to a random unit."
       },
       "card_art": "@Kodama",
       "is_an_ability": true,
@@ -103,10 +103,10 @@
       "id": "KodamaAbilityEffect",
       "name": "CardEffectAddStatusEffect",
       "target_mode": "random_in_room",
-      "target_team": "heroes",
+      "target_team": "both",
       "param_status_effects": [
         {
-          "status": "poison",
+          "status": "@haunt",
           "count": 2
         }
       ]

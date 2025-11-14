@@ -1,33 +1,34 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.deref.json",
   "relic_effects": [
     {
-      "id": "Relic3Effect",
-      "name": "RelicEffectEnergyOnCardPlay",
-      "param_int": 2,
-      "param_card_type": "room"
+      "id": "SudamaSealEffect",
+      "name": "RelicEffectModifyMonsterCost",
+      "param_subtype": "@Sub_Spirit",
+      "param_int": -1
+
     }
   ],
   "relics": [
     {
-      "id": "Relic3",
+      "id": "sudamaseal",
       "type": "collectable",
       "names": {
-        "english": "Relic 3"
+        "english": "Sudama Seal"
       },
       "descriptions": {
-        "english": "Whenever you play a room, gain [effect0.power] [ember]."
+        "english": "Units with the Spirit subtype cost -1[ember]."
       },
       "relic_activated": {
-        "english": "Backup Generator activated!"
+        "english": "Cheaper."
       },
       "lore_tooltips": [
         {
-          "english": "A secondary power source that activates whenever new systems come online."
+          "english": "Good seal."
         }
       ],
       "lore_style": "herzal",
-      "relic_effects": [ "@Relic3Effect" ],
+      "relic_effects": [ "@SudamaSealEffect" ],
       "icon": "@YokaiRelicIcon3",
       "icon_small": "@YokaiRelicIconSmall3",
       "extensions": [
