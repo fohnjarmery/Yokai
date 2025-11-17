@@ -1,0 +1,113 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.deref.json",
+  "cards": [
+    {
+      "id": "Snaketrail",
+      "names": {
+        "english": "Snaketrail"
+      },
+      "descriptions": {
+        "english": "+1 [capacity]. Whenever an enemy unit dies, other enemy units gain Panic [effect0.status.power]."
+      },
+      "lore_tooltips": [
+        {
+          "english": "Lore stuff."
+        }
+      ],
+      "card_art": "@SnaketrailArt",
+      "cost": 0,
+      "card_type": "room",
+      "rarity": "common",
+      "class": "@ClassYokai",
+      "targets_room": true,
+      "targetless": true,
+      "effects": [
+        "@SnaketrailRoomEffect"
+      ],
+      "pools": [
+        "MegaPool"
+      ]
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "SnaketrailRoomUpgrade",
+      "titles": {
+        "english": "Snaketrail"
+      },
+      "descriptions": {
+        "english": "+1 [capacity]. Whenever an enemy unit dies, other enemy units gain Panic [effect0.status.power]."
+      },
+      "trigger_upgrades": [
+        "@SnaketrailTrigger"
+      ],
+      "room_modifier_upgrades": [
+        "@SnaketrailRoomModifier"
+      ],
+      "hide_icon_on_card": true,
+      "icon": "@SnaketrailArt"
+    }
+  ],
+  "room_modifiers": [
+    {
+      "id": "SnaketrailRoomModifier",
+      "name": "RoomStateCapacityModifier",
+      "disallow_in_deployment": false,
+      "target_mode": "room",
+      "param_int": 1
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "SnaketrailTrigger",
+      "descriptions": {
+        "english": "Whenever an enemy unit dies, other enemy units gain Panic [effect0.status.power]."
+      },
+      "trigger": "on_any_hero_death_on_floor",
+      "hide_visual_and_ignore_silence": true,
+      "effects": [
+        "@ApplySnaketrailUpgrade"
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SnaketrailRoomEffect",
+      "name": "CardEffectAttachTrainRoomAttachment",
+      "target_mode": "room",
+      "param_upgrade": "@SnaketrailRoomUpgrade",
+      "param_bool": false,
+      "param_bool_2": false,
+      "target_team": "heroes"
+    },
+    {
+      "id": "ApplySnaketrailUpgrade",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "room",
+      "target_team": "heroes",
+      "param_status_effects": [
+        {
+          "status": "@panic",
+          "count": 5
+        }
+      ]
+    }
+  ],
+  "sprites": [
+    {
+      "id": "SnaketrailArt",
+      "path": "textures/SnaketrailArt.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "SnaketrailArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@SnaketrailArt"
+        }
+      }
+    }
+  ]
+}

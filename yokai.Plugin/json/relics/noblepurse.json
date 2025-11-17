@@ -4,7 +4,7 @@
     {
       "id": "NoblePurseEffect",
       "name": "RelicEffectGoldOnTrigger",
-      "param_int": 2,
+      "param_int": 5,
       "param_trigger": {
         "id": "@Evoke",
         "mod_reference": "Conductor"
@@ -21,7 +21,7 @@
         "english": "Noble's Purse'"
       },
       "descriptions": {
-        "english": "Whenever a unit triggers Evoke, gain 2 Gold."
+        "english": "Whenever a unit triggers Evoke, gain 5 Gold."
       },
       "relic_activated": {
         "english": "The purse spills!"

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.deref.json",
   "cards": [
     {
       "id": "ShrineDance",
@@ -7,7 +7,7 @@
         "english": "Shrine Dance"
       },
       "descriptions": {
-        "english": "[descend]. Deal [effect1.power] damage."
+        "english": "+[effect0.power][capacity]. Restore [effect1.power][health] to allied units. Increase the cost of this card by 1. "
       },
       "rarity": "uncommon",
       "class": "@ClassYokai",
@@ -17,31 +17,46 @@
       "pools": [
         "MegaPool"
       ],
-      "cost": 1,
+      "cost": 2,
       "effects": [
         {
-          "id": "@ShrineDanceDescend"
+          "id": "@ShrineDanceCapacity"
         },
         {
-          "id": "@ShrineDanceDamage"
+          "id": "@ShrineDanceHeal"
+        },
+        {
+          "id": "@ShrineDanceCost"
         }
       ]
     }
   ],
+
   "effects": [
     {
-      "id": "ShrineDanceDescend",
-      "name": "CardEffectBump",
-      "target_mode": "drop_target_character",
-      "target_team": "both",
-      "param_int": -1
+      "id": "ShrineDanceCapacity",
+      "name": "CardEffectAdjustRoomCapacity",
+      "target_mode": "room",
+      "target_team": "monsters",
+      "param_int": 2
     },
     {
-      "id": "ShrineDanceDamage",
-      "name": "CardEffectDamage",
-      "target_mode": "last_targeted_characters",
-      "target_team": "both",
-      "param_int": 5
+      "id": "ShrineDanceHeal",
+      "name": "CardEffectHeal",
+      "target_mode": "room",
+      "target_team": "monsters",
+      "param_int": 50
+    },
+    {
+      "id": "ShrineDanceCost",
+      "name": "CardEffectAddUpgradeToCurrentCard",
+      "param_upgrade": "@ShrineDanceCostUpgrade"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "ShrineDanceCostUpgrade",
+      "cost_reduction": -1
     }
   ],
   "sprites": [

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.deref.json",
   "cards": [
     {
       "id": "OnmyojiTome",
@@ -7,7 +7,7 @@
         "english": "Onmyoji Tome"
       },
       "descriptions": {
-        "english": "[descend]. Deal [effect1.power] damage."
+        "english": "Apply <b>Ability</b>: Unleash Magic to a friendly unit."
       },
       "rarity": "rare",
       "class": "@ClassYokai",
@@ -18,30 +18,58 @@
         "MegaPool"
       ],
       "cost": 1,
+      "traits": [
+        {
+          "id": "@Consume"
+        }
+      ],
       "effects": [
         {
-          "id": "@OnmyojiTomeDescend"
-        },
+          "id": "@OnmyojiTomeApply"
+        }
+      ]
+    },
+    {
+      "id": "OnmyojiAbility",
+      "names": {
+        "english": "Unleash Magic"
+      },
+      "descriptions": {
+        "english": "Apply Haunt 5 to all units on every floor."
+      },
+      "card_art": "@OnmyojiTomeArt",
+      "is_an_ability": true,
+      "cooldown": 5,
+      "targetless": true,
+      "targets_room": true,
+      "card_type": "spell",
+      "effects": [
         {
-          "id": "@OnmyojiTomeDamage"
+          "id": "@OnmyojiAbilityEffect"
         }
       ]
     }
   ],
   "effects": [
     {
-      "id": "OnmyojiTomeDescend",
-      "name": "CardEffectBump",
+      "id": "OnmyojiTomeApply",
+      "name": "CardEffectSetUnitAbility",
       "target_mode": "drop_target_character",
-      "target_team": "both",
-      "param_int": -1
+      "target_team": "monsters",
+      "param_card": "@OnmyojiAbility"
     },
     {
-      "id": "OnmyojiTomeDamage",
-      "name": "CardEffectDamage",
-      "target_mode": "last_targeted_characters",
+      "id": "OnmyojiAbilityEffect",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "tower",
       "target_team": "both",
-      "param_int": 5
+      "param_status_effects": [
+        {
+          "status": "@haunt",
+          "count": 5
+        }
+      ]
+        
     }
   ],
   "sprites": [

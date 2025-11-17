@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.deref.json",
   "cards": [
     {
       "id": "SesshosekiSpike",
@@ -7,7 +7,7 @@
         "english": "Sessho-seki Spike"
       },
       "descriptions": {
-        "english": "[descend]. Deal [effect1.power] damage."
+        "english": "Apply [trait1.statusmultiplier][x] [yokai.Plugin_haunt]."
       },
       "rarity": "rare",
       "class": "@ClassYokai",
@@ -17,31 +17,49 @@
       "pools": [
         "MegaPool"
       ],
-      "cost": 1,
-      "effects": [
+      "cost_type": "x",
+      "traits": [
         {
-          "id": "@SesshosekiSpikeDescend"
+          "id": "@Consume"
         },
         {
-          "id": "@SesshosekiSpikeDamage"
+          "id": "@SpikeScaleHaunt"
+        }
+      ],
+      "effects": [
+        {
+          "id": "@SpikeApplyHaunt"
+        }
+      ]
+    }
+  ],
+  "traits": [
+    {
+      "id": "SpikeScaleHaunt",
+      "name": "CardTraitScalingAddStatusEffect",
+      "param_tracked_value": "played_cost",
+      "param_int": 6,
+      "effect_text_suppressed": true,
+      "param_status_effects": [
+        {
+          "status": "@haunt",
+          "count": 0
         }
       ]
     }
   ],
   "effects": [
     {
-      "id": "SesshosekiSpikeDescend",
-      "name": "CardEffectBump",
+      "id": "SpikeApplyHaunt",
+      "name": "CardEffectAddStatusEffect",
       "target_mode": "drop_target_character",
       "target_team": "both",
-      "param_int": -1
-    },
-    {
-      "id": "SesshosekiSpikeDamage",
-      "name": "CardEffectDamage",
-      "target_mode": "last_targeted_characters",
-      "target_team": "both",
-      "param_int": 5
+      "param_status_effects": [
+        {
+          "status": "@haunt",
+          "count": 0
+        }
+      ]
     }
   ],
   "sprites": [

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.deref.json",
   "cards": [
     {
       "id": "Heartstopper",
@@ -7,7 +7,7 @@
         "english": "Heartstopper"
       },
       "descriptions": {
-        "english": "[descend]. Deal [effect1.power] damage."
+        "english": "Apply [panic] [effect0.status0.power]. Deal damage equal to Panic stacks."
       },
       "rarity": "rare",
       "class": "@ClassYokai",
@@ -17,10 +17,15 @@
       "pools": [
         "MegaPool"
       ],
-      "cost": 1,
+      "cost": 2,
+      "traits": [
+        {
+          "id": "@TraitHeartDamage"
+        }
+      ],
       "effects": [
         {
-          "id": "@HeartstopperDescend"
+          "id": "@HeartstopperPanic"
         },
         {
           "id": "@HeartstopperDamage"
@@ -28,20 +33,41 @@
       ]
     }
   ],
+
+  "traits": [
+    {
+      "id": "TraitHeartDamage",
+      "name": "CardTraitAddDamagePerStatusEffect",
+      "param_status_effects": [
+        {
+          "status": "@panic",
+          "count": 1
+        }
+      ],
+      "param_int": 1,
+      "param_bool": false
+    }
+  ],
+
   "effects": [
     {
-      "id": "HeartstopperDescend",
-      "name": "CardEffectBump",
+      "id": "HeartstopperPanic",
+      "name": "CardEffectAddStatusEffect",
       "target_mode": "drop_target_character",
       "target_team": "both",
-      "param_int": -1
+      "param_status_effects": [
+        {
+          "status": "@panic",
+          "count": 30
+        }
+      ]
     },
     {
       "id": "HeartstopperDamage",
       "name": "CardEffectDamage",
       "target_mode": "last_targeted_characters",
       "target_team": "both",
-      "param_int": 5
+      "param_int": 0
     }
   ],
   "sprites": [

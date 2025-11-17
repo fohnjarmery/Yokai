@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.deref.json",
   "relics": [
     {
       "id": "Fearstone",
@@ -8,7 +8,7 @@
         "english": "Fearstone"
       },
       "descriptions": {
-        "english": "Upgrade a unit with +[effect0.upgrade0.bonusdamage][attack]"
+        "english": "Upgrade a unit with +[effect0.upgrade0.bonusdamage][attack] and [haunt][effect0.upgrade0.power]."
       },
       "relic_effects": [
         "@FearstoneEnhancer"
@@ -45,6 +45,13 @@
         "english": "Gain +[bonusdamage][attack]."
       },
       "bonus_damage": 5,
+      "status_effect_upgrades": [
+        {
+          "status": "@haunt",
+          "count": 5
+        }
+      ], 
+
       "icon": "@FearstoneIcon",
       "use_upgrade_hightlight_tags": true
     }

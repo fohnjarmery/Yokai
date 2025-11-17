@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.deref.json",
   "cards": [
     {
       "id": "SpawnKappa",
@@ -25,14 +25,35 @@
       "pools": [
         "MegaPool"
       ]
+    },
+    {
+      "id": "KappaAbility",
+      "names": {
+        "english": "Dark Bargain"
+      },
+      "descriptions": {
+        "english": "Spend 3 [Soul]. Gain [effect1.powerabs] [coin]. Apply [stealth] [effect2.status0.power] to allied units."
+      },
+      "card_art": "@Kappa",
+      "is_an_ability": true,
+      "cooldown": 2,
+      "targetless": true,
+      "targets_room": true,
+      "card_type": "spell",
+      "effects": [
+        "@KappaCheckSouls",
+        "@KappaGiveGold",
+        "@KappaStealth",
+        "@KappaRemoveSouls"
+      ]
     }
   ],
   "characters": [
     {
       "id": "Kappa",
       "size": 1,
-      "attack_damage": 15,
-      "health": 15,
+      "attack_damage": 5,
+      "health": 5,
       "names": {
         "english": "Kappa"
       },
@@ -45,10 +66,15 @@
           "id": "@KappaTrigger"
         }
       ],
+      "ability": "@KappaAbility",
       "starting_status_effects": [
         {
           "status": "stealth",
-          "count": 3
+          "count": 5
+        },
+        {
+          "status": "avarice",
+          "count": 5
         }
       ]
     }
@@ -57,15 +83,12 @@
     {
       "id": "KappaTrigger",
       "descriptions": {
-        "english": "Gain +[effect0.upgrade.bonusdamage][attack] and [lifesteal] [effect1.status0.power]."
+        "english": "Gain [soul] [effect0.status0.power]."
       },
-      "trigger": "on_any_unit_death_on_floor",
+      "trigger": "on_attacking",
       "effects": [
         {
-          "id": "@KappaGainAttack"
-        },
-        {
-          "id": "@KappaGainLifesteal"
+          "id": "@KappaGainSoul"
         }
       ]
     }
@@ -78,29 +101,68 @@
       "param_character": "@Kappa"
     },
     {
-      "id": "KappaGainAttack",
-      "name": "CardEffectAddTempCardUpgradeToUnits",
-      "target_mode": "self",
-      "target_team": "none",
-      "param_upgrade": "@KappaFiveAttack"
-    },
-    {
-      "id": "KappaGainLifesteal",
+      "id": "KappaGainSoul",
       "name": "CardEffectAddStatusEffect",
       "target_mode": "self",
       "target_team": "none",
       "param_status_effects": [
         {
-          "status": "lifesteal",
+          "status": "captured_soul",
           "count": 1
         }
       ]
-    }
-  ],
-  "upgrades": [
+    },
     {
-      "id": "KappaFiveAttack",
-      "bonus_damage": 5
+      "id": "KappaCheckSouls",
+      "name": {
+        "id": "@CardEffectRequireStatusThreshold",
+        "mod_reference": "Conductor"
+      },
+      "target_mode": "self",
+      "should_test": true,
+      "should_cancel_subsequent_effects_if_test_fails": true,
+      "param_bool": true,
+      "param_status_effects": [
+        {
+          "status": "captured_soul",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "id": "KappaGiveGold",
+      "name": "CardEffectRewardGold",
+      "target_mode": "room",
+      "target_team": "monsters",
+      "param_int": 15,
+      "should_test": true,
+      "should_cancel_subsequent_effects_if_test_fails": true,
+      "should_fail_to_cast_if_test_fails": true
+    },
+    {
+      "id": "KappaStealth",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "room",
+      "target_team": "monsters",
+      "shouldTest": true,
+      "shouldCancelSubsequentEffectsIfTestFails": true,
+      "param_status_effects": [
+        {
+          "status": "stealth",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "KappaRemoveSouls",
+      "name": "CardEffectRemoveStatusEffect",
+      "target_mode": "self",
+      "param_status_effects": [
+        {
+          "status": "captured_soul",
+          "count": 3
+        }
+      ]
     }
   ],
   "sprites": [

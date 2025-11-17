@@ -29,15 +29,24 @@ namespace yokai.Plugin.code.RoomModifiers
 
         public int GetModifiedAttackDamage(Damage.Type damageType, CharacterState attackerState, bool requestingForCharacterStats, ICoreGameManagers coreGameManagers)
         {
-            if (attackerState.GetTeamType() == TeamType)
+            if (requestingForCharacterStats)
             {
-                return DamageModifier;
+                return GetDynamicInt(attackerState);
             }
             return 0;
         }
 
         public int GetModifiedMagicPowerDamage(ICoreGameManagers coreGameManagers)
         {
+            return 0;
+        }
+
+        public override int GetDynamicInt(CharacterState characterContext)
+        {
+            if (characterContext.GetTeamType() == Team.Type.Monsters)
+            {
+                return DamageModifier;
+            }
             return 0;
         }
 

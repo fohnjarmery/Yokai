@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.deref.json",
   "cards": [
     {
       "id": "SpawnYukiOnna",
@@ -7,7 +7,7 @@
         "english": "Yuki-Onna"
       },
       "card_art": "@YukiOnna",
-      "cost": 1,
+      "cost": 2,
       "card_type": "monster",
       "rarity": "rare",
       "class": "@ClassYokai",
@@ -31,8 +31,8 @@
     {
       "id": "YukiOnna",
       "size": 2,
-      "attack_damage": 25,
-      "health": 25,
+      "attack_damage": 20,
+      "health": 15,
       "names": {
         "english": "YukiOnna"
       },
@@ -45,6 +45,12 @@
         {
           "id": "@YukiOnnaTrigger"
         }
+      ],
+      "starting_status_effects": [
+        {
+          "status": "@haunt",
+          "count": 10
+        }
       ]
     }
   ],
@@ -52,15 +58,15 @@
     {
       "id": "YukiOnnaTrigger",
       "descriptions": {
-        "english": "Gain +[effect0.upgrade.bonusdamage][attack] and [lifesteal] [effect1.status0.power]."
+        "english": "Gain [haunt] [effect1.status0.power]."
       },
-      "trigger": "on_any_unit_death_on_floor",
+      "trigger": {
+        "id": "@Evoke",
+        "mod_reference": "Conductor"
+      },
       "effects": [
         {
-          "id": "@YukiOnnaGainAttack"
-        },
-        {
-          "id": "@YukiOnnaGainLifesteal"
+          "id": "@YukiOnnaGainHaunt"
         }
       ]
     }
@@ -80,13 +86,13 @@
       "param_upgrade": "@YukiOnnaOneAttack"
     },
     {
-      "id": "YukiOnnaGainLifesteal",
+      "id": "YukiOnnaGainHaunt",
       "name": "CardEffectAddStatusEffect",
       "target_mode": "self",
       "target_team": "none",
       "param_status_effects": [
         {
-          "status": "lifesteal",
+          "status": "@haunt",
           "count": 1
         }
       ]

@@ -75,7 +75,6 @@ namespace yokai.Plugin
                         "json/spells/spell_parade.json",
                         "json/spells/spell_possession.json",
                         "json/spells/spell_shudder.json",
-                        "json/spells/spell_snaketrail.json",
                         "json/spells/spell_tanukicharm.json",
                         "json/spells/spell_wailingecho.json",
                         "json/spells/spell_purityritual.json",
@@ -104,6 +103,7 @@ namespace yokai.Plugin
                         //Rooms
                         "json/rooms/room_demonparade.json",
                         "json/rooms/room_toriigate.json",
+                        "json/rooms/room_snaketrail.json",
 
                         //Artifacts
                         "json/relics/dojigourd.json",
@@ -114,9 +114,13 @@ namespace yokai.Plugin
                         "json/relics/paradebanner.json",
                         "json/relics/scampuss.json",
                         "json/relics/hannyamask.json",
-                        "json/relics/relic9.json",
+                        "json/relics/grudge.json",
                         "json/relics/onimask.json",
-                        "json/relics/relic11.json"
+                        "json/relics/relic11.json",
+
+                        //StatusEffects
+                        "json/status_effects/haunt.json",
+                        "json/status_effects/panic.json"
                     );
                 }
             );

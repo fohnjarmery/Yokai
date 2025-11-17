@@ -11,10 +11,10 @@
         "english": "Haunt {0}"
       },
       "card_tooltips": {
-        "english": "Allied units have +[codeint0][attack] per stack."
+        "english": "Player units have +[codeint0][attack] per stack on Allies."
       },
       "character_tooltips": {
-        "english": "Allied units have +[codeint0][attack] (+[codeint1][attack] per stack)."
+        "english": "Player units have +[codeint0][attack] (+[codeint1][attack] per stack)."
       },
       "replacement_texts": {
         "english": "<b>Haunt</b>"

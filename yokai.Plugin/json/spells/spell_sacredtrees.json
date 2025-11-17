@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.deref.json",
   "cards": [
     {
       "id": "SacredTrees",
@@ -7,7 +7,7 @@
         "english": "Sacred Trees"
       },
       "descriptions": {
-        "english": "[descend]. Deal [effect1.power] damage."
+        "english": "Apply <br>Haunt</br>1 to allied units then <br>Propagate</br> 3 on allied units."
       },
       "rarity": "uncommon",
       "class": "@ClassYokai",
@@ -17,31 +17,39 @@
       "pools": [
         "MegaPool"
       ],
-      "cost": 1,
+      "cost": 2,
       "effects": [
         {
-          "id": "@SacredTreesDescend"
+          "id": "@SacredTreesHaunt"
         },
         {
-          "id": "@SacredTreesDamage"
+          "id": "@SacredTreesPropagate"
         }
       ]
     }
   ],
   "effects": [
     {
-      "id": "SacredTreesDescend",
-      "name": "CardEffectBump",
-      "target_mode": "drop_target_character",
-      "target_team": "both",
-      "param_int": -1
+      "id": "SacredTreesHaunt",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "room",
+      "target_team": "monsters",
+      "param_status_effects": [
+        {
+          "status": "@haunt",
+          "count": 1
+        }
+      ]
     },
     {
-      "id": "SacredTreesDamage",
-      "name": "CardEffectDamage",
-      "target_mode": "last_targeted_characters",
-      "target_team": "both",
-      "param_int": 5
+      "id": "SacredTreesPropagate",
+      "name": "CardEffectAdjustAllStatusEffects",
+      "target_mode": "room",
+      "target_team": "monsters",
+      "param_int": 3,
+      "param_bool": false,
+      "param_int_2": 1
+
     }
   ],
   "sprites": [

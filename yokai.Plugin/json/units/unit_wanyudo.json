@@ -36,7 +36,7 @@
       },
       "card_art": "@Wanyudo",
       "is_an_ability": true,
-      "cooldown": 3,
+      "cooldown": 2,
       "targetless": true,
       "targets_room": false,
       "card_type": "spell",
@@ -51,7 +51,7 @@
     {
       "id": "Wanyudo",
       "size": 2,
-      "attack_damage": 18,
+      "attack_damage": 20,
       "health": 18,
       "names": {
         "english": "Wanyudo"

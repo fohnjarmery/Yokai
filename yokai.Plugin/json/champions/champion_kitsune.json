@@ -307,21 +307,24 @@
       "name": "CardEffectFloorRearrange",
       "target_mode": "back_in_room",
       "target_team": "heroes",
-      "param_int": 0
+      "param_int": 0,
+      "target_ignore_bosses": true
     },
     {
       "id": "FoxCharmPull2",
       "name": "CardEffectFloorRearrange",
       "target_mode": "back_in_room",
       "target_team": "heroes",
-      "param_int": 0
+      "param_int": 0,
+      "target_ignore_bosses": true
     },
     {
       "id": "FoxCharmPull3",
       "name": "CardEffectFloorRearrange",
       "target_mode": "back_in_room",
       "target_team": "heroes",
-      "param_int": 0
+      "param_int": 0,
+      "target_ignore_bosses": true
     },
     {
       "id": "FoxCharmDamage1",

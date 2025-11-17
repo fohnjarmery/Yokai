@@ -6,7 +6,7 @@
             "english": "Darkness"
         },
         "descriptions": {
-            "english": "[Shuffle] enemy units. Apply 2 Panic."
+            "english": "[Shuffle] enemy units. Apply 4 Panic."
         },
         "rarity": "common",
         "class": "@ClassYokai",
@@ -44,7 +44,7 @@
           "param_status_effects": [
             {
               "status": "@panic",
-              "count": 2
+              "count": 4
             }
           ]
         }

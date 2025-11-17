@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.deref.json",
   "cards": [
     {
       "id": "Possession",
@@ -7,7 +7,7 @@
         "english": "Possession"
       },
       "descriptions": {
-        "english": "[descend]. Deal [effect1.power] damage."
+        "english": "[Advance] a unit. Apply 3 [Haunt] to the unit."
       },
       "rarity": "common",
       "class": "@ClassYokai",
@@ -20,28 +20,33 @@
       "cost": 1,
       "effects": [
         {
-          "id": "@PossessionDescend"
+          "id": "@PossessionAdvance"
         },
         {
-          "id": "@PossessionDamage"
+          "id": "@PossessionStatus"
         }
       ]
     }
   ],
   "effects": [
     {
-      "id": "PossessionDescend",
-      "name": "CardEffectBump",
+      "id": "PossessionAdvance",
+      "name": "CardEffectFloorRearrange",
       "target_mode": "drop_target_character",
       "target_team": "both",
-      "param_int": -1
+      "param_int": 0
     },
     {
-      "id": "PossessionDamage",
-      "name": "CardEffectDamage",
+      "id": "PossessionStatus",
+      "name": "CardEffectAddStatusEffect",
       "target_mode": "last_targeted_characters",
       "target_team": "both",
-      "param_int": 5
+      "param_status_effects": [
+        {
+          "status": "@haunt",
+          "count": 3
+        }
+      ]
     }
   ],
   "sprites": [

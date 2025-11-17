@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.deref.json",
   "cards": [
     {
       "id": "WailingEcho",
@@ -7,7 +7,7 @@
         "english": "Wailing Echo"
       },
       "descriptions": {
-        "english": "[descend]. Deal [effect1.power] damage."
+        "english": "Heal all Allies by 5. Damage all enemies per stack of Haunt."
       },
       "rarity": "common",
       "class": "@ClassYokai",
@@ -17,10 +17,15 @@
       "pools": [
         "MegaPool"
       ],
-      "cost": 1,
+      "cost": 2,
+      "traits": [
+        {
+          "id": "@TraitEchoDamage"
+        }
+      ],
       "effects": [
         {
-          "id": "@WailingEchoDescend"
+          "id": "@WailingEchoHeal"
         },
         {
           "id": "@WailingEchoDamage"
@@ -28,20 +33,37 @@
       ]
     }
   ],
+
+  "traits": [
+    {
+      "id": "TraitEchoDamage",
+      "name": "CardTraitAddDamagePerStatusEffect",
+      "param_status_effects": [
+        {
+          "status": "@haunt",
+          "count": 1
+        }
+      ],
+      "param_int": 1,
+      "param_bool": false
+    }
+  ],
+
+
   "effects": [
     {
-      "id": "WailingEchoDescend",
-      "name": "CardEffectBump",
-      "target_mode": "drop_target_character",
-      "target_team": "both",
-      "param_int": -1
+      "id": "WailingEchoHeal",
+      "name": "CardEffectHeal",
+      "target_mode": "room",
+      "target_team": "monsters",
+      "param_int": 5
     },
     {
       "id": "WailingEchoDamage",
       "name": "CardEffectDamage",
-      "target_mode": "last_targeted_characters",
-      "target_team": "both",
-      "param_int": 5
+      "target_mode": "room",
+      "target_team": "heroes",
+      "param_int": 0
     }
   ],
   "sprites": [

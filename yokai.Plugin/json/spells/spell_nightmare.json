@@ -7,7 +7,7 @@
         "english": "Nightmare"
       },
       "descriptions": {
-        "english": "[descend]. Deal [effect1.power] damage."
+        "english": "Deal [effect1.power] damage and apply [panic][effect0.status0.power], twice."
       },
       "rarity": "uncommon",
       "class": "@ClassYokai",
@@ -17,31 +17,61 @@
       "pools": [
         "MegaPool"
       ],
-      "cost": 1,
+      "cost": 2,
       "effects": [
         {
-          "id": "@NightmareDescend"
+          "id": "@NightmarePanic"
         },
         {
           "id": "@NightmareDamage"
+        },
+        {
+          "id": "@NightmarePanic2"
+        },
+        {
+          "id": "@NightmareDamage2"
         }
       ]
     }
   ],
   "effects": [
     {
-      "id": "NightmareDescend",
-      "name": "CardEffectBump",
+      "id": "NightmarePanic",
+      "name": "CardEffectAddStatusEffect",
       "target_mode": "drop_target_character",
       "target_team": "both",
-      "param_int": -1
+      "param_status_effects": [
+        {
+          "status": "@panic",
+          "count": 5
+        }
+      ]
     },
     {
       "id": "NightmareDamage",
       "name": "CardEffectDamage",
       "target_mode": "last_targeted_characters",
       "target_team": "both",
-      "param_int": 5
+      "param_int": 15
+    },
+    {
+      "id": "NightmarePanic2",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "last_targeted_characters",
+      "target_team": "both",
+      "param_status_effects": [
+        {
+          "status": "@panic",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "id": "NightmareDamage2",
+      "name": "CardEffectDamage",
+      "target_mode": "last_targeted_characters",
+      "target_team": "both",
+      "param_int": 15
     }
   ],
   "sprites": [

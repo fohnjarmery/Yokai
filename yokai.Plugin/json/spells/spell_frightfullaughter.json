@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.deref.json",
   "cards": [
     {
       "id": "FrightfulLaughter",
@@ -7,41 +7,61 @@
         "english": "Frightful Laughter"
       },
       "descriptions": {
-        "english": "[descend]. Deal [effect1.power] damage."
+        "english": "Apply +1 Attack to Allied Units per Haunt stack on them."
       },
       "rarity": "uncommon",
       "class": "@ClassYokai",
       "card_art": "@FrightfulLaughterArt",
       "targets_room": true,
-      "targetless": false,
+      "targetless": true,
       "pools": [
         "MegaPool"
       ],
-      "cost": 1,
+      "cost": 2,
+      "traits": [
+        {
+          "id": "@FrightfulLaughterScaling"
+        }
+      ],
       "effects": [
         {
-          "id": "@FrightfulLaughterDescend"
-        },
-        {
-          "id": "@FrightfulLaughterDamage"
+          "id": "@FrightfulLaughterBoost"
         }
       ]
     }
   ],
+
+  "traits": [
+    {
+      "id": "FrightfulLaughterScaling",
+      "name": {
+        "id": "@CardTraitUpgradeByStatusScaling",
+        "mod_reference": "yokai.Plugin"
+      },
+      "param_status_effects": [
+        {
+          "status": "@haunt",
+          "count": 0
+        }
+      ]
+    }
+  ],
+
   "effects": [
     {
-      "id": "FrightfulLaughterDescend",
-      "name": "CardEffectBump",
-      "target_mode": "drop_target_character",
-      "target_team": "both",
-      "param_int": -1
-    },
+      "id": "FrightfulLaughterBoost",
+      "name": "CardEffectAddTempCardUpgradeToUnits",
+      "target_mode": "room",
+      "target_team": "monsters",
+      "param_upgrade": {
+        "id": "@FrightfulLaughterUpgrade"
+      }
+    }
+  ],
+  "upgrades": [
     {
-      "id": "FrightfulLaughterDamage",
-      "name": "CardEffectDamage",
-      "target_mode": "last_targeted_characters",
-      "target_team": "both",
-      "param_int": 5
+      "id": "FrightfulLaughterUpgrade",
+      "bonus_damage": 1
     }
   ],
   "sprites": [

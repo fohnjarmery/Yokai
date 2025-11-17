@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.deref.json",
   "cards": [
     {
       "id": "BagOfWind",
@@ -7,7 +7,7 @@
         "english": "Bag of Wind"
       },
       "descriptions": {
-        "english": "[descend]. Deal [effect1.power] damage."
+        "english": "<br>Shuffle</br> enemy units 3 times and apply Dazed 1."
       },
       "rarity": "uncommon",
       "class": "@ClassYokai",
@@ -17,31 +17,62 @@
       "pools": [
         "MegaPool"
       ],
-      "cost": 1,
+      "cost": 3,
       "effects": [
         {
-          "id": "@BagOfWindDescend"
+          "id": "@BagOfWindShuffle"
         },
         {
-          "id": "@BagOfWindDamage"
+          "id": "@BagOfWindShuffle2"
+        },
+        {
+          "id": "@BagOfWindShuffle3"
+        },
+        {
+          "id": "@BagOfWindDaze"
         }
       ]
     }
   ],
   "effects": [
     {
-      "id": "BagOfWindDescend",
-      "name": "CardEffectBump",
-      "target_mode": "drop_target_character",
-      "target_team": "both",
-      "param_int": -1
+      "id": "BagOfWindShuffle",
+      "name": {
+        "id": "@CardEffectShuffleUnits",
+        "mod_reference": "Conductor"
+      },
+      "target_mode": "room",
+      "target_team": "heroes"
     },
     {
-      "id": "BagOfWindDamage",
-      "name": "CardEffectDamage",
-      "target_mode": "last_targeted_characters",
-      "target_team": "both",
-      "param_int": 5
+      "id": "BagOfWindShuffle2",
+      "name": {
+        "id": "@CardEffectShuffleUnits",
+        "mod_reference": "Conductor"
+      },
+      "target_mode": "room",
+      "target_team": "heroes"
+    },
+    {
+      "id": "BagOfWindShuffle3",
+      "name": {
+        "id": "@CardEffectShuffleUnits",
+        "mod_reference": "Conductor"
+      },
+      "target_mode": "room",
+      "target_team": "heroes"
+    },
+    {
+      "id": "BagOfWindDaze",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "room",
+      "target_team": "heroes",
+      "param_status_effects": [
+        {
+          "status": "dazed",
+          "count": 1
+        }
+      ]
     }
   ],
   "sprites": [

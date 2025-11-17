@@ -34,10 +34,10 @@
       "descriptions": {
         "english": "Descend a unit to the bottom floor."
       },
-      "card_art": "@UmiBozu",
+      "card_art": "@Umibozu",
       "is_an_ability": true,
       "cooldown": 1,
-      "targetless": true,
+      "targetless": false,
       "targets_room": false,
       "card_type": "spell",
       "effects": [

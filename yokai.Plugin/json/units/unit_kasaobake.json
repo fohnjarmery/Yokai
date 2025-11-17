@@ -54,8 +54,8 @@
     {
       "id": "KasaObake",
       "size": 1,
-      "attack_damage": 3,
-      "health": 10,
+      "attack_damage": 15,
+      "health": 7,
       "names": {
         "english": "KasaObake"
       },

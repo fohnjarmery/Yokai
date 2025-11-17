@@ -73,7 +73,7 @@
     {
       "id": "KodamaTrigger",
       "descriptions": {
-        "english": "Propagate 1 to a random unit."
+        "english": "Propagate 1 to a random allied unit."
       },
       "trigger": {
         "id": "@Evoke",
@@ -95,7 +95,7 @@
       "id": "KodamaEvoke",
       "name": "CardEffectAdjustAllStatusEffects",
       "target_mode": "random_in_room",
-      "target_team": "both",
+      "target_team": "monsters",
       "param_int": 1,
       "param_int_2": 1
     },

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.deref.json",
   "cards": [
     {
       "id": "SpawnOrochi",
@@ -7,7 +7,7 @@
         "english": "Orochi"
       },
       "card_art": "@Orochi",
-      "cost": 1,
+      "cost": 3,
       "card_type": "monster",
       "rarity": "rare",
       "class": "@ClassYokai",
@@ -24,6 +24,25 @@
       ],
       "pools": [
         "UnitsAllBanner"
+      ]
+    },
+    {
+      "id": "OrochiAbility",
+      "names": {
+        "english": "Join the Snake"
+      },
+      "descriptions": {
+        "english": "Gain 1 Multistrike."
+      },
+      "card_art": "@Orochi",
+      "is_an_ability": true,
+      "cooldown": 2,
+      "targetless": false,
+      "targets_room": true,
+      "card_type": "spell",
+      "effects": [
+        "@OrochiSacrificeEffect",
+        "@OrochiMultistrikeEffect"
       ]
     }
   ],
@@ -46,10 +65,11 @@
           "id": "@OrochiTrigger"
         }
       ],
+      "ability": "@OrochiAbility",
       "starting_status_effects": [
         {
           "status": "multistrike",
-          "count": 2
+          "count": 1
         }
       ]
     }
@@ -58,15 +78,12 @@
     {
       "id": "OrochiTrigger",
       "descriptions": {
-        "english": "Gain +[effect0.upgrade.bonusdamage][attack] and [lifesteal] [effect1.status0.power]."
+        "english": "Apply Panic 1 to all units."
       },
-      "trigger": "on_any_unit_death_on_floor",
+      "trigger": "on_own_ability_activated",
       "effects": [
         {
-          "id": "@OrochiGainAttack"
-        },
-        {
-          "id": "@OrochiGainLifesteal"
+          "id": "@OrochiApplyPanic"
         }
       ]
     }
@@ -79,29 +96,34 @@
       "param_character": "@Orochi"
     },
     {
-      "id": "OrochiGainAttack",
-      "name": "CardEffectAddTempCardUpgradeToUnits",
-      "target_mode": "self",
-      "target_team": "none",
-      "param_upgrade": "@OrochiOneAttack"
+      "id": "OrochiSacrificeEffect",
+      "name": "CardEffectSacrifice",
+      "target_mode": "drop_target_character",
+      "target_team": "monsters"      
     },
     {
-      "id": "OrochiGainLifesteal",
+      "id": "OrochiApplyPanic",
       "name": "CardEffectAddStatusEffect",
-      "target_mode": "self",
-      "target_team": "none",
+      "target_mode": "room",
+      "target_team": "both",
       "param_status_effects": [
         {
-          "status": "lifesteal",
+          "status": "@panic",
           "count": 1
         }
       ]
-    }
-  ],
-  "upgrades": [
+    },
     {
-      "id": "OrochiOneAttack",
-      "bonus_damage": 1
+      "id": "OrochiMultistrikeEffect",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "self",
+      "target_team": "monsters",
+      "param_status_effects": [
+        {
+          "status": "multistrike",
+          "count": 1
+        }
+      ]
     }
   ],
   "sprites": [

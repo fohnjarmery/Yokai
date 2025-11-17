@@ -1,5 +1,5 @@
 {
-    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.deref.json",
   "cards": [
     {
       "id": "PurityRitual",
@@ -7,7 +7,7 @@
         "english": "Purity Ritual"
       },
       "descriptions": {
-        "english": "[descend]. Deal [effect1.power] damage."
+        "english": "Reduce a unit's cooldown by 1 and remove all negative status effects."
       },
       "rarity": "uncommon",
       "class": "@ClassYokai",
@@ -17,31 +17,41 @@
       "pools": [
         "MegaPool"
       ],
-      "cost": 1,
+      "cost": 2,
+      "traits": [
+        {
+          "id": "@Consume"
+        }
+      ],
       "effects": [
         {
-          "id": "@PurityRitualDescend"
+          "id": "@PurityRitualCooldown"
         },
         {
-          "id": "@PurityRitualDamage"
+          "id": "@PurityRitualCleanse"
         }
       ]
     }
   ],
     "effects": [
       {
-        "id": "PurityRitualDescend",
-        "name": "CardEffectBump",
+        "id": "PurityRitualCooldown",
+        "name": "CardEffectRemoveStatusEffect",
         "target_mode": "drop_target_character",
-        "target_team": "both",
-        "param_int": -1
+        "target_team": "monsters",
+        "param_status_effects": [
+          {
+            "status": "cooldown",
+            "count": 1
+          }
+        ]
       },
       {
-        "id": "PurityRitualDamage",
-        "name": "CardEffectDamage",
+        "id": "PurityRitualCleanse",
+        "name": "CardEffectRemoveAllStatusEffects",
+        "param_int": 1,
         "target_mode": "last_targeted_characters",
-        "target_team": "both",
-        "param_int": 5
+        "target_team": "monsters"
       }
     ],
   "sprites": [

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.deref.json",
   "cards": [
     {
       "id": "Shudder",
@@ -7,7 +7,7 @@
         "english": "Shudder"
       },
       "descriptions": {
-        "english": "[descend]. Deal [effect1.power] damage."
+        "english": "Apply Panic 10 to an enemy unit and Retreat it."
       },
       "rarity": "common",
       "class": "@ClassYokai",
@@ -20,28 +20,33 @@
       "cost": 1,
       "effects": [
         {
-          "id": "@ShudderDescend"
+          "id": "@ShudderPanic"
         },
         {
-          "id": "@ShudderDamage"
+          "id": "@ShudderRetreat"
         }
       ]
     }
   ],
   "effects": [
     {
-      "id": "ShudderDescend",
-      "name": "CardEffectBump",
+      "id": "ShudderPanic",
+      "name": "CardEffectAddStatusEffect",
       "target_mode": "drop_target_character",
-      "target_team": "both",
-      "param_int": -1
+      "target_team": "heroes",
+      "param_status_effects": [
+        {
+          "status": "@panic",
+          "count": 10
+        }
+      ]
     },
     {
-      "id": "ShudderDamage",
-      "name": "CardEffectDamage",
-      "target_mode": "last_targeted_characters",
-      "target_team": "both",
-      "param_int": 5
+      "id": "ShudderRetreat",
+      "name": "CardEffectFloorRearrange",
+      "target_mode": "drop_target_character",
+      "target_team": "heroes",
+      "param_int": 1
     }
   ],
   "sprites": [

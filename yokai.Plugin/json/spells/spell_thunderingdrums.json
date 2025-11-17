@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.deref.json",
   "cards": [
     {
       "id": "ThunderingDrums",
@@ -7,7 +7,7 @@
         "english": "Thundering Drums"
       },
       "descriptions": {
-        "english": "[descend]. Deal [effect1.power] damage."
+        "english": "Apply Haunt 5 to an allied unit then apply Conduit equal to Haunt stacks."
       },
       "rarity": "uncommon",
       "class": "@ClassYokai",
@@ -17,31 +17,47 @@
       "pools": [
         "MegaPool"
       ],
-      "cost": 1,
+      "cost": 2,
       "effects": [
         {
-          "id": "@ThunderingDrumsDescend"
+          "id": "@ThunderingDrumsHaunt"
         },
         {
-          "id": "@ThunderingDrumsDamage"
+          "id": "@ThunderingDrumsConduit"
         }
       ]
     }
   ],
   "effects": [
     {
-      "id": "ThunderingDrumsDescend",
-      "name": "CardEffectBump",
+      "id": "ThunderingDrumsHaunt",
+      "name": "CardEffectAddStatusEffect",
       "target_mode": "drop_target_character",
-      "target_team": "both",
-      "param_int": -1
+      "target_team": "monsters",
+      "param_status_effects": [
+        {
+          "status": "@haunt",
+          "count": 5
+        }
+      ]
     },
     {
-      "id": "ThunderingDrumsDamage",
-      "name": "CardEffectDamage",
+      "id": "ThunderingDrumsConduit",
+      "name": "CardEffectAddStatusEffectPerOtherEffect",
       "target_mode": "last_targeted_characters",
       "target_team": "both",
-      "param_int": 5
+      "param_bool": true,
+      "param_int": 1,
+      "param_status_effects": [
+        {
+          "status": "conduit",
+          "count": 1
+        },
+        {
+          "status": "@haunt",
+          "count": 1
+        }
+      ]
     }
   ],
   "sprites": [

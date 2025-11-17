@@ -1,11 +1,13 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.deref.json",
   "relic_effects": [
     {
       "id": "Relic11Effect",
-      "name": "RelicEffectEnergyOnCardPlay",
-      "param_int": 2,
-      "param_card_type": "room"
+      "name": "RelicEffectDamageEnemyOnFriendlyTrigger",
+      "param_trigger": "on_own_ability_activated",
+      "source_team": "monsters",
+      "param_int": 10,
+      "target_mode": "random_in_room"
     }
   ],
   "relics": [
@@ -16,14 +18,14 @@
         "english": "Relic 11"
       },
       "descriptions": {
-        "english": "Whenever you play a room, gain [effect0.power] [ember]."
+        "english": "Deal [effect0.power] damage to a random enemy unit when you activate an Ability."
       },
       "relic_activated": {
-        "english": "Backup Generator activated!"
+        "english": "Magic!"
       },
       "lore_tooltips": [
         {
-          "english": "A secondary power source that activates whenever new systems come online."
+          "english": "Last relic here we gooooo"
         }
       ],
       "lore_style": "herzal",

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.deref.json",
   "cards": [
     {
       "id": "ToriiGate",
@@ -7,7 +7,7 @@
         "english": "Torii Gate"
       },
       "descriptions": {
-        "english": "+[effect0.upgrade.roommodifier0.power][capacity]. When a friendly unit dies, apply +[effect0.upgrade.charactertrigger0.effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.charactertrigger0.effect0.upgrade.bonushp][health] to friendly units."
+        "english": "Friendly units gain Haunt 5 and cleanse negative status effects on Resolve."
       },
       "lore_tooltips": [
         {
@@ -39,42 +39,31 @@
         "english": "ToriiGate"
       },
       "descriptions": {
-        "english": "+[roommodifier0.power][capacity]. When a friendly unit dies, apply +[charactertrigger0.effect0.upgrade.bonusdamage][attack] and +[charactertrigger0.effect0.upgrade.bonushp][health] to friendly units."
+        "english": "Friendly units gain Haunt 5 and cleanse negative status effects on Resolve."
       },
       "trigger_upgrades": [
         "@ToriiGateTrigger"
       ],
-      "room_modifier_upgrades": [
-        "@ToriiGateRoomModifier"
+      "status_effect_upgrades": [
+        {
+          "status": "@haunt",
+          "count": 5
+        }
       ],
       "hide_icon_on_card": true,
       "icon": "@ToriiGateArt"
-    },
-    {
-      "id": "ToriiGateThreeAttackOneHealth",
-      "bonus_damage": 3,
-      "bonus_hp": 1
-    }
-  ],
-  "room_modifiers": [
-    {
-      "id": "ToriiGateRoomModifier",
-      "name": "RoomStateCapacityModifier",
-      "disallow_in_deployment": false,
-      "target_mode": "room",
-      "param_int": 1
     }
   ],
   "character_triggers": [
     {
       "id": "ToriiGateTrigger",
       "descriptions": {
-        "english": "When a friendly unit dies, apply +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health] to friendly units."
+        "english": "Friendly units gain Resolve: Remove negative status effects."
       },
-      "trigger": "on_death",
+      "trigger": "post_combat",
       "hide_visual_and_ignore_silence": true,
       "effects": [
-        "@ApplyToriiGateUpgrade"
+        "@ToriiGateCleanse"
       ]
     }
   ],
@@ -89,11 +78,11 @@
       "target_team": "monsters"
     },
     {
-      "id": "ApplyToriiGateUpgrade",
-      "name": "CardEffectAddTempCardUpgradeToUnits",
-      "target_mode": "room",
-      "target_team": "monsters",
-      "param_upgrade": "@ToriiGateThreeAttackOneHealth"
+      "id": "ToriiGateCleanse",
+      "name": "CardEffectRemoveAllStatusEffects",
+      "param_int": 1,
+      "target_mode": "self",
+      "target_team": "monsters"
     }
   ],
   "sprites": [

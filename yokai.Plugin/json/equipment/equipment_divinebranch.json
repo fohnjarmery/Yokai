@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.deref.json",
   "cards": [
     {
       "id": "DivineBranch",
@@ -8,68 +8,87 @@
       },
       "lore_tooltips": [
         {
-          "english": "A branch from the Divine Tree."
+          "english": "A Magical Branch."
         }
       ],
       "card_type": "equipment",
       "rarity": "uncommon",
       "class": "@ClassYokai",
-      "unlock_level": 4,
       "card_art": "@DivineBranchArt",
       "targets_room": true,
       "targetless": false,
       "pools": [
         "MegaPool",
         "RoomAndEquipmentMerchant_EquipmentPool",
+        "RoomAndEquipmentMerchant_RoomAndEquipmentPool",
         "RoomAndEquipmentDraftPool",
         "EquipmentPoolNonEnemy",
         "FreeEquipmentMutatorPool"
       ],
-      "cost": 1,
+      "cost": 2,
       "effects": [
-        "@Equip_DivineBranch"
+        "@EquipBranch"
       ]
     }
   ],
   "upgrades": [
     {
-      "id": "upg_DivineBranch",
-      "bonus_damage": 15,
-      "bonus_hp": 0,
-      "status_effect_upgrades": [
-        {
-          "status": "undying",
-          "count": 3
-        }
-      ],
+      "id": "UpgradeBranch",
+      "bonus_damage": 12,
+      "bonus_hp": 12,
       "trigger_upgrades": [
-        "@DivineBranchResolveTrigger"
+        "@TriggerBranch"
       ],
       "icon": "@DivineBranchArt"
     }
   ],
   "character_triggers": [
     {
-      "id": "DivineBranchResolveTrigger",
-      "trigger": "post_combat",
-      "descriptions": {
-        "english": "Die."
+      "id": "TriggerBranch",
+      "trigger": {
+        "id": "@Evoke",
+        "mod_reference": "Conductor"
       },
-      "effects": [ "@DivineBranchDie" ]
+      "descriptions": {
+        "english": "Gain [rage] [effect0.status0.power] and [regen] [effect1.status0.power]"
+      },
+      "effects": [
+        "@EvokeBranchRage",
+        "@EvokeBranchRegen"
+      ]
     }
   ],
   "effects": [
     {
-      "id": "Equip_DivineBranch",
+      "id": "EquipBranch",
       "name": "CardEffectAttachEquipment",
       "target_mode": "drop_target_character",
       "target_team": "monsters",
-      "param_upgrade": "@upg_DivineBranch"
+      "param_upgrade": "@UpgradeBranch"
     },
     {
-      "id": "DivineBranchDie",
-      "name": "CardEffectKill",
-      "target_mode": "self"
+      "id": "EvokeBranchRage",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "self",
+      "target_team": "monsters",
+      "param_status_effects": [
+        {
+          "status": "buff",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": "EvokeBranchRegen",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "self",
+      "target_team": "monsters",
+      "param_status_effects": [
+        {
+          "status": "regen",
+          "count": 2
+        }
+      ]
     }
   ],
   "sprites": [

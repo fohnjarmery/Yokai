@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.deref.json",
   "cards": [
     {
       "id": "SpawnChochinObake",
@@ -7,7 +7,7 @@
         "english": "Chochin-Obake"
       },
       "card_art": "@ChochinObake",
-      "cost": 0,
+      "cost": 1,
       "card_type": "monster",
       "rarity": "common",
       "class": "@ClassYokai",
@@ -25,14 +25,34 @@
       "pools": [
         "MegaPool"
       ]
+    },
+    {
+      "id": "ChochinAbility",
+      "names": {
+        "english": "Lucky Lantern"
+      },
+      "descriptions": {
+        "english": "Gain 1 [ember] and 10 [coin]."
+      },
+      "card_art": "@ChochinObake",
+      "is_an_ability": true,
+      "cooldown": 1,
+      "targetless": true,
+      "targets_room": true,
+      "card_type": "spell",
+      "effects": [
+        "@ChochinSacrifice",
+        "@ChochinEmber",
+        "@ChochinGold"
+      ]
     }
   ],
   "characters": [
     {
       "id": "ChochinObake",
       "size": 1,
-      "attack_damage": 9,
-      "health": 9,
+      "attack_damage": 7,
+      "health": 3,
       "names": {
         "english": "ChochinObake"
       },
@@ -40,26 +60,11 @@
       "subtypes": [
         "@Sub_Spirit"
       ],
-      "triggers": [
+      "ability": "@ChochinAbility",
+      "starting_status_effects": [
         {
-          "id": "@ChochinObakeTrigger"
-        }
-      ]
-    }
-  ],
-  "character_triggers": [
-    {
-      "id": "ChochinObakeTrigger",
-      "descriptions": {
-        "english": "Gain +[effect0.upgrade.bonusdamage][attack] and [rage] [effect1.status0.power]."
-      },
-      "trigger": "on_any_unit_death_on_floor",
-      "effects": [
-        {
-          "id": "@ChochinObakeGainAttack"
-        },
-        {
-          "id": "@ChochinObakeGainRage"
+          "status": "@haunt",
+          "count": 3
         }
       ]
     }
@@ -72,29 +77,21 @@
       "param_character": "@ChochinObake"
     },
     {
-      "id": "ChochinObakeGainAttack",
-      "name": "CardEffectAddTempCardUpgradeToUnits",
+      "id": "ChochinSacrifice",
+      "name": "CardEffectSacrifice",
       "target_mode": "self",
-      "target_team": "none",
-      "param_upgrade": "@ChochinObakeOneAttack"
+      "target_team": "monsters"
     },
     {
-      "id": "ChochinObakeGainRage",
-      "name": "CardEffectAddStatusEffect",
-      "target_mode": "self",
-      "target_team": "none",
-      "param_status_effects": [
-        {
-          "status": "buff",
-          "count": 1
-        }
-      ]
-    }
-  ],
-  "upgrades": [
+      "id": "ChochinEmber",
+      "name": "CardEffectGainEnergy",
+      "param_int": 1,
+      "param_bool": false
+    },
     {
-      "id": "ChochinObakeOneAttack",
-      "bonus_damage": 1
+      "id": "ChochinGold",
+      "name": "CardEffectRewardGold",
+      "param_int": 10
     }
   ],
   "sprites": [

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.deref.json",
   "cards": [
     {
       "id": "DemonParade",
@@ -7,7 +7,7 @@
         "english": "Demon Parade"
       },
       "descriptions": {
-        "english": "+[effect0.upgrade.roommodifier0.power][capacity]. When a friendly unit dies, apply +[effect0.upgrade.charactertrigger0.effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.charactertrigger0.effect0.upgrade.bonushp][health] to friendly units."
+        "english": "When you play a unit, draw a unit and reduce its cost to 0."
       },
       "lore_tooltips": [
         {
@@ -39,45 +39,34 @@
         "english": "DemonParade"
       },
       "descriptions": {
-        "english": "+[roommodifier0.power][capacity]. When a friendly unit dies, apply +[charactertrigger0.effect0.upgrade.bonusdamage][attack] and +[charactertrigger0.effect0.upgrade.bonushp][health] to friendly units."
+        "english": "When you play a unit, draw a unit and reduce its cost to 0."
       },
       "trigger_upgrades": [
         "@DemonParadeTrigger"
-      ],
-      "room_modifier_upgrades": [
-        "@DemonParadeRoomModifier"
       ],
       "hide_icon_on_card": true,
       "icon": "@DemonParadeArt"
     },
     {
-      "id": "DemonParadeThreeAttackOneHealth",
-      "bonus_damage": 3,
-      "bonus_hp": 1
-    }
-  ],
-  "room_modifiers": [
-    {
-      "id": "DemonParadeRoomModifier",
-      "name": "RoomStateCapacityModifier",
-      "disallow_in_deployment": false,
-      "target_mode": "room",
-      "param_int": 1
+      "id": "DemonParadeCostUpgrade",
+      "cost_reduction": 99
     }
   ],
   "character_triggers": [
     {
       "id": "DemonParadeTrigger",
       "descriptions": {
-        "english": "When a friendly unit dies, apply +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health] to friendly units."
+        "english": "When you play a unit, draw a unit and reduce its cost to 0."
       },
-      "trigger": "on_death",
+      "trigger": "on_spawn",
       "hide_visual_and_ignore_silence": true,
       "effects": [
-        "@ApplyDemonParadeUpgrade"
+        "@DemonParadeDiscount",
+        "@DemonParadeDraw"
       ]
     }
   ],
+  
   "effects": [
     {
       "id": "DemonParadeRoomEffect",
@@ -89,13 +78,18 @@
       "target_team": "monsters"
     },
     {
-      "id": "ApplyDemonParadeUpgrade",
-      "name": "CardEffectAddTempCardUpgradeToUnits",
-      "target_mode": "room",
-      "target_team": "monsters",
-      "param_upgrade": "@DemonParadeThreeAttackOneHealth"
+      "id": "DemonParadeDiscount",
+      "name": "CardEffectAddTempCardUpgradeToNextDrawnCard",
+      "param_upgrade": "@DemonParadeCostUpgrade"
+    },
+    {
+      "id": "DemonParadeDraw",
+      "name": "CardEffectDrawType",
+      "param_int": 1,
+      "param_card_filter": "OnlyUnit"
     }
   ],
+ 
   "sprites": [
     {
       "id": "DemonParadeArt",

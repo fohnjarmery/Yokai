@@ -7,7 +7,7 @@
       "source_team": "heroes",
       "param_status_effects": [
         {
-          "status": "debuff",
+          "status": "@panic",
           "count": 1
         }
       ],
@@ -22,7 +22,7 @@
         "english": "Tengu Feather Fan"
       },
       "descriptions": {
-        "english": "Whenever an enemy unit moves, apply 1 Sap."
+        "english": "Whenever an enemy unit moves, apply 1 Panic."
       },
       "relic_activated": {
         "english": "Confusion!"

@@ -7,9 +7,9 @@ using System.Collections.Generic;
 using System.Text;
 using yokai.Plugin.code.RoomModifiers;
 
-namespace yokai.Plugin.code.StatusEffects
+namespace yokai.Plugin
 {
-    class StatusEffectScourgeState : StatusEffectState, IDamageStatusEffect
+    class StatusEffectPanicState : StatusEffectState, IDamageStatusEffect
     {
         public override bool TestTrigger(StatusEffectState.InputTriggerParams inputTriggerParams, StatusEffectState.OutputTriggerParams outputTriggerParams, ICoreGameManagers coreGameManagers)
         {

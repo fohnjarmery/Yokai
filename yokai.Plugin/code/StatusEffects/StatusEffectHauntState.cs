@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Text;
 using yokai.Plugin.code.RoomModifiers;
 
-namespace yokai.Plugin.code.StatusEffects
+namespace yokai.Plugin
 {
     public class StatusEffectHauntState : StatusEffectState
     {

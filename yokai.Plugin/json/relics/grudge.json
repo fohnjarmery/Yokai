@@ -6,7 +6,7 @@
       "name": "RelicEffectAddStatusEffectOnStatusApplied",
       "target_mode": "front_in_room",
       "source_team": "none",
-      "param_int": 1,
+      "param_int": 3,
       "param_bool": true,
       "param_status_effects": [
         {

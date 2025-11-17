@@ -1,5 +1,5 @@
 {
-    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.deref.json",
   "cards": [
     {
       "id": "Parade",
@@ -7,7 +7,7 @@
         "english": "Parade"
       },
       "descriptions": {
-        "english": "[descend]. Deal [effect1.power] damage."
+        "english": "Apply 1 Haunt to all units."
       },
       "rarity": "common",
       "class": "@ClassYokai",
@@ -20,28 +20,23 @@
       "cost": 1,
       "effects": [
         {
-          "id": "@ParadeDescend"
-        },
-        {
-          "id": "@ParadeDamage"
+          "id": "@ParadeHaunt"
         }
       ]
     }
   ],
     "effects": [
       {
-        "id": "ParadeDescend",
-        "name": "CardEffectBump",
-        "target_mode": "drop_target_character",
+        "id": "ParadeHaunt",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "room",
         "target_team": "both",
-        "param_int": -1
-      },
-      {
-        "id": "ParadeDamage",
-        "name": "CardEffectDamage",
-        "target_mode": "last_targeted_characters",
-        "target_team": "both",
-        "param_int": 5
+        "param_status_effects": [
+          {
+            "status": "@haunt",
+            "count": 1
+          }
+        ]
       }
     ],
   "sprites": [

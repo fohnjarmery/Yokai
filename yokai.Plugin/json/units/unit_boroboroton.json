@@ -1,142 +1,153 @@
 {
-    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
-    "cards": [
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.deref.json",
+  "cards": [
+    {
+      "id": "SpawnBoroboroton",
+      "names": {
+        "english": "Boroboroton"
+      },
+      "card_art": "@Boroboroton",
+      "cost": 2,
+      "card_type": "monster",
+      "rarity": "rare",
+      "class": "@ClassYokai",
+      "descriptions": {
+        "english": "When applying a stack of Panic, apply one more."
+      },
+      "targets_room": true,
+      "effects": [
         {
-            "id": "SpawnBoroboroton",
-            "names": {
-                "english": "Boroboroton"
+          "id": "@SpawnBoroboroton"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "Flavour Text"
+        }
+      ],
+      "pools": [
+        "MegaPool"
+      ]
+    },
+    {
+      "id": "BoroAbility",
+      "names": {
+        "english": "Rugpull"
+      },
+      "descriptions": {
+        "english": "Shuffle enemy units."
+      },
+      "card_art": "@Boroboroton",
+      "is_an_ability": true,
+      "cooldown": 2,
+      "targetless": true,
+      "targets_room": false,
+      "card_type": "spell",
+      "effects": [
+        {
+          "id": "@BoroAbilityEffect"
+        }
+      ]
+    }
+  ],
+
+  "characters": [
+    {
+      "id": "Boroboroton",
+      "size": 1,
+      "attack_damage": 0,
+      "health": 12,
+      "names": {
+        "english": "Boroboroton"
+      },
+      "character_art": "@BoroborotonCharacterArt",
+      "subtypes": [
+        "@Sub_Spirit"
+      ],
+      "ability": "@BoroAbility",
+      "room_modifiers": [
+        "@BoroScalingRoomModifier"
+      ]
+    }
+  ],
+
+  "effects": [
+    {
+      "id": "SpawnBoroboroton",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "room",
+      "param_character": "@Boroboroton"
+    },
+    {
+      "id": "BoroAbilityEffect",
+      "name": {
+        "id": "@CardEffectShuffleUnits",
+        "mod_reference": "Conductor"
+      },
+      "target_mode": "room",
+      "target_team": "heroes"
+    }
+  ],
+
+  "room_modifiers": [
+    {
+      "id": "BoroScalingRoomModifier",
+      "name": "RoomStateAddStatusEffectOnStatusApplied",
+      "in_play_descriptions": {
+        "english": "When applying a stack of Panic, apply one more."
+      },
+      "param_int": 1,
+      "param_int_2": 0,
+      "param_status_effects": [
+        {
+          "status": "@panic",
+          "count": 0,
+          "from_permanent_upgrade": false
+        }
+      ]
+    }
+  ],
+
+  "sprites": [
+    {
+      "id": "Boroboroton",
+      "path": "textures/BoroborotonCardArt.png"
+    },
+    {
+      "id": "BoroborotonCharacterArt",
+      "path": "textures/BoroborotonCharacterArt.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "Boroboroton",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@Boroboroton"
+        }
+      }
+    },
+    {
+      "id": "BoroborotonCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@BoroborotonCharacterArt",
+          "transform": {
+            "position": {
+              "x": 0.1,
+              "y": 0.73,
+              "z": 0
             },
-            "card_art": "@Boroboroton",
-            "cost": 1,
-            "card_type": "monster",
-            "rarity": "rare",
-            "class": "@ClassYokai",
-            "targets_room": true,
-            "effects": [
-                {
-                    "id": "@SpawnBoroboroton"
-                }
-            ],
-            "lore_tooltips": [
-                {
-                    "english": "Flavour Text"
-                }
-            ],
-            "pools": [
-                "MegaPool"
-            ]
-        }
-    ],
-    "characters": [
-        {
-            "id": "Boroboroton",
-            "size": 1,
-            "attack_damage": 15,
-            "health": 5,
-            "names": {
-                "english": "Boroboroton"
-            },
-            "character_art": "@BoroborotonCharacterArt",
-            "subtypes": [
-                "@Sub_Spirit"
-            ],
-            "triggers": [
-                {
-                    "id": "@BoroborotonTrigger"
-                }
-            ]
-        }
-    ],
-    "character_triggers": [
-        {
-            "id": "BoroborotonTrigger",
-            "descriptions": {
-                "english": "Gain +[effect0.upgrade.bonusdamage][attack] and [lifesteal] [effect1.status0.power]."
-            },
-            "trigger": "on_any_unit_death_on_floor",
-            "effects": [
-                {
-                    "id": "@BoroborotonGainAttack"
-                },
-                {
-                    "id": "@BoroborotonGainLifesteal"
-                }
-            ]
-        }
-    ],
-    "effects": [
-        {
-            "id": "SpawnBoroboroton",
-            "name": "CardEffectSpawnMonster",
-            "target_mode": "room",
-            "param_character": "@Boroboroton"
-        },
-        {
-            "id": "BoroborotonGainAttack",
-            "name": "CardEffectAddTempCardUpgradeToUnits",
-            "target_mode": "self",
-            "target_team": "none",
-            "param_upgrade": "@BoroborotonOneAttack"
-        },
-        {
-            "id": "BoroborotonGainLifesteal",
-            "name": "CardEffectAddStatusEffect",
-            "target_mode": "self",
-            "target_team": "none",
-            "param_status_effects": [
-                {
-                    "status": "lifesteal",
-                    "count": 1
-                }
-            ]
-        }
-    ],
-    "upgrades": [
-        {
-            "id": "BoroborotonOneAttack",
-            "bonus_damage": 1
-        }
-    ],
-    "sprites": [
-        {
-            "id": "Boroboroton",
-            "path": "textures/BoroborotonCardArt.png"
-        },
-        {
-            "id": "BoroborotonCharacterArt",
-            "path": "textures/BoroborotonCharacterArt.png"
-        }
-    ],
-    "game_objects": [
-        {
-            "id": "Boroboroton",
-            "type": "card_art",
-            "extensions": {
-                "card_art": {
-                    "sprite": "@Boroboroton"
-                }
+            "scale": {
+              "x": 0.9,
+              "y": 0.9,
+              "z": 1
             }
-        },
-        {
-            "id": "BoroborotonCharacterArt",
-            "type": "character_art",
-            "extensions": {
-                "character_art": {
-                    "sprite": "@BoroborotonCharacterArt",
-                    "transform": {
-                        "position": {
-                            "x": 0.1,
-                            "y": 0.73,
-                            "z": 0
-                        },
-                        "scale": {
-                            "x": 0.9,
-                            "y": 0.9,
-                            "z": 1
-                        }
-                    }
-                }
-            }
+          }
         }
-    ]
+      }
+    }
+  ]
 }
