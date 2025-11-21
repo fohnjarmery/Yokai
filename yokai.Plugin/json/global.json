@@ -1,9 +1,33 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.deref.json",
   "traits": [
     {
       "id": "Consume",
       "name": "CardTraitExhaustState"
+    }
+  ],
+  "additional_tooltips": [
+    {
+      "id": "YokaiEvokeTooltip",
+      "titles": {
+        "english": "Evoke"
+      },
+      "descriptions": {
+        "english": "Triggers when a friendly unit activates an <b>Ability</b>."
+      },
+      "style": "keyword",
+      "allow_secondary_placement": true
+    },
+    {
+      "id": "YokaiPanicTooltip",
+      "titles": {
+        "english": "Panic"
+      },
+      "descriptions": {
+        "english": "Deals damage equal to stacks when moving."
+      },
+      "style": "keyword",
+      "allow_secondary_placement": true
     }
   ]
 }

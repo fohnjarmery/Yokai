@@ -8,7 +8,7 @@
         "english": "Fearstone"
       },
       "descriptions": {
-        "english": "Upgrade a unit with +[effect0.upgrade0.bonusdamage][attack] and [haunt][effect0.upgrade0.power]."
+        "english": "Upgrade a unit with +[effect0.upgrade0.bonusdamage][attack] and [yokai.Plugin_haunt]<b>5</b>."
       },
       "relic_effects": [
         "@FearstoneEnhancer"

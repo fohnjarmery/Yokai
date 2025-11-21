@@ -7,7 +7,7 @@
         "english": "Wailing Echo"
       },
       "descriptions": {
-        "english": "Heal all Allies by 5. Damage all enemies per stack of Haunt."
+        "english": "Restore [effect0.power] health to allied units. Damage all enemies per stack of <b>Haunt</b> on them."
       },
       "rarity": "common",
       "class": "@ClassYokai",
@@ -56,7 +56,7 @@
       "name": "CardEffectHeal",
       "target_mode": "room",
       "target_team": "monsters",
-      "param_int": 5
+      "param_int": 10
     },
     {
       "id": "WailingEchoDamage",

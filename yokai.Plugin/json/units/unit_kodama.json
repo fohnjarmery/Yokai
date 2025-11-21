@@ -32,11 +32,11 @@
         "english": "Spirits Up!"
       },
       "descriptions": {
-        "english": "Apply Haunt 2 to a random unit."
+        "english": "Apply [yokai.Plugin_haunt] [effect0.status0.power] to a random unit."
       },
       "card_art": "@Kodama",
       "is_an_ability": true,
-      "cooldown": 1,
+      "cooldown": 2,
       "targetless": true,
       "targets_room": false,
       "card_type": "spell",
@@ -73,7 +73,7 @@
     {
       "id": "KodamaTrigger",
       "descriptions": {
-        "english": "Propagate 1 to a random allied unit."
+        "english": "<b>Propagate 1</b> on a random friendly unit."
       },
       "trigger": {
         "id": "@Evoke",

@@ -10,6 +10,7 @@
       "cost": 3,
       "card_type": "monster",
       "rarity": "rare",
+      "unlock_level": 10,
       "class": "@ClassYokai",
       "targets_room": true,
       "effects": [
@@ -32,7 +33,7 @@
         "english": "Join the Snake"
       },
       "descriptions": {
-        "english": "Gain 1 Multistrike."
+        "english": "Gain [effect1.status0.power] <b>Multistrike</b>."
       },
       "card_art": "@Orochi",
       "is_an_ability": true,
@@ -78,7 +79,7 @@
     {
       "id": "OrochiTrigger",
       "descriptions": {
-        "english": "Apply Panic 1 to all units."
+        "english": "Apply [yokai.Plugin_panic] [effect0.status0.power] to all units."
       },
       "trigger": "on_own_ability_activated",
       "effects": [

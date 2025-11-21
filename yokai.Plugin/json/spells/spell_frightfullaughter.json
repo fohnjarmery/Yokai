@@ -7,7 +7,7 @@
         "english": "Frightful Laughter"
       },
       "descriptions": {
-        "english": "Apply +1 Attack to Allied Units per Haunt stack on them."
+        "english": "Apply +1[attack] to Allied Units per <b>Haunt</b> stack on them."
       },
       "rarity": "uncommon",
       "class": "@ClassYokai",

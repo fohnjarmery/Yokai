@@ -10,6 +10,7 @@
       "cost": 2,
       "card_type": "monster",
       "rarity": "rare",
+      "unlock_level": 2,
       "class": "@ClassYokai",
       "targets_room": true,
       "effects": [
@@ -32,7 +33,7 @@
       "id": "YukiOnna",
       "size": 2,
       "attack_damage": 20,
-      "health": 15,
+      "health": 20,
       "names": {
         "english": "YukiOnna"
       },
@@ -58,7 +59,7 @@
     {
       "id": "YukiOnnaTrigger",
       "descriptions": {
-        "english": "Gain [haunt] [effect1.status0.power]."
+        "english": "Gain [yokai.Plugin_haunt] [effect0.status0.power]."
       },
       "trigger": {
         "id": "@Evoke",
@@ -79,13 +80,6 @@
       "param_character": "@YukiOnna"
     },
     {
-      "id": "YukiOnnaGainAttack",
-      "name": "CardEffectAddTempCardUpgradeToUnits",
-      "target_mode": "self",
-      "target_team": "none",
-      "param_upgrade": "@YukiOnnaOneAttack"
-    },
-    {
       "id": "YukiOnnaGainHaunt",
       "name": "CardEffectAddStatusEffect",
       "target_mode": "self",
@@ -93,7 +87,7 @@
       "param_status_effects": [
         {
           "status": "@haunt",
-          "count": 1
+          "count": 2
         }
       ]
     }

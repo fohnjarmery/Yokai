@@ -7,7 +7,7 @@
         "english": "Tanuki Charm"
       },
       "descriptions": {
-        "english": "Trigger a unit's <br>Resolve</br> and <br>Evoke</br> triggers."
+        "english": "Trigger a unit's <b>Resolve</b> and <b>Evoke</b> triggers."
       },
       "rarity": "common",
       "class": "@ClassYokai",
@@ -17,7 +17,7 @@
       "pools": [
         "MegaPool"
       ],
-      "cost": 1,
+      "cost": 0,
       "traits": [
         {
           "id": "@Consume"
@@ -46,6 +46,10 @@
       "name": "CardEffectPlayUnitTrigger",
       "target_mode": "last_targeted_characters",
       "target_team": "both",
+      "hide_tooltip": true,
+      "additional_tooltips": [
+        "@YokaiEvokeTooltip"
+      ],
       "param_trigger": {
         "id": "@Evoke",
         "mod_reference": "Conductor"

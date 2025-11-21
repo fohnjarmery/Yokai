@@ -7,7 +7,7 @@
         "english": "Snaketrail"
       },
       "descriptions": {
-        "english": "+1 [capacity]. Whenever an enemy unit dies, other enemy units gain Panic [effect0.status.power]."
+        "english": "Whenever an enemy unit dies, other enemy units gain [yokai.Plugin_panic] <b>5</b>."
       },
       "lore_tooltips": [
         {
@@ -36,34 +36,22 @@
         "english": "Snaketrail"
       },
       "descriptions": {
-        "english": "+1 [capacity]. Whenever an enemy unit dies, other enemy units gain Panic [effect0.status.power]."
+        "english": "Whenever an enemy unit dies, other enemy units gain Panic <b>5</b>."
       },
       "trigger_upgrades": [
         "@SnaketrailTrigger"
       ],
-      "room_modifier_upgrades": [
-        "@SnaketrailRoomModifier"
-      ],
       "hide_icon_on_card": true,
       "icon": "@SnaketrailArt"
-    }
-  ],
-  "room_modifiers": [
-    {
-      "id": "SnaketrailRoomModifier",
-      "name": "RoomStateCapacityModifier",
-      "disallow_in_deployment": false,
-      "target_mode": "room",
-      "param_int": 1
     }
   ],
   "character_triggers": [
     {
       "id": "SnaketrailTrigger",
       "descriptions": {
-        "english": "Whenever an enemy unit dies, other enemy units gain Panic [effect0.status.power]."
+        "english": "Whenever an enemy unit dies, other enemy units gain [yokai.Plugin_panic] [effect0.status.power]."
       },
-      "trigger": "on_any_hero_death_on_floor",
+      "trigger": "on_death",
       "hide_visual_and_ignore_silence": true,
       "effects": [
         "@ApplySnaketrailUpgrade"
@@ -84,6 +72,9 @@
       "id": "ApplySnaketrailUpgrade",
       "name": "CardEffectAddStatusEffect",
       "target_mode": "room",
+      "additional_tooltips": [
+        "@YokaiPanicTooltip"
+      ],
       "target_team": "heroes",
       "param_status_effects": [
         {

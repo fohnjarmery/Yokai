@@ -7,13 +7,13 @@
         "english": "Thousand-Demon March"
       },
       "descriptions": {
-        "english": "Allied units attack immediately. Apply [Daze] [effect1.status0.power] to allied units."
+        "english": "Friendly units attack immediately. Apply [dazed] [effect1.status0.power] to friendly units."
       },
       "rarity": "uncommon",
       "class": "@ClassYokai",
       "card_art": "@ThousandDemonMarchArt",
       "targets_room": true,
-      "targetless": false,
+      "targetless": true,
       "pools": [
         "MegaPool"
       ],

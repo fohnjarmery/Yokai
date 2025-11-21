@@ -12,10 +12,10 @@
   ],
   "relics": [
     {
-      "id": "Relic11",
+      "id": "ShrineStaff",
       "type": "collectable",
       "names": {
-        "english": "Relic 11"
+        "english": "Shrine Staff"
       },
       "descriptions": {
         "english": "Deal [effect0.power] damage to a random enemy unit when you activate an Ability."

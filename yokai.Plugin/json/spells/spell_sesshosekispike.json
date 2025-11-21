@@ -38,7 +38,7 @@
       "id": "SpikeScaleHaunt",
       "name": "CardTraitScalingAddStatusEffect",
       "param_tracked_value": "played_cost",
-      "param_int": 6,
+      "param_int": 4,
       "effect_text_suppressed": true,
       "param_status_effects": [
         {

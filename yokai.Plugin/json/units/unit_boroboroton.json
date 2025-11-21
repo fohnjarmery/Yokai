@@ -10,9 +10,10 @@
       "cost": 2,
       "card_type": "monster",
       "rarity": "rare",
+      "unlock_level": 6,
       "class": "@ClassYokai",
       "descriptions": {
-        "english": "When applying a stack of Panic, apply one more."
+        "english": "When applying a stack of <b>Panic</b>, apply one more."
       },
       "targets_room": true,
       "effects": [
@@ -94,7 +95,7 @@
       "id": "BoroScalingRoomModifier",
       "name": "RoomStateAddStatusEffectOnStatusApplied",
       "in_play_descriptions": {
-        "english": "When applying a stack of Panic, apply one more."
+        "english": "When applying a stack of <b>Panic</b>, apply one more."
       },
       "param_int": 1,
       "param_int_2": 0,

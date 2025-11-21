@@ -19,7 +19,7 @@
         "english": "Hannya Mask"
       },
       "descriptions": {
-        "english": "Your units apply Panic 2 to enemy units at the end of combat."
+        "english": "Friendly units apply [yokai.Plugin_panic] [effect1.status0.power] on <b>Resolve</b>."
       },
       "relic_activated": {
         "english": "Spooked!"
@@ -39,6 +39,7 @@
             "class": "@ClassYokai",
             "pools": [ "MegaRelicPool" ],
             "rarity": "common",
+            "unlock_level": 6,
             "deprioritize_in_ftue_drafts": true
           }
         }

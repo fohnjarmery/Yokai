@@ -5,14 +5,14 @@
         "names": {
             "english": "Darkness"
         },
-        "descriptions": {
-            "english": "[Shuffle] enemy units. Apply 4 Panic."
-        },
+      "descriptions": {
+        "english": "<b>Shuffle</b> enemy units. Apply [yokai.Plugin_panic] [effect1.status0.power]."
+      },
         "rarity": "common",
         "class": "@ClassYokai",
         "card_art": "@DarknessArt",
         "targets_room": true,
-        "targetless": false,
+        "targetless": true,
         "pools": [
             "StarterCardsOnly"
         ],

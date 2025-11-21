@@ -7,9 +7,10 @@
         "english": "Nightmare"
       },
       "descriptions": {
-        "english": "Deal [effect1.power] damage and apply [panic][effect0.status0.power], twice."
+        "english": "Deal [effect1.power] damage and apply [yokai.Plugin_panic] [effect0.status0.power], twice."
       },
       "rarity": "uncommon",
+      "unlock_level": 7,
       "class": "@ClassYokai",
       "card_art": "@NightmareArt",
       "targets_room": true,

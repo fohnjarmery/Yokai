@@ -7,13 +7,13 @@
         "english": "Parade"
       },
       "descriptions": {
-        "english": "Apply 1 Haunt to all units."
+        "english": "Apply [effect0.status0.power] [yokai.Plugin_haunt] to all units."
       },
       "rarity": "common",
       "class": "@ClassYokai",
       "card_art": "@ParadeArt",
       "targets_room": true,
-      "targetless": false,
+      "targetless": true,
       "pools": [
         "MegaPool"
       ],

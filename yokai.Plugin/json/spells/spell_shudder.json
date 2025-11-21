@@ -7,7 +7,7 @@
         "english": "Shudder"
       },
       "descriptions": {
-        "english": "Apply Panic 10 to an enemy unit and Retreat it."
+        "english": "Apply [yokai.Plugin_panic] [effect0.status0.power] to an enemy unit and <b>Retreat</b> it."
       },
       "rarity": "common",
       "class": "@ClassYokai",
@@ -37,7 +37,7 @@
       "param_status_effects": [
         {
           "status": "@panic",
-          "count": 10
+          "count": 15
         }
       ]
     },

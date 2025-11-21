@@ -11,7 +11,7 @@
         "english": "Haunt {0}"
       },
       "card_tooltips": {
-        "english": "Player units have +[codeint0][attack] per stack on Allies."
+        "english": "Player units have +[codeint0][attack] per stacks between Allies. Does not buff enemies."
       },
       "character_tooltips": {
         "english": "Player units have +[codeint0][attack] (+[codeint1][attack] per stack)."

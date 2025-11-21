@@ -7,7 +7,7 @@
         "english": "Thundering Drums"
       },
       "descriptions": {
-        "english": "Apply Haunt 5 to an allied unit then apply Conduit equal to Haunt stacks."
+        "english": "Apply [yokai.Plugin_haunt] [effect0.status0.power] to an allied unit then apply <b>Conduit</b> equal to <b>Haunt</b> stacks."
       },
       "rarity": "uncommon",
       "class": "@ClassYokai",
@@ -37,7 +37,7 @@
       "param_status_effects": [
         {
           "status": "@haunt",
-          "count": 5
+          "count": 4
         }
       ]
     },

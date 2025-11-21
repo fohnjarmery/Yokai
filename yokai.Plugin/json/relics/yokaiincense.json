@@ -41,6 +41,7 @@
             "class": "@ClassYokai",
             "pools": [ "MegaRelicPool" ],
             "rarity": "common",
+            "unlock_level": 2,
             "deprioritize_in_ftue_drafts": true
           }
         }

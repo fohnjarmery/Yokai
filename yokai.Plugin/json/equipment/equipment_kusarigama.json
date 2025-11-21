@@ -13,6 +13,7 @@
       ],
       "card_type": "equipment",
       "rarity": "rare",
+      "unlock_level": 9,
       "class": "@ClassYokai",
       "card_art": "@KusarigamaArt",
       "targets_room": true,

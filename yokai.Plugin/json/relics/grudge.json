@@ -24,7 +24,7 @@
         "english": "Grudge"
       },
       "descriptions": {
-        "english": "Whenever a unit gains Panic, they gain one more."
+        "english": "When a unit gains [yokai.Plugin_panic] it gains <b>+1</b> Stack."
       },
       "relic_activated": {
         "english": "Grudge!"

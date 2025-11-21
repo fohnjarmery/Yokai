@@ -6,6 +6,8 @@
       "name": "RelicEffectDrawOnPreOpeningDraw",
       "param_int": 1,
       "param_card_filter": "OnlyUnit",
+      "param_excluded_subtypes": [ "SubtypesData_BannerUnit" ],
+      "param_card_filter_2": "ExcludeChampions",
       "param_bool": true,
       "param_upgrade": "@ScampussUpgrade"
     }

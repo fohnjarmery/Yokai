@@ -10,6 +10,7 @@
         "english": "Apply <b>Ability</b>: Unleash Magic to a friendly unit."
       },
       "rarity": "rare",
+      "unlock_level": 8,
       "class": "@ClassYokai",
       "card_art": "@OnmyojiTomeArt",
       "targets_room": true,
@@ -35,7 +36,7 @@
         "english": "Unleash Magic"
       },
       "descriptions": {
-        "english": "Apply Haunt 5 to all units on every floor."
+        "english": "Apply [yokai.Plugin_haunt] [effect0.status0.power] to all units on every floor."
       },
       "card_art": "@OnmyojiTomeArt",
       "is_an_ability": true,

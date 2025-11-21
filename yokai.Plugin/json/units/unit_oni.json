@@ -32,7 +32,7 @@
       "id": "Oni",
       "size": 2,
       "attack_damage": 35,
-      "health": 25,
+      "health": 35,
       "names": {
         "english": "Oni"
       },
@@ -55,7 +55,7 @@
     {
       "id": "OniDeathwishTrigger",
       "descriptions": {
-        "english": "Apply +20[attack] to self. On Retreating, regain 25 [health] and apply -15[attack] to self."
+        "english": "Apply +20[attack]. On Retreat, restore <b>25</b> health and apply <b>-15</b>[attack]."
       },
       "trigger": "on_deathwish",
       "effects": [

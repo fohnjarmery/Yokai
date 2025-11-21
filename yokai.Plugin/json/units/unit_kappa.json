@@ -10,6 +10,7 @@
       "cost": 1,
       "card_type": "monster",
       "rarity": "common",
+      "unlock_level": 3,
       "class": "@ClassYokai",
       "targets_room": true,
       "effects": [
@@ -32,7 +33,7 @@
         "english": "Dark Bargain"
       },
       "descriptions": {
-        "english": "Spend 3 [Soul]. Gain [effect1.powerabs] [coin]. Apply [stealth] [effect2.status0.power] to allied units."
+        "english": "Spend 3 [soul]. Gain [effect1.powerabs] [coin]. Apply [stealth] [effect2.status0.power] to allied units."
       },
       "card_art": "@Kappa",
       "is_an_ability": true,
@@ -52,8 +53,8 @@
     {
       "id": "Kappa",
       "size": 1,
-      "attack_damage": 5,
-      "health": 5,
+      "attack_damage": 3,
+      "health": 3,
       "names": {
         "english": "Kappa"
       },
@@ -70,11 +71,11 @@
       "starting_status_effects": [
         {
           "status": "stealth",
-          "count": 5
+          "count": 3
         },
         {
           "status": "avarice",
-          "count": 5
+          "count": 3
         }
       ]
     }

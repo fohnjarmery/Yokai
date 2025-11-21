@@ -32,7 +32,7 @@
         "english": "Structural Damage"
       },
       "descriptions": {
-        "english": "Deal 25 damage to enemy units and 50 damage to self."
+        "english": "Deal [effect1.power] damage to enemy units and [effect0.power] damage to self."
       },
       "card_art": "@Nurikabe",
       "is_an_ability": true,
@@ -50,8 +50,8 @@
     {
       "id": "Nurikabe",
       "size": 3,
-      "attack_damage": 30,
-      "health": 100,
+      "attack_damage": 0,
+      "health": 110,
       "names": {
         "english": "Nurikabe"
       },
@@ -65,14 +65,20 @@
           "id": "@NurikabeTrigger"
         }
       ],
-      "ability": "@NurikabeAbility"
+      "ability": "@NurikabeAbility",
+      "starting_status_effects": [
+        {
+          "status": "immobile",
+          "count": 1
+        }
+      ]
     }
   ],
   "character_triggers": [
     {
       "id": "NurikabeTrigger",
       "descriptions": {
-        "english": "Restore 15 health."
+        "english": "Restore [effect0.power] health."
       },
       "trigger": {
         "id": "@Evoke",

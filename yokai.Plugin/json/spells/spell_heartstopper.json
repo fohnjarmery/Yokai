@@ -7,7 +7,7 @@
         "english": "Heartstopper"
       },
       "descriptions": {
-        "english": "Apply [panic] [effect0.status0.power]. Deal damage equal to Panic stacks."
+        "english": "Apply [yokai.Plugin_panic] [effect0.status0.power]. Deal damage equal to <b>Panic</b> stacks."
       },
       "rarity": "rare",
       "class": "@ClassYokai",

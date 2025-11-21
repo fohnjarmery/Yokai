@@ -7,7 +7,7 @@
         "english": "Itsumade Itsumade!"
       },
       "descriptions": {
-        "english": "Apply [decay] [effect0.status0.power], [unstable] [effect1.status0.power], [panic] [effect2.status0.power], [mute] [effect3.status0.power] and Retreat an enemy unit. ."
+        "english": "Apply [decay] [effect0.status0.power], [unstable] [effect1.status0.power], [yokai.Plugin_panic] [effect2.status0.power], [mute] [effect3.status0.power] and <b>Retreat</b> an enemy unit. ."
       },
       "rarity": "rare",
       "class": "@ClassYokai",

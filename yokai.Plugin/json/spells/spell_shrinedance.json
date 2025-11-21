@@ -7,13 +7,14 @@
         "english": "Shrine Dance"
       },
       "descriptions": {
-        "english": "+[effect0.power][capacity]. Restore [effect1.power][health] to allied units. Increase the cost of this card by 1. "
+        "english": "+[effect0.power][capacity] on this floor. Restore [effect1.power] health to friendly units and cleanse negative status effects. Increase the cost of this card by 1 permanently. "
       },
       "rarity": "uncommon",
+      "unlock_level": 4,
       "class": "@ClassYokai",
       "card_art": "@ShrineDanceArt",
       "targets_room": true,
-      "targetless": false,
+      "targetless": true,
       "pools": [
         "MegaPool"
       ],
@@ -24,6 +25,12 @@
         },
         {
           "id": "@ShrineDanceHeal"
+        },
+        {
+          "id": "@ShrineDanceCleanse"
+        },
+        {
+          "id": "@ShrineDanceFragile"
         },
         {
           "id": "@ShrineDanceCost"
@@ -45,7 +52,26 @@
       "name": "CardEffectHeal",
       "target_mode": "room",
       "target_team": "monsters",
-      "param_int": 50
+      "param_int": 100
+    },
+    {
+      "id": "ShrineDanceCleanse",
+      "name": "CardEffectRemoveAllStatusEffects",
+      "param_int": 1,
+      "target_mode": "room",
+      "target_team": "monsters"
+    },
+    {
+      "id": "ShrineDanceFragile",
+      "name": "CardEffectRemoveStatusEffect",
+      "target_mode": "last_targeted_characters",
+      "target_team": "monsters",
+      "param_status_effects": [
+        {
+          "status": "fragile",
+          "count": 1
+        }
+      ]
     },
     {
       "id": "ShrineDanceCost",

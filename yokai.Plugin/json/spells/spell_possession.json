@@ -7,7 +7,7 @@
         "english": "Possession"
       },
       "descriptions": {
-        "english": "[Advance] a unit. Apply 3 [Haunt] to the unit."
+        "english": "<b>Advance</b> a unit. Apply [effect1.status0.power] [yokai.Plugin_haunt] to the unit."
       },
       "rarity": "common",
       "class": "@ClassYokai",
@@ -17,7 +17,7 @@
       "pools": [
         "MegaPool"
       ],
-      "cost": 1,
+      "cost": 0,
       "effects": [
         {
           "id": "@PossessionAdvance"
@@ -44,7 +44,7 @@
       "param_status_effects": [
         {
           "status": "@haunt",
-          "count": 3
+          "count": 2
         }
       ]
     }

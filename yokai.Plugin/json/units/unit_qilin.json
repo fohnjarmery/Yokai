@@ -51,8 +51,8 @@
     {
       "id": "Qilin",
       "size": 3,
-      "attack_damage": 40,
-      "health": 35,
+      "attack_damage": 35,
+      "health": 40,
       "names": {
         "english": "Qilin"
       },
@@ -126,7 +126,7 @@
       "param_int_2":  2,
       "use_status_effect_multiplier":  false,
       "param_bool":  false,
-      "param_bool_2": true
+      "param_bool_2": false
     }
   ],
   "sprites": [

@@ -12,7 +12,7 @@
       "rarity": "uncommon",
       "class": "@ClassYokai",
       "descriptions": {
-        "english": "+5 attack per stack of Stealth on self."
+        "english": "+8[attack] for every stack of <b>Stealth</b>."
       },
       "targets_room": true,
       "effects": [
@@ -35,7 +35,7 @@
         "english": "In The Shade"
       },
       "descriptions": {
-        "english": "Apply Stealth 2 to allied units."
+        "english": "Apply [stealth] [effect0.status0.power] to friendly units."
       },
       "card_art": "@KasaObake",
       "is_an_ability": true,
@@ -67,6 +67,12 @@
       "ability": "@KasaAbility",
       "room_modifiers": [
         "@KasaScalingRoomModifier"
+      ],
+      "starting_status_effects": [
+        {
+          "status": "stealth",
+          "count": 1
+        }
       ]
     }
   ],
@@ -95,9 +101,9 @@
       "id": "KasaScalingRoomModifier",
       "name": "RoomStateSelfDamagePerStatusEffectStack",
       "in_play_descriptions": {
-        "english": "+[power][attack] per Stealth stacks on self."
+        "english": "+[power][attack] per stack of <b>Stealth</b>."
       },
-      "param_int": 5,
+      "param_int": 8,
       "param_status_effects": [
         {
           "status": "stealth",

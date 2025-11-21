@@ -7,13 +7,13 @@
         "english": "Sacred Trees"
       },
       "descriptions": {
-        "english": "Apply <br>Haunt</br>1 to allied units then <br>Propagate</br> 3 on allied units."
+        "english": "Apply [yokai.Plugin_haunt] [effect0.status0.power] to allied units then <b>Propagate</b> <b>3</b> on allied units."
       },
       "rarity": "uncommon",
       "class": "@ClassYokai",
       "card_art": "@SacredTreesArt",
       "targets_room": true,
-      "targetless": false,
+      "targetless": true,
       "pools": [
         "MegaPool"
       ],

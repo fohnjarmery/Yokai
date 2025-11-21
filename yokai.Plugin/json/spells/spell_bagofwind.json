@@ -7,9 +7,10 @@
         "english": "Bag of Wind"
       },
       "descriptions": {
-        "english": "<br>Shuffle</br> enemy units 3 times and apply Dazed 1."
+        "english": "<b>Shuffle</b> enemy units <b>3</b> times and apply [dazed] [effect3.status0.power]."
       },
       "rarity": "uncommon",
+      "unlock_level": 5,
       "class": "@ClassYokai",
       "card_art": "@BagOfWindArt",
       "targets_room": true,

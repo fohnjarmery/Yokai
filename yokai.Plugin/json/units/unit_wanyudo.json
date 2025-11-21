@@ -32,7 +32,7 @@
         "english": "Hot Headed"
       },
       "descriptions": {
-        "english": "Apply Rage 4 to self."
+        "english": "Apply [rage] [effect0.status0.power] to self."
       },
       "card_art": "@Wanyudo",
       "is_an_ability": true,
@@ -73,7 +73,7 @@
     {
       "id": "WanyudoTrigger",
       "descriptions": {
-        "english": "Reduce allied cooldowns by 1."
+        "english": "Reduce friendly units <b>cooldown</b> by 1."
       },
       "trigger": "on_kill",
       "effects": [

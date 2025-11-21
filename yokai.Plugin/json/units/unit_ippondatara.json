@@ -32,7 +32,7 @@
           "english": "Reinforce"
         },
         "descriptions": {
-          "english": "Apply 2 Damage Shield to the front allied unit."
+          "english": "Apply [effect0.status0.power] [damageshield] to the front allied unit."
         },
         "card_art": "@IpponDatara",
         "is_an_ability": true,
@@ -71,7 +71,7 @@
       {
         "id": "IpponDataraTrigger",
         "descriptions": {
-          "english": "Apply +10 attack to self."
+          "english": "Apply +8[attack]."
         },
         "trigger": {
           "id": "@Evoke",
@@ -114,7 +114,7 @@
     "upgrades": [
         {
             "id": "IpponDataraTenAttack",
-            "bonus_damage": 10
+            "bonus_damage": 8
         }
     ],
     "sprites": [

@@ -22,7 +22,7 @@
         "english": "Oni Mask"
       },
       "descriptions": {
-        "english": "All units enter with 1 Haunt."
+        "english": "All units enter with [yokai.Plugin_haunt] <b>1</b>."
       },
       "relic_activated": {
         "english": "Haunted!"
@@ -43,6 +43,7 @@
             "class": "@ClassYokai",
             "pools": [ "MegaRelicPool" ],
             "rarity": "common",
+            "unlock_level": 8,
             "deprioritize_in_ftue_drafts": true
           }
         }
