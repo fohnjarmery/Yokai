@@ -51,6 +51,7 @@ This clan features:
 
  # Known Issues
  There's currently no icon for the clan in the Logbook but you can still view them in there.
+ 
  The map node for their banner units always appears visited, even when it isn't. This is a known issue with Trainworks. Just be sure to check the banner.
  
  # To Do
