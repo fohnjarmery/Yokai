@@ -4,7 +4,7 @@ schemaVersion = "0.0.1"
 [package]
 namespace = "Yokai"
 name = "yokai"
-versionNumber = "0.1.0"
+versionNumber = "1.0.0"
 description = "Yokai Clan"
 websiteUrl = "https://thunderstore.io"
 containsNsfwContent = false
