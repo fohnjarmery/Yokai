@@ -9,6 +9,7 @@ Parading through heaven comes a march of free-spirited demons, enemies of order 
 
 The Yokai clan is focused on building large floors, unit-heavy strategies, lots of activated Abilities and disrupting the enemy through moving them around.
 The clan features two new Status effects to assist them with this:
+
  -**Haunt**-
  
   Haunt is a Buff that can be applied to enemies and allies. It has no effect on enemy units however allied units will gain additional attack for every other Haunt 
