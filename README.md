@@ -48,8 +48,11 @@ This clan features:
  -1 New Steelshop Enhancer
  
  -2 New Status Effects
- 
 
+ # Known Issues
+ There's currently no icon for the clan in the Logbook but you can still view them in there.
+ The map node for their banner units always appears visited, even when it isn't. This is a known issue with Trainworks. Just be sure to check the banner.
+ 
  # To Do
  **Art** - Right now, the clan is using entirely placeholder art for cards/characters. I've tried to ensure the art is somewhat close to Monster Train 2's art but eventually I do plan to create my own art assets.
  
