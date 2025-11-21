@@ -1,5 +1,7 @@
 # The Yokai Clan
 
+<img width="900" height="600" alt="YokaiClanBanner" src="https://github.com/user-attachments/assets/ccc8cc16-6571-43c5-aa35-14de765e8f25" />
+
 This mod adds a new playable clan to the game - the Yokai Clan!
 Parading through heaven comes a march of free-spirited demons, enemies of order and standing in opposition to The Titans.
 
