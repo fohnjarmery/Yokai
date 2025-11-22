@@ -6,7 +6,7 @@ namespace = "Yokai"
 name = "yokai"
 versionNumber = "1.0.1"
 description = "Yokai Clan"
-websiteUrl = "https://thunderstore.io"
+websiteUrl = "https://github.com/fohnjarmery/Yokai"
 containsNsfwContent = false
 
 [package.dependencies]
