@@ -65,3 +65,12 @@ This clan features:
  **Balancing** - I've tried to keep the clan roughly similar to other MT2 clans in powerlevel but there's still balance-work to be done. I've been able to win a few Cov10 runs with the clan but if anyone has any balancing feedback I'd be happy to hear it!
  
  **Custom Effects** - Whilst the new status effects and triggers are unique, it would be nice to have a few more unique effects on cards. Hopefully as time passes and I learn more about coding I can expand on these.
+
+# Sample Screenshots
+![Screenshot 1](https://github.com/fohnjarmery/Yokai/blob/main/Screenshot%202025-11-21%20183408.png)
+![Screenshot 2](https://github.com/fohnjarmery/Yokai/blob/main/Screenshot%202025-11-21%20183430.png)
+![Screenshot 3](https://github.com/fohnjarmery/Yokai/blob/main/Screenshot%202025-11-21%20183449.png)
+![Screenshot 4](https://github.com/fohnjarmery/Yokai/blob/main/Screenshot%202025-11-21%20183507.png)
+![Screenshot 5](https://github.com/fohnjarmery/Yokai/blob/main/Screenshot%202025-11-21%20183600.png)
+
+
