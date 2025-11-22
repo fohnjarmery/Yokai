@@ -68,7 +68,6 @@ This clan features:
 
 # Sample Screenshots
 ![Screenshot 1](https://github.com/fohnjarmery/Yokai/blob/main/Screenshot%202025-11-21%20183408.png)
-![Screenshot 2](https://github.com/fohnjarmery/Yokai/blob/main/Screenshot%202025-11-21%20183430.png)
 ![Screenshot 3](https://github.com/fohnjarmery/Yokai/blob/main/Screenshot%202025-11-21%20183449.png)
 ![Screenshot 4](https://github.com/fohnjarmery/Yokai/blob/main/Screenshot%202025-11-21%20183507.png)
 ![Screenshot 5](https://github.com/fohnjarmery/Yokai/blob/main/Screenshot%202025-11-21%20183600.png)
