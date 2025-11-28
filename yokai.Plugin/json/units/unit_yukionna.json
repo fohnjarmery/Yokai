@@ -7,9 +7,9 @@
         "english": "Yuki-Onna"
       },
       "card_art": "@YukiOnna",
-      "cost": 2,
+      "cost": 1,
       "card_type": "monster",
-      "rarity": "rare",
+      "rarity": "uncommon",
       "unlock_level": 2,
       "class": "@ClassYokai",
       "targets_room": true,
@@ -32,8 +32,8 @@
     {
       "id": "YukiOnna",
       "size": 2,
-      "attack_damage": 20,
-      "health": 20,
+      "attack_damage": 12,
+      "health": 7,
       "names": {
         "english": "YukiOnna"
       },

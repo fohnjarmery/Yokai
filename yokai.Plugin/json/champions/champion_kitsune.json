@@ -32,7 +32,7 @@
       },
       "card_art": "@Kitsune",
       "is_an_ability": true,
-      "cooldown": 1,
+      "cooldown": 2,
       "targetless": false,
       "targets_room": true,
       "card_type": "spell",
@@ -46,7 +46,7 @@
         "english": "Fox Charm II"
       },
       "descriptions": {
-        "english": "<b>Advance</b> a unit. Then deal <b>10</b> Damage to front enemy unit."
+        "english": "<b>Advance</b> a unit."
       },
       "card_art": "@Kitsune",
       "is_an_ability": true,
@@ -55,8 +55,7 @@
       "targets_room": true,
       "card_type": "spell",
       "effects": [
-        "@FoxCharmPull2",
-        "@FoxCharmDamage1"
+        "@FoxCharmPull2"
       ]
     },
     {
@@ -65,7 +64,7 @@
         "english": "Fox Charm III"
       },
       "descriptions": {
-        "english": "<b>Advance</b> a unit. Then deal <b>30</b> Damage to front enemy unit."
+        "english": "<b>Advance</b> a unit."
       },
       "card_art": "@Kitsune",
       "is_an_ability": true,
@@ -74,8 +73,7 @@
       "targets_room": true,
       "card_type": "spell",
       "effects": [
-        "@FoxCharmPull3",
-        "@FoxCharmDamage2"
+        "@FoxCharmPull3"
       ]
     }
   ],
@@ -107,12 +105,6 @@
       },
       "bonus_damage": 15,
       "bonus_hp": 0,
-      "status_effect_upgrades": [
-        {
-          "status": "ambush",
-          "count": 1
-        }
-      ],
       "trigger_upgrades": [
         "@Ninetailed1Trigger"
       ]
@@ -127,12 +119,6 @@
       },
       "bonus_damage": 45,
       "bonus_hp": 5,
-      "status_effect_upgrades": [
-        {
-          "status": "ambush",
-          "count": 1
-        }
-      ],
       "trigger_upgrades": [
         "@Ninetailed2Trigger"
       ]
@@ -147,14 +133,12 @@
       },
       "bonus_damage": 85,
       "bonus_hp": 10,
-      "status_effect_upgrades": [
-        {
-          "status": "ambush",
-          "count": 1
-        }
+      "remove_upgrades": [
+        "@upg_NineTailed2"
       ],
       "trigger_upgrades": [
-        "@Ninetailed3Trigger"
+        "@NinetailedActionTrigger",
+        "@NinetailedResolveTrigger"
       ]
     },
     {
@@ -203,7 +187,8 @@
       },
       "bonus_damage": 12,
       "bonus_hp": 10,
-      "ability_upgrade": "@FoxCharm1Ability"
+      "ability_upgrade": "@FoxCharm1Ability",
+      "trigger_upgrades": ["@Mischievous1Trigger"]
     },
     {
       "id": "upg_Mischievous2",
@@ -215,7 +200,8 @@
       },
       "bonus_damage": 35,
       "bonus_hp": 15,
-      "ability_upgrade": "@Foxcharm2Ability"
+      "ability_upgrade": "@Foxcharm1Ability",
+      "trigger_upgrades": [ "@Mischievous2Trigger" ]
     },
     {
       "id": "upg_Mischievous3",
@@ -227,14 +213,15 @@
       },
       "bonus_damage": 65,
       "bonus_hp": 20,
-      "ability_upgrade": "@Foxcharm3Ability"
+      "ability_upgrade": "@Foxcharm2Ability",
+      "trigger_upgrades": [ "@Mischievous3Trigger" ]
     },
     {
       "id": "NinetailedCelebrate1Upgrade",
       "status_effect_upgrades": [
         {
           "status": "@haunt",
-          "count": 5,
+          "count": 6,
           "from_permanent_upgrade": true
         }
       ]
@@ -244,22 +231,28 @@
       "status_effect_upgrades": [
         {
           "status": "@haunt",
-          "count": 8,
+          "count": 10,
           "from_permanent_upgrade": true
         }
       ]
     },
     {
-      "id": "NinetailedCelebrate3Upgrade",
-      "status_effect_upgrades": [
-        {
-          "status": "@haunt",
-          "count": 15,
-          "from_permanent_upgrade": true
-        }
-      ]
+      "id": "Mischievous1StatUpgrade",
+      "bonus_damage": 2,
+      "bonus_hp": 3
+    },
+    {
+      "id": "Mischievous2StatUpgrade",
+      "bonus_damage": 5,
+      "bonus_hp": 8
+    },
+    {
+      "id": "Mischievous3StatUpgrade",
+      "bonus_damage": 6,
+      "bonus_hp": 10
     }
   ],
+
 
   "character_triggers": [
     {
@@ -313,13 +306,64 @@
       ]
     },
     {
-      "id": "Ninetailed3Trigger",
-      "trigger": "on_encounter_complete",
+      "id": "NinetailedActionTrigger",
+      "trigger": "on_turn_begin",
       "descriptions": {
-        "english": "Gain [yokai.Plugin_haunt] [effect0.upgrade.status0.power] permanently."
+        "english": "Gain <b>Multistrike</b> [effect0.status1.power] per [effect0.status0.power] [yokai.Plugin_haunt] stacks."
       },
       "effects": [
-        "@Ninetailed3Celebrate"
+        "@NinetailedReward",
+        "@NinetailedReward100",
+        "@NinetailedReward150",
+        "@NinetailedReward200",
+        "@NinetailedReward250",
+        "@NinetailedReward300"
+      ]
+    },
+    {
+      "id": "NinetailedResolveTrigger",
+      "trigger": "post_combat",
+      "descriptions": {
+        "english": "Lose all stacks of <b>Multistrike</b>."
+      },
+      "effects": [
+        "@NinetailedResolve"
+      ]
+    },
+    {
+      "id": "Mischievous1Trigger",
+      "descriptions": {
+        "english": "Apply +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health] to front friendly unit."
+      },
+      "trigger": "on_own_ability_activated",
+      "effects": [
+        {
+          "id": "@Mischievous1Stats"
+        }
+      ]
+    },
+    {
+      "id": "Mischievous2Trigger",
+      "descriptions": {
+        "english": "Apply +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health] to front friendly unit."
+      },
+      "trigger": "on_own_ability_activated",
+      "effects": [
+        {
+          "id": "@Mischievous2Stats"
+        }
+      ]
+    },
+    {
+      "id": "Mischievous3Trigger",
+      "descriptions": {
+        "english": "Apply +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health] to front friendly unit."
+      },
+      "trigger": "on_own_ability_activated",
+      "effects": [
+        {
+          "id": "@Mischievous3Stats"
+        }
       ]
     }
   ],
@@ -355,20 +399,6 @@
       "target_team": "both",
       "param_int": 0,
       "target_ignore_bosses": true
-    },
-    {
-      "id": "FoxCharmDamage1",
-      "name": "CardEffectDamage",
-      "target_mode": "front_in_room",
-      "target_team": "heroes",
-      "param_int": 10
-    },
-    {
-      "id": "FoxCharmDamage2",
-      "name": "CardEffectDamage",
-      "target_mode": "front_in_room",
-      "target_team": "heroes",
-      "param_int": 30
     },
     {
       "id": "Haunting1Enchant",
@@ -425,16 +455,127 @@
       "param_int_3": 2
     },
     {
-      "id": "Ninetailed3Celebrate",
-      "name": "CardEffectAddCardUpgradeToUnits",
+      "id": "NinetailedReward",
+      "name": "CardEffectAddStatusEffectOnStatusThreshold",
       "target_mode": "self",
-      "param_upgrade": "@NinetailedCelebrate3Upgrade",
-      "param_int": 0,
-      "param_int_2": 0,
-      "param_int_3": 2
+      "param_status_effects": [
+        {
+          "status": "@haunt",
+          "count": 50
+        },
+        {
+          "status": "multistrike",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "NinetailedReward100",
+      "name": "CardEffectAddStatusEffectOnStatusThreshold",
+      "target_mode": "self",
+      "param_status_effects": [
+        {
+          "status": "@haunt",
+          "count": 100
+        },
+        {
+          "status": "multistrike",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "NinetailedReward150",
+      "name": "CardEffectAddStatusEffectOnStatusThreshold",
+      "target_mode": "self",
+      "param_status_effects": [
+        {
+          "status": "@haunt",
+          "count": 150
+        },
+        {
+          "status": "multistrike",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "NinetailedReward200",
+      "name": "CardEffectAddStatusEffectOnStatusThreshold",
+      "target_mode": "self",
+      "param_status_effects": [
+        {
+          "status": "@haunt",
+          "count": 200
+        },
+        {
+          "status": "multistrike",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "NinetailedReward250",
+      "name": "CardEffectAddStatusEffectOnStatusThreshold",
+      "target_mode": "self",
+      "param_status_effects": [
+        {
+          "status": "@haunt",
+          "count": 250
+        },
+        {
+          "status": "multistrike",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "NinetailedReward300",
+      "name": "CardEffectAddStatusEffectOnStatusThreshold",
+      "target_mode": "self",
+      "param_status_effects": [
+        {
+          "status": "@haunt",
+          "count": 300
+        },
+        {
+          "status": "multistrike",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "NinetailedResolve",
+      "name": "CardEffectRemoveStatusEffect",
+      "target_mode": "self",
+      "param_status_effects": [
+        {
+          "status": "multistrike",
+          "count": 99
+        }
+      ]
+    },
+    {
+      "id": "Mischievous1Stats",
+      "name": "CardEffectAddTempCardUpgradeToUnits",
+      "target_mode": "front_in_room",
+      "target_team": "monsters",
+      "param_upgrade": "@Mischievous1StatUpgrade"
+    },
+    {
+      "id": "Mischievous2Stats",
+      "name": "CardEffectAddTempCardUpgradeToUnits",
+      "target_mode": "front_in_room",
+      "target_team": "monsters",
+      "param_upgrade": "@Mischievous2StatUpgrade"
+    },
+    {
+      "id": "Mischievous3Stats",
+      "name": "CardEffectAddTempCardUpgradeToUnits",
+      "target_mode": "front_in_room",
+      "target_team": "monsters",
+      "param_upgrade": "@Mischievous3StatUpgrade"
     }
-
-
   ],
   "sprites": [
     {

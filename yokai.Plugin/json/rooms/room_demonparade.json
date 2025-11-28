@@ -7,7 +7,7 @@
         "english": "Demon Parade"
       },
       "descriptions": {
-        "english": "When you play a unit, draw a unit and reduce its cost to 0."
+        "english": "When you play a unit, fill the floor with copies. Allied units die at the end of the turn."
       },
       "lore_tooltips": [
         {
@@ -15,7 +15,7 @@
         }
       ],
       "card_art": "@DemonParadeArt",
-      "cost": 1,
+      "cost": 2,
       "card_type": "room",
       "rarity": "rare",
       "class": "@ClassYokai",
@@ -39,10 +39,11 @@
         "english": "DemonParade"
       },
       "descriptions": {
-        "english": "When you play a unit, draw a unit and reduce its cost to 0."
+        "english": "When you play a unit, fill the floor with copies. Allied units die at the end of the turn."
       },
       "trigger_upgrades": [
-        "@DemonParadeTrigger"
+        "@DemonParadeTrigger",
+        "@DemonParadeEndTurnTrigger"
       ],
       "hide_icon_on_card": true,
       "icon": "@DemonParadeArt"
@@ -56,13 +57,23 @@
     {
       "id": "DemonParadeTrigger",
       "descriptions": {
-        "english": "When you play a unit, draw a unit and reduce its cost to 0."
+        "english": "Create 3 duplicates when played."
       },
       "trigger": "on_spawn",
       "hide_visual_and_ignore_silence": true,
       "effects": [
-        "@DemonParadeDiscount",
-        "@DemonParadeDraw"
+        "@DemonParadeDuplicate"
+      ]
+    },
+    {
+      "id": "DemonParadeEndTurnTrigger",
+      "descriptions": {
+        "english": "Die at the end of the turn."
+      },
+      "trigger": "post_combat",
+      "hide_visual_and_ignore_silence": true,
+      "effects": [
+        "@DemonParadeDeath"
       ]
     }
   ],
@@ -78,15 +89,15 @@
       "target_team": "monsters"
     },
     {
-      "id": "DemonParadeDiscount",
-      "name": "CardEffectAddTempCardUpgradeToNextDrawnCard",
-      "param_upgrade": "@DemonParadeCostUpgrade"
+      "id": "DemonParadeDuplicate",
+      "name": "CardEffectCopyUnits",
+      "param_int": 3,
+      "target_mode": "self"
     },
     {
-      "id": "DemonParadeDraw",
-      "name": "CardEffectDrawType",
-      "param_int": 1,
-      "param_card_filter": "OnlyUnit"
+      "id": "DemonParadeDeath",
+      "name": "CardEffectKill",
+      "target_mode": "self"
     }
   ],
  

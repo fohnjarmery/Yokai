@@ -7,7 +7,7 @@
         "english": "Parade"
       },
       "descriptions": {
-        "english": "Apply [effect0.status0.power] [yokai.Plugin_haunt] to all units."
+        "english": "Apply [yokai.Plugin_haunt] [effect0.status0.power] to all units."
       },
       "rarity": "common",
       "class": "@ClassYokai",
@@ -34,7 +34,7 @@
         "param_status_effects": [
           {
             "status": "@haunt",
-            "count": 1
+            "count": 2
           }
         ]
       }

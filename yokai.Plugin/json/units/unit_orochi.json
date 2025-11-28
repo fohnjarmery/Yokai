@@ -33,7 +33,7 @@
         "english": "Join the Snake"
       },
       "descriptions": {
-        "english": "Gain [effect1.status0.power] <b>Multistrike</b>."
+        "english": "Gain <b>Multistrike</b> [effect1.status0.power]."
       },
       "card_art": "@Orochi",
       "is_an_ability": true,

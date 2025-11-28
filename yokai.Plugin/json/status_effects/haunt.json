@@ -11,10 +11,10 @@
         "english": "Haunt {0}"
       },
       "card_tooltips": {
-        "english": "Player units have +[codeint0][attack] per stacks between Allies. Does not buff enemies."
+        "english": "Player units have +[codeint0][attack] per stacks between friendly units. Does not buff enemies."
       },
       "character_tooltips": {
-        "english": "Player units have +[codeint0][attack] (+[codeint1][attack] per stack)."
+        "english": "Player units have +[codeint0][attack] (+[codeint1][attack] per stacks between friendly units.)."
       },
       "replacement_texts": {
         "english": "<b>Haunt</b>"
@@ -24,6 +24,7 @@
       "display_category": "positive",
       "exclude_hero_propagation": true,
       "is_stackable": true,
+      "remove_stack_at_end_of_turn": true,
       "icon": "@Haunt"
     }
   ],

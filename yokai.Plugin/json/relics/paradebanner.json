@@ -5,7 +5,7 @@
       "id": "ParadeBannerEffect",
       "name": "RelicEffectAdditionalDrawPerCardType",
       "param_card_type": "monster",
-      "param_int": 4
+      "param_int": 6
     }
   ],
   "relics": [
@@ -16,7 +16,7 @@
         "english": "Parade Banner"
       },
       "descriptions": {
-        "english": "For each 4 Monsters in your deck, draw an additional card."
+        "english": "For every 6 Monsters in your deck, draw an additional card."
       },
       "relic_activated": {
         "english": "March!"

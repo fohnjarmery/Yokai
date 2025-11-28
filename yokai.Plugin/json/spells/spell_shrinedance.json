@@ -66,6 +66,7 @@
       "name": "CardEffectRemoveStatusEffect",
       "target_mode": "last_targeted_characters",
       "target_team": "monsters",
+      "hide_tooltip": true,
       "param_status_effects": [
         {
           "status": "fragile",

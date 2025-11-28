@@ -39,7 +39,8 @@
     },
     {
       "id": "StrideTraitExplosive",
-      "name": "CardTraitDamageOverflow"
+      "name": "CardTraitDamageOverflow",
+      "param_int": 2
     }
   ],
   "effects": [

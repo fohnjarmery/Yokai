@@ -55,7 +55,7 @@
     {
       "id": "OniDeathwishTrigger",
       "descriptions": {
-        "english": "Apply +20[attack]. On Retreat, restore <b>25</b> health and apply <b>-15</b>[attack]."
+        "english": "<b>+20</b>[attack].    On moving backward, restore <b>25</b> health and apply <b>-15</b>[attack]."
       },
       "trigger": "on_deathwish",
       "effects": [

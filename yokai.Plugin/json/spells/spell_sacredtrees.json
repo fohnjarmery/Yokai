@@ -7,7 +7,7 @@
         "english": "Sacred Trees"
       },
       "descriptions": {
-        "english": "Apply [yokai.Plugin_haunt] [effect0.status0.power] to allied units then <b>Propagate</b> <b>3</b> on allied units."
+        "english": "Apply [yokai.Plugin_haunt] [effect0.status0.power] to allied units then <b>Propagate</b> <b>3</b>."
       },
       "rarity": "uncommon",
       "class": "@ClassYokai",
@@ -18,6 +18,11 @@
         "MegaPool"
       ],
       "cost": 2,
+      "traits": [
+        {
+          "id": "@Consume"
+        }
+      ],
       "effects": [
         {
           "id": "@SacredTreesHaunt"

@@ -9,7 +9,7 @@
       "card_art": "@Qilin",
       "cost": 2,
       "card_type": "monster",
-      "rarity": "uncommon",
+      "rarity": "rare",
       "class": "@ClassYokai",
       "targets_room": true,
       "effects": [
@@ -32,7 +32,7 @@
         "english": "Blessing of Protection"
       },
       "descriptions": {
-        "english": "Share all status effects with friendly units."
+        "english": "Duplicate all buffs to other friendly units."
       },
       "card_art": "@Qilin",
       "is_an_ability": true,
@@ -73,7 +73,7 @@
     {
       "id": "QilinTrigger",
       "descriptions": {
-        "english": "Gain 2 [regen] and 2 [rage]."
+        "english": "Gain [regen] [effect0.status0.power] and [rage] [effect1.status0.power]."
       },
       "trigger": "post_combat",
       "effects": [

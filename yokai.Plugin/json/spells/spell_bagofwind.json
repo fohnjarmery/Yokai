@@ -14,7 +14,7 @@
       "class": "@ClassYokai",
       "card_art": "@BagOfWindArt",
       "targets_room": true,
-      "targetless": false,
+      "targetless": true,
       "pools": [
         "MegaPool"
       ],

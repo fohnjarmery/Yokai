@@ -21,7 +21,7 @@
         "english": "Noble's Purse'"
       },
       "descriptions": {
-        "english": "Whenever a unit triggers Evoke, gain 5 Gold."
+        "english": "Gain <b>5</b>[coin] when a friendly unit triggers <b>Evoke</b>."
       },
       "relic_activated": {
         "english": "The purse spills!"

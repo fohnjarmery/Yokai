@@ -18,7 +18,7 @@
         "english": "Shrine Staff"
       },
       "descriptions": {
-        "english": "Deal [effect0.power] damage to a random enemy unit when you activate an Ability."
+        "english": "After using an ability, deal [effect0.power] damage to a random enemy unit."
       },
       "relic_activated": {
         "english": "Magic!"

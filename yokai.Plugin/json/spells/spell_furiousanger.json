@@ -7,7 +7,7 @@
         "english": "Furious Anger"
       },
       "descriptions": {
-        "english": "Deal [effect0.power] damage. Apply additional damage equal to target <b>Haunt</b> stacks."
+        "english": "Deal [effect0.power] damage. Apply 5 additional damage per target <b>Haunt</b> stacks."
       },
       "rarity": "uncommon",
       "class": "@ClassYokai",
@@ -32,7 +32,8 @@
   "traits": [
     {
       "id": "AngerTraitExplosive",
-      "name": "CardTraitDamageOverflow"
+      "name": "CardTraitDamageOverflow",
+      "param_int": 2
     },
     {
       "id": "AngerTraitScaling",
@@ -43,7 +44,7 @@
           "count": 1
         }
       ],
-      "param_int": 1,
+      "param_int": 5,
       "param_bool": false
     }
   ],

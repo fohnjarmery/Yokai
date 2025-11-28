@@ -32,7 +32,7 @@
         "english": "Spirits Up!"
       },
       "descriptions": {
-        "english": "Apply [yokai.Plugin_haunt] [effect0.status0.power] to a random unit."
+        "english": "Apply [yokai.Plugin_haunt] [effect0.status0.power] to a random non-Morsel unit."
       },
       "card_art": "@Kodama",
       "is_an_ability": true,
@@ -73,7 +73,7 @@
     {
       "id": "KodamaTrigger",
       "descriptions": {
-        "english": "<b>Propagate 1</b> on a random friendly unit."
+        "english": "<b>Propagate 1</b> on a random friendly non-Morsel unit."
       },
       "trigger": {
         "id": "@Evoke",
@@ -96,6 +96,7 @@
       "name": "CardEffectAdjustAllStatusEffects",
       "target_mode": "random_in_room",
       "target_team": "monsters",
+      "target_character_excluded_subtypes": [ "SubtypesData_Snack" ],
       "param_int": 1,
       "param_int_2": 1
     },
@@ -104,6 +105,7 @@
       "name": "CardEffectAddStatusEffect",
       "target_mode": "random_in_room",
       "target_team": "both",
+      "target_character_excluded_subtypes": ["SubtypesData_Snack"],
       "param_status_effects": [
         {
           "status": "@haunt",

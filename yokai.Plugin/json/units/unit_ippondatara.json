@@ -32,7 +32,7 @@
           "english": "Reinforce"
         },
         "descriptions": {
-          "english": "Apply [effect0.status0.power] [damageshield] to the front allied unit."
+          "english": "Apply [damageshield] [effect0.status0.power] to the front friendly unit."
         },
         "card_art": "@IpponDatara",
         "is_an_ability": true,
@@ -71,7 +71,7 @@
       {
         "id": "IpponDataraTrigger",
         "descriptions": {
-          "english": "Apply +8[attack]."
+          "english": "+8[attack]."
         },
         "trigger": {
           "id": "@Evoke",
