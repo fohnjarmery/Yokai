@@ -4,7 +4,7 @@ schemaVersion = "0.0.1"
 [package]
 namespace = "Yokai"
 name = "yokai"
-versionNumber = "1.0.3"
+versionNumber = "1.0.4"
 description = "Yokai Clan"
 websiteUrl = "https://github.com/fohnjarmery/Yokai"
 containsNsfwContent = false
