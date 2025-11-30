@@ -4,14 +4,17 @@
     {
       "id": "Snaketrail",
       "names": {
-        "english": "Snaketrail"
+        "english": "Snaketrail",
+        "chinese": "蛇踪"
       },
       "descriptions": {
-        "english": "Whenever an enemy unit dies, other enemy units gain [yokai.Plugin_panic] <b>5</b>."
+        "english": "Whenever an enemy unit dies, other enemy units gain [yokai.Plugin_panic] <b>5</b>.",
+        "chinese": "每当敌方单位死亡时，其他敌方单位获得[yokai.Plugin_panic] <b>5</b>。"
       },
       "lore_tooltips": [
         {
-          "english": "Lore stuff."
+          "english": "Lore stuff.",
+          "chinese": "蛇行过后，恐惧蔓延。"
         }
       ],
       "card_art": "@SnaketrailArt",
@@ -33,10 +36,12 @@
     {
       "id": "SnaketrailRoomUpgrade",
       "titles": {
-        "english": "Snaketrail"
+        "english": "Snaketrail",
+        "chinese": "蛇踪"
       },
       "descriptions": {
-        "english": "Whenever an enemy unit dies, other enemy units gain Panic <b>5</b>."
+        "english": "Whenever an enemy unit dies, other enemy units gain Panic <b>5</b>.",
+        "chinese": "每当敌方单位死亡时，其他敌方单位获得恐慌<b>5</b>。"
       },
       "trigger_upgrades": [
         "@SnaketrailTrigger"
@@ -49,7 +54,8 @@
     {
       "id": "SnaketrailTrigger",
       "descriptions": {
-        "english": "Whenever an enemy unit dies, other enemy units gain [yokai.Plugin_panic] [effect0.status.power]."
+        "english": "Whenever an enemy unit dies, other enemy units gain [yokai.Plugin_panic] [effect0.status.power].",
+        "chinese": "每当敌方单位死亡时，其他敌方单位获得[yokai.Plugin_panic] [effect0.status.power]。"
       },
       "trigger": "on_death",
       "hide_visual_and_ignore_silence": true,
