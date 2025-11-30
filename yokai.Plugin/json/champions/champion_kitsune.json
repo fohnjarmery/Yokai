@@ -4,7 +4,8 @@
     {
       "id": "SpawnKitsune",
       "names": {
-        "english": "Kitsune"
+        "english": "Kitsune",
+        "chinese": "妖狐"
       },
       "card_art": "@Kitsune",
       "cost": 0,
@@ -18,17 +19,20 @@
       ],
       "lore_tooltips": [
         {
-          "english": "A cute little fox spirit, but don't be fooled."
+          "english": "A cute little fox spirit, but don't be fooled.",
+          "chinese": "看似可爱的小狐狸精，但千万别被她的外表所欺骗。"
         }
       ]
     },
     {
       "id": "FoxCharm1Ability",
       "names": {
-        "english": "Fox Charm"
+        "english": "Fox Charm",
+        "chinese": "狐媚术"
       },
       "descriptions": {
-        "english": "<b>Advance</b> a unit."
+        "english": "<b>Advance</b> a unit.",
+        "chinese": "<b>前进</b>一个单位。"
       },
       "card_art": "@Kitsune",
       "is_an_ability": true,
@@ -43,10 +47,12 @@
     {
       "id": "FoxCharm2Ability",
       "names": {
-        "english": "Fox Charm II"
+        "english": "Fox Charm II",
+        "chinese": "狐媚术 II"
       },
       "descriptions": {
-        "english": "<b>Advance</b> a unit."
+        "english": "<b>Advance</b> a unit.",
+        "chinese": "<b>前进</b>一个单位。"
       },
       "card_art": "@Kitsune",
       "is_an_ability": true,
@@ -61,10 +67,12 @@
     {
       "id": "FoxCharm3Ability",
       "names": {
-        "english": "Fox Charm III"
+        "english": "Fox Charm III",
+        "chinese": "狐媚术 III"
       },
       "descriptions": {
-        "english": "<b>Advance</b> a unit."
+        "english": "<b>Advance</b> a unit.",
+        "chinese": "<b>前进</b>一个单位。"
       },
       "card_art": "@Kitsune",
       "is_an_ability": true,
@@ -81,7 +89,8 @@
     {
       "id": "Kitsune",
       "names": {
-        "english": "Kitsune"
+        "english": "Kitsune",
+        "chinese": "妖狐"
       },
       "character_art": "@KitsuneCharacterArt",
       "chatter": "@CTR_Kitsune",
@@ -98,10 +107,12 @@
     {
       "id": "upg_NineTailed1",
       "titles": {
-        "english": "Nine Tailed"
+        "english": "Nine Tailed",
+        "chinese": "九尾"
       },
       "descriptions": {
-        "english": "Damage path"
+        "english": "Damage path",
+        "chinese": "伤害路线"
       },
       "bonus_damage": 15,
       "bonus_hp": 0,
@@ -112,10 +123,12 @@
     {
       "id": "upg_NineTailed2",
       "titles": {
-        "english": "Nine Tailed II"
+        "english": "Nine Tailed II",
+        "chinese": "九尾 II"
       },
       "descriptions": {
-        "english": "Even more damage path"
+        "english": "Even more damage path",
+        "chinese": "更高伤害路线"
       },
       "bonus_damage": 45,
       "bonus_hp": 5,
@@ -126,10 +139,12 @@
     {
       "id": "upg_NineTailed3",
       "titles": {
-        "english": "Nine Tailed III"
+        "english": "Nine Tailed III",
+        "chinese": "九尾 III"
       },
       "descriptions": {
-        "english": "So much damage path"
+        "english": "So much damage path",
+        "chinese": "极致伤害路线"
       },
       "bonus_damage": 85,
       "bonus_hp": 10,
@@ -144,10 +159,12 @@
     {
       "id": "upg_Haunting1",
       "titles": {
-        "english": "Haunting"
+        "english": "Haunting",
+        "chinese": "幽魂"
       },
       "descriptions": {
-        "english": "Health path"
+        "english": "Health path",
+        "chinese": "生命路线"
       },
       "bonus_damage": 10,
       "bonus_hp": 15,
@@ -156,10 +173,12 @@
     {
       "id": "upg_Haunting2",
       "titles": {
-        "english": "Haunting II"
+        "english": "Haunting II",
+        "chinese": "幽魂 II"
       },
       "descriptions": {
-        "english": "Even more health path"
+        "english": "Even more health path",
+        "chinese": "更高生命路线"
       },
       "bonus_damage": 20,
       "bonus_hp": 25,
@@ -168,10 +187,12 @@
     {
       "id": "upg_Haunting3",
       "titles": {
-        "english": "Haunting III"
+        "english": "Haunting III",
+        "chinese": "幽魂 III"
       },
       "descriptions": {
-        "english": "So much health path"
+        "english": "So much health path",
+        "chinese": "极致生命路线"
       },
       "bonus_damage": 30,
       "bonus_hp": 30,
@@ -180,10 +201,12 @@
     {
       "id": "upg_Mischievous1",
       "titles": {
-        "english": "Mischievous"
+        "english": "Mischievous",
+        "chinese": "狡黠"
       },
       "descriptions": {
-        "english": "mixed path"
+        "english": "mixed path",
+        "chinese": "混合路线"
       },
       "bonus_damage": 12,
       "bonus_hp": 10,
@@ -193,10 +216,12 @@
     {
       "id": "upg_Mischievous2",
       "titles": {
-        "english": "Mischievous II"
+        "english": "Mischievous II",
+        "chinese": "狡黠 II"
       },
       "descriptions": {
-        "english": "even more mixed path"
+        "english": "even more mixed path",
+        "chinese": "更高混合路线"
       },
       "bonus_damage": 35,
       "bonus_hp": 15,
@@ -206,10 +231,12 @@
     {
       "id": "upg_Mischievous3",
       "titles": {
-        "english": "Mischievous III"
+        "english": "Mischievous III",
+        "chinese": "狡黠 III"
       },
       "descriptions": {
-        "english": "so much mixed path"
+        "english": "so much mixed path",
+        "chinese": "极致混合路线"
       },
       "bonus_damage": 65,
       "bonus_hp": 20,
@@ -252,14 +279,13 @@
       "bonus_hp": 10
     }
   ],
-
-
   "character_triggers": [
     {
       "id": "Haunting1Trigger",
       "trigger": "after_spawn_enchant",
       "descriptions": {
-        "english": "Apply [yokai.Plugin_haunt] [effect0.status0.power] to all units."
+        "english": "Apply [yokai.Plugin_haunt] [effect0.status0.power] to all units.",
+        "chinese": "为所有单位施加 [yokai.Plugin_haunt] [effect0.status0.power]。"
       },
       "effects": [
         "@Haunting1Enchant"
@@ -269,7 +295,8 @@
       "id": "Haunting2Trigger",
       "trigger": "after_spawn_enchant",
       "descriptions": {
-        "english": "Apply [yokai.Plugin_haunt] [effect0.status0.power] to all units."
+        "english": "Apply [yokai.Plugin_haunt] [effect0.status0.power] to all units.",
+        "chinese": "为所有单位施加 [yokai.Plugin_haunt] [effect0.status0.power]。"
       },
       "effects": [
         "@Haunting2Enchant"
@@ -279,7 +306,8 @@
       "id": "Haunting3Trigger",
       "trigger": "after_spawn_enchant",
       "descriptions": {
-        "english": "Apply [yokai.Plugin_haunt] [effect0.status0.power] to all units."
+        "english": "Apply [yokai.Plugin_haunt] [effect0.status0.power] to all units.",
+        "chinese": "为所有单位施加 [yokai.Plugin_haunt] [effect0.status0.power]。"
       },
       "effects": [
         "@Haunting3Enchant"
@@ -289,7 +317,8 @@
       "id": "Ninetailed1Trigger",
       "trigger": "on_encounter_complete",
       "descriptions": {
-        "english": "Gain [yokai.Plugin_haunt] [effect0.upgrade.status0.power] permanently."
+        "english": "Gain [yokai.Plugin_haunt] [effect0.upgrade.status0.power] permanently.",
+        "chinese": "永久获得 [yokai.Plugin_haunt] [effect0.upgrade.status0.power]。"
       },
       "effects": [
         "@Ninetailed1Celebrate"
@@ -299,7 +328,8 @@
       "id": "Ninetailed2Trigger",
       "trigger": "on_encounter_complete",
       "descriptions": {
-        "english": "Gain [yokai.Plugin_haunt] [effect0.upgrade.status0.power] permanently."
+        "english": "Gain [yokai.Plugin_haunt] [effect0.upgrade.status0.power] permanently.",
+        "chinese": "永久获得 [yokai.Plugin_haunt] [effect0.upgrade.status0.power]。"
       },
       "effects": [
         "@Ninetailed2Celebrate"
@@ -309,7 +339,8 @@
       "id": "NinetailedActionTrigger",
       "trigger": "on_turn_begin",
       "descriptions": {
-        "english": "Gain <b>Multistrike</b> [effect0.status1.power] per [effect0.status0.power] [yokai.Plugin_haunt] stacks."
+        "english": "Gain <b>Multistrike</b> [effect0.status1.power] per [effect0.status0.power] [yokai.Plugin_haunt] stacks.",
+        "chinese": "每 [effect0.status0.power] 层 [yokai.Plugin_haunt] 获得<b>多重攻击</b> [effect0.status1.power]。"
       },
       "effects": [
         "@NinetailedReward",
@@ -324,7 +355,8 @@
       "id": "NinetailedResolveTrigger",
       "trigger": "post_combat",
       "descriptions": {
-        "english": "Lose all stacks of <b>Multistrike</b>."
+        "english": "Lose all stacks of <b>Multistrike</b>.",
+        "chinese": "失去所有<b>多重攻击</b>层数。"
       },
       "effects": [
         "@NinetailedResolve"
@@ -333,7 +365,8 @@
     {
       "id": "Mischievous1Trigger",
       "descriptions": {
-        "english": "Apply +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health] to front friendly unit."
+        "english": "Apply +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health] to front friendly unit.",
+        "chinese": "为前方友方单位施加+[effect0.upgrade.bonusdamage][attack]和+[effect0.upgrade.bonushp][health]。"
       },
       "trigger": "on_own_ability_activated",
       "effects": [
@@ -345,7 +378,8 @@
     {
       "id": "Mischievous2Trigger",
       "descriptions": {
-        "english": "Apply +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health] to front friendly unit."
+        "english": "Apply +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health] to front friendly unit.",
+        "chinese": "为前方友方单位施加+[effect0.upgrade.bonusdamage][attack]和+[effect0.upgrade.bonushp][health]。"
       },
       "trigger": "on_own_ability_activated",
       "effects": [
@@ -357,7 +391,8 @@
     {
       "id": "Mischievous3Trigger",
       "descriptions": {
-        "english": "Apply +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health] to front friendly unit."
+        "english": "Apply +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health] to front friendly unit.",
+        "chinese": "为前方友方单位施加+[effect0.upgrade.bonusdamage][attack]和+[effect0.upgrade.bonushp][health]。"
       },
       "trigger": "on_own_ability_activated",
       "effects": [
@@ -367,7 +402,6 @@
       ]
     }
   ],
-
   "effects": [
     {
       "id": "SpawnKitsune",
@@ -625,33 +659,42 @@
       "gender": "female",
       "added_expressions": [
         {
-          "english": "You can trust me!"
+          "english": "You can trust me!",
+          "chinese": "你可以相信我！"
         },
         {
-          "english": "I'll lead the way!"
+          "english": "I'll lead the way!",
+          "chinese": "我来带路！"
         },
         {
-          "english": "I'm not really a fighter..."
+          "english": "I'm not really a fighter...",
+          "chinese": "我其实不太擅长战斗..."
         }
       ],
       "idle_expressions": [
         {
-          "english": "Aren't I cute?"
+          "english": "Aren't I cute?",
+          "chinese": "我不可爱吗？"
         },
         {
-          "english": "I don't like all this noise."
+          "english": "I don't like all this noise.",
+          "chinese": "我不喜欢这些噪音。"
         },
         {
-          "english": "Wanna pet me?"
+          "english": "Wanna pet me?",
+          "chinese": "想摸摸我吗？"
         },
         {
-          "english": "Don't be fooled now!"
+          "english": "Don't be fooled now!",
+          "chinese": "现在可别被骗了！"
         },
         {
-          "english": "I want to chew on some wings."
+          "english": "I want to chew on some wings.",
+          "chinese": "我想嚼点翅膀。"
         },
         {
-          "english": "Are you feeling lost?"
+          "english": "Are you feeling lost?",
+          "chinese": "你迷路了吗？"
         }
       ]
     }
