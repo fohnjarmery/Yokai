@@ -4,11 +4,14 @@
     {
       "id": "DivineBranch",
       "names": {
-        "english": "Divine Branch"
+        "english": "Divine Branch",
+        "chinese": "神枝"
       },
+
       "lore_tooltips": [
         {
-          "english": "A Magical Branch."
+          "english": "A Magical Branch.",
+          "chinese": "蕴含神力的树枝。"
         }
       ],
       "card_type": "equipment",
@@ -50,7 +53,8 @@
         "mod_reference": "Conductor"
       },
       "descriptions": {
-        "english": "Gain [rage] [effect0.status0.power] and [regen] [effect1.status0.power]"
+        "english": "Gain [rage] [effect0.status0.power] and [regen] [effect1.status0.power]",
+        "chinese": "获得 [rage] [effect0.status0.power] 和 [regen] [effect1.status0.power]。"
       },
       "effects": [
         "@EvokeBranchRage",
