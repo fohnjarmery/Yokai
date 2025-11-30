@@ -10,10 +10,12 @@
     {
       "id": "YokaiEvokeTooltip",
       "titles": {
-        "english": "Evoke"
+        "english": "Evoke",
+        "chinese": "营造"
       },
       "descriptions": {
-        "english": "Triggers when a friendly unit activates an <b>Ability</b>."
+        "english": "Triggers when a friendly unit activates an <b>Ability</b>.",
+        "chinese": "当友方单位激活<b>能力</b>时触发。"
       },
       "style": "keyword",
       "allow_secondary_placement": true
@@ -21,10 +23,12 @@
     {
       "id": "YokaiPanicTooltip",
       "titles": {
-        "english": "Panic"
+        "english": "Panic",
+        "chinese": "恐慌"
       },
       "descriptions": {
-        "english": "Deals damage equal to stacks when moving."
+        "english": "Deals damage equal to stacks when moving.",
+        "chinese": "移动时受到等同于层数的伤害。"
       },
       "style": "keyword",
       "allow_secondary_placement": true
