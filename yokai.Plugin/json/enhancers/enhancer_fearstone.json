@@ -5,10 +5,12 @@
       "id": "Fearstone",
       "type": "enhancer",
       "names": {
-        "english": "Fearstone"
+        "english": "Fearstone",
+        "chinese": "恐石"
       },
       "descriptions": {
-        "english": "Upgrade a unit with +[effect0.upgrade0.bonusdamage][attack] and [yokai.Plugin_haunt] <b>5</b>."
+        "english": "Upgrade a unit with +[effect0.upgrade0.bonusdamage][attack] and [yokai.Plugin_haunt] <b>5</b>.",
+        "chinese": "升级一个单位，获得+[effect0.upgrade0.bonusdamage][attack]和 [yokai.Plugin_haunt] <b>5</b>。"
       },
       "relic_effects": [
         "@FearstoneEnhancer"
@@ -39,10 +41,12 @@
     {
       "id": "FearstoneUpgrade",
       "titles": {
-        "english": "Fearstone"
+        "english": "Fearstone",
+        "chinese": "恐石"
       },
       "descriptions": {
-        "english": "Gain +[bonusdamage][attack]."
+        "english": "Gain +[bonusdamage][attack].",
+        "chinese": "获得+[bonusdamage][attack]。"
       },
       "bonus_damage": 5,
       "status_effect_upgrades": [
@@ -50,8 +54,7 @@
           "status": "@haunt",
           "count": 5
         }
-      ], 
-
+      ],
       "icon": "@FearstoneIcon",
       "use_upgrade_hightlight_tags": true
     }

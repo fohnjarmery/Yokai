@@ -4,10 +4,12 @@
     {
       "id": "PurityRitual",
       "names": {
-        "english": "Purity Ritual"
+        "english": "Purity Ritual",
+        "chinese": "净化仪式"
       },
       "descriptions": {
-        "english": "Reduce a unit's <b>cooldown</b> by 1 and remove all negative status effects."
+        "english": "Reduce a unit's <b>cooldown</b> by 1 and remove all negative status effects.",
+        "chinese": "减少一个单位的<b>冷却</b> 1 并移除所有负面状态效果。"
       },
       "rarity": "uncommon",
       "class": "@ClassYokai",

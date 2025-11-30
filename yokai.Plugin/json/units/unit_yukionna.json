@@ -4,7 +4,8 @@
     {
       "id": "SpawnYukiOnna",
       "names": {
-        "english": "Yuki-Onna"
+        "english": "Yuki-Onna",
+        "chinese": "雪女"
       },
       "card_art": "@YukiOnna",
       "cost": 1,
@@ -20,7 +21,8 @@
       ],
       "lore_tooltips": [
         {
-          "english": "Flavour Text"
+          "english": "Flavour Text",
+          "chinese": "出没于雪山中的冰雪女妖，冰冷的吐息能冻结敌人的灵魂。"
         }
       ],
       "pools": [
@@ -35,7 +37,8 @@
       "attack_damage": 12,
       "health": 7,
       "names": {
-        "english": "YukiOnna"
+        "english": "YukiOnna",
+        "chinese": "雪女"
       },
       "character_art": "@YukiOnnaCharacterArt",
       "subtypes": [
@@ -59,7 +62,8 @@
     {
       "id": "YukiOnnaTrigger",
       "descriptions": {
-        "english": "Gain [yokai.Plugin_haunt] [effect0.status0.power]."
+        "english": "Gain [yokai.Plugin_haunt] [effect0.status0.power].",
+        "chinese": "获得 [yokai.Plugin_haunt] [effect0.status0.power]。"
       },
       "trigger": {
         "id": "@Evoke",

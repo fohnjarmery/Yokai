@@ -4,10 +4,12 @@
     {
       "id": "ThousandDemonMarch",
       "names": {
-        "english": "Thousand-Demon March"
+        "english": "Thousand-Demon March",
+        "chinese": "千鬼行进"
       },
       "descriptions": {
-        "english": "Friendly units attack immediately. Apply [dazed] [effect1.status0.power] to friendly units."
+        "english": "Friendly units attack immediately. Apply [dazed] [effect1.status0.power] to friendly units.",
+        "chinese": "友方单位立即攻击。为友方单位施加[dazed] [effect1.status0.power]。"
       },
       "rarity": "uncommon",
       "class": "@ClassYokai",

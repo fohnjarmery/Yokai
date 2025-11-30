@@ -4,14 +4,17 @@
     {
       "id": "ToriiGate",
       "names": {
-        "english": "Torii Gate"
+        "english": "Torii Gate",
+        "chinese": "鸟居"
       },
       "descriptions": {
-        "english": "Friendly units gain [yokai.Plugin_haunt] <b>5</b> and cleanse negative status effects on <b>Resolve</b>."
+        "english": "Friendly units gain [yokai.Plugin_haunt] <b>5</b> and cleanse negative status effects on <b>Resolve</b>.",
+        "chinese": "友方单位获得[yokai.Plugin_haunt] <b>5</b> 并在<b>结算</b>时清除负面状态效果。"
       },
       "lore_tooltips": [
         {
-          "english": "Lore stuff."
+          "english": "Lore stuff.",
+          "chinese": "神域入口，净化与守护。"
         }
       ],
       "card_art": "@ToriiGateArt",
@@ -36,10 +39,12 @@
     {
       "id": "ToriiGateRoomUpgrade",
       "titles": {
-        "english": "ToriiGate"
+        "english": "ToriiGate",
+        "chinese": "鸟居"
       },
       "descriptions": {
-        "english": "Friendly units gain [yokai.Plugin_haunt] <b>5</b> and cleanse negative status effects on <b>Resolve</b>."
+        "english": "Friendly units gain [yokai.Plugin_haunt] <b>5</b> and cleanse negative status effects on <b>Resolve</b>.",
+        "chinese": "友方单位获得[yokai.Plugin_haunt] <b>5</b> 并在<b>结算</b>时清除负面状态效果。"
       },
       "trigger_upgrades": [
         "@ToriiGateTrigger"
@@ -58,7 +63,8 @@
     {
       "id": "ToriiGateTrigger",
       "descriptions": {
-        "english": "Friendly units gain Resolve: Remove negative status effects."
+        "english": "Friendly units gain Resolve: Remove negative status effects.",
+        "chinese": "友方单位结算时：移除负面状态效果。"
       },
       "trigger": "post_combat",
       "hide_visual_and_ignore_silence": true,

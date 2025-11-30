@@ -19,17 +19,21 @@
       "id": "TenguFeather4",
       "type": "collectable",
       "names": {
-        "english": "Tengu Feather Fan"
+        "english": "Tengu Feather Fan",
+        "chinese": "天狗羽扇"
       },
       "descriptions": {
-        "english": "Whenever an enemy unit moves, apply [yokai.Plugin_panic] [effect0.status0.power]."
+        "english": "Whenever an enemy unit moves, apply [yokai.Plugin_panic] [effect0.status0.power].",
+        "chinese": "每当敌方单位移动时，施加[yokai.Plugin_panic] [effect0.status0.power]。"
       },
       "relic_activated": {
-        "english": "Confusion!"
+        "english": "Confusion!",
+        "chinese": "扇动混乱！"
       },
       "lore_tooltips": [
         {
-          "english": "Jet-black feathers of a Tengu."
+          "english": "Jet-black feathers of a Tengu.",
+          "chinese": "天狗的漆黑羽毛制成的扇子。"
         }
       ],
       "lore_style": "herzal",

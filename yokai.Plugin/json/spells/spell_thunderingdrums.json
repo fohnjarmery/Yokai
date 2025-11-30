@@ -4,10 +4,12 @@
     {
       "id": "ThunderingDrums",
       "names": {
-        "english": "Thundering Drums"
+        "english": "Thundering Drums",
+        "chinese": "雷鸣太鼓"
       },
       "descriptions": {
-        "english": "Apply [yokai.Plugin_haunt] [effect0.status0.power] to an allied unit then apply <b>Conduit</b> equal to <b>Haunt</b> stacks."
+        "english": "Apply [yokai.Plugin_haunt] [effect0.status0.power] to an allied unit then apply <b>Conduit</b> equal to <b>Haunt</b> stacks.",
+        "chinese": "为友方单位施加[yokai.Plugin_haunt] [effect0.status0.power]，然后施加等同于<b>附灵</b>层数的<b>传导</b>。"
       },
       "rarity": "uncommon",
       "class": "@ClassYokai",

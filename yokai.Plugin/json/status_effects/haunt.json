@@ -5,19 +5,24 @@
       "id": "haunt",
       "class_name": "@StatusEffectHauntState",
       "names": {
-        "english": "Haunt"
+        "english": "Haunt",
+        "chinese": "附灵"
       },
       "stackable_names": {
-        "english": "Haunt {0}"
+        "english": "Haunt {0}",
+        "chinese": "附灵 {0}"
       },
       "card_tooltips": {
-        "english": "Player units have +[codeint0][attack] per stacks between friendly units. Does not buff enemies."
+        "english": "Player units have +[codeint0][attack] per stacks between friendly units. Does not buff enemies.",
+        "chinese": "每层[Haunt]为友方提供+[codeint0][attack]（敌方无效），每回合-1 <b>附灵</b>。"
       },
       "character_tooltips": {
-        "english": "Player units have +[codeint0][attack] (+[codeint1][attack] per stacks between friendly units.)."
+        "english": "Player units have +[codeint0][attack] (+[codeint1][attack] per stacks between friendly units.).",
+        "chinese": "每层[Haunt]为友方提供+[codeint0][attack]（敌方无效），每回合-1 <b>附灵</b>。"
       },
       "replacement_texts": {
-        "english": "<b>Haunt</b>"
+        "english": "<b>Haunt</b>",
+        "chinese": "<b>附灵</b>"
       },
       "param_int": 1,
       "is_propagatable": true,

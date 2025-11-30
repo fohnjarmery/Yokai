@@ -6,7 +6,6 @@
       "name": "RelicEffectModifyMonsterCost",
       "param_subtype": "@Sub_Spirit",
       "param_int": -1
-
     }
   ],
   "relics": [
@@ -14,17 +13,21 @@
       "id": "sudamaseal",
       "type": "collectable",
       "names": {
-        "english": "Sudama Seal"
+        "english": "Sudama Seal",
+        "chinese": "木灵封印"
       },
       "descriptions": {
-        "english": "Units with the Spirit subtype cost -1[ember]."
+        "english": "Units with the Spirit subtype cost -1[ember].",
+        "chinese": "灵体单位消耗-1 [ember]。"
       },
       "relic_activated": {
-        "english": "Cheaper."
+        "english": "Cheaper.",
+        "chinese": "费用减免。"
       },
       "lore_tooltips": [
         {
-          "english": "Good seal."
+          "english": "Good seal.",
+          "chinese": "有效的封印。"
         }
       ],
       "lore_style": "herzal",

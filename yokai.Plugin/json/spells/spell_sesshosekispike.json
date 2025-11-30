@@ -4,10 +4,12 @@
     {
       "id": "SesshosekiSpike",
       "names": {
-        "english": "Sessho-seki Spike"
+        "english": "Sessho-seki Spike",
+        "chinese": "杀生石符咒"
       },
       "descriptions": {
-        "english": "Apply [trait1.statusmultiplier][x] [yokai.Plugin_haunt]."
+        "english": "Apply [trait1.statusmultiplier][x] [yokai.Plugin_haunt].",
+        "chinese": "施加[trait1.statusmultiplier][x] [yokai.Plugin_haunt]"
       },
       "rarity": "rare",
       "class": "@ClassYokai",

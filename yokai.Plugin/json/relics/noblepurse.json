@@ -10,7 +10,6 @@
         "mod_reference": "Conductor"
       },
       "source_team": "monsters"
-
     }
   ],
   "relics": [
@@ -18,17 +17,21 @@
       "id": "NoblePurse",
       "type": "collectable",
       "names": {
-        "english": "Noble's Purse'"
+        "english": "Noble's Purse",
+        "chinese": "贵族钱袋"
       },
       "descriptions": {
-        "english": "Gain <b>5</b>[coin] when a friendly unit triggers <b>Evoke</b>."
+        "english": "Gain <b>5</b>[coin] when a friendly unit triggers <b>Evoke</b>.",
+        "chinese": "当友方单位触发<b>营造</b>时获得<b>5</b>[coin]。"
       },
       "relic_activated": {
-        "english": "The purse spills!"
+        "english": "The purse spills!",
+        "chinese": "钱袋洒落了！"
       },
       "lore_tooltips": [
         {
-          "english": "Jingle Jangle."
+          "english": "Jingle Jangle.",
+          "chinese": "叮当作响。"
         }
       ],
       "lore_style": "herzal",

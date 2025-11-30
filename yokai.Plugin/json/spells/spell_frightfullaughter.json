@@ -4,10 +4,12 @@
     {
       "id": "FrightfulLaughter",
       "names": {
-        "english": "Frightful Laughter"
+        "english": "Frightful Laughter",
+        "chinese": "恐怖笑声"
       },
       "descriptions": {
-        "english": "Apply +1[attack] to Allied Units per <b>Haunt</b> stack on them."
+        "english": "Apply +1[attack] to Allied Units per <b>Haunt</b> stack on them.",
+        "chinese": "为友方单位根据其<b>附灵</b>层数赋予+1[attack]。"
       },
       "rarity": "uncommon",
       "class": "@ClassYokai",

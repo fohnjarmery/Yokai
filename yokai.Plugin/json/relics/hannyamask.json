@@ -16,17 +16,21 @@
       "id": "HannyaMask",
       "type": "collectable",
       "names": {
-        "english": "Hannya Mask"
+        "english": "Hannya Mask",
+        "chinese": "般若面具"
       },
       "descriptions": {
-        "english": "Friendly units apply [yokai.Plugin_panic] <b>2</b> on <b>Resolve</b>."
+        "english": "Friendly units apply [yokai.Plugin_panic] <b>2</b> on <b>Resolve</b>.",
+        "chinese": "友方单位在<b>结算</b>时施加[yokai.Plugin_panic] <b>2</b>。"
       },
       "relic_activated": {
-        "english": "Spooked!"
+        "english": "Spooked!",
+        "chinese": "受惊了！"
       },
       "lore_tooltips": [
         {
-          "english": "Creepy Mask."
+          "english": "Creepy Mask.",
+          "chinese": "令人毛骨悚然的鬼面。"
         }
       ],
       "lore_style": "herzal",
@@ -51,7 +55,8 @@
       "id": "HannyaMaskResolveTrigger",
       "trigger": "post_combat",
       "descriptions": {
-        "english": "Doesn't need to be here"
+        "english": "Doesn't need to be here",
+        "chinese": "无需在此显灵"
       },
       "hide_visual_and_ignore_silence": true,
       "effects": [

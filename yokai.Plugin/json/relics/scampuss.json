@@ -24,17 +24,21 @@
       "id": "Scampuss",
       "type": "collectable",
       "names": {
-        "english": "Friendly Scampuss"
+        "english": "Friendly Scampuss",
+        "chinese": "友好的猫又"
       },
       "descriptions": {
-        "english": "On Deployment Phase, draw a non-Banner unit and apply +10[attack] and -1[ember]."
+        "english": "On Deployment Phase, draw a non-Banner unit and apply +10[attack] and -1[ember].",
+        "chinese": "部署阶段，抽一张非旗帜单位并施加+10[attack]和-1[ember]。"
       },
       "relic_activated": {
-        "english": "Meow~"
+        "english": "Meow~",
+        "chinese": "喵~"
       },
       "lore_tooltips": [
         {
-          "english": "Pretty cute."
+          "english": "Pretty cute.",
+          "chinese": "相当可爱。"
         }
       ],
       "lore_style": "heph",

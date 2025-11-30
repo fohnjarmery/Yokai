@@ -4,11 +4,14 @@
     {
       "id": "Kusarigama",
       "names": {
-        "english": "Kusarigama"
+        "english": "Kusarigama",
+        "chinese": "锁镰"
       },
+
       "lore_tooltips": [
         {
-          "english": "A Stealthy Blade."
+          "english": "A Stealthy Blade.",
+          "chinese": "忍者使用的隐秘武器。"
         }
       ],
       "card_type": "equipment",
@@ -54,7 +57,8 @@
       "id": "TriggerSickle",
       "trigger": "on_own_ability_activated",
       "descriptions": {
-        "english": "Gain [stealth] [effect0.status0.power]."
+        "english": "Gain [stealth] [effect0.status0.power].",
+        "chinese": "获得 [stealth] [effect0.status0.power]"
       },
       "effects": [
         "@ConjureSickleStealth"

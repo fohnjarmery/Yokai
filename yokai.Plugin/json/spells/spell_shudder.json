@@ -4,10 +4,12 @@
     {
       "id": "Shudder",
       "names": {
-        "english": "Shudder"
+        "english": "Shudder",
+        "chinese": "战栗"
       },
       "descriptions": {
-        "english": "Apply [yokai.Plugin_panic] [effect0.status0.power] to an enemy unit and <b>Retreat</b> it."
+        "english": "Apply [yokai.Plugin_panic] [effect0.status0.power] to an enemy unit and <b>Retreat</b> it.",
+        "chinese": "对目标施加[yokai.Plugin_panic] [effect0.status0.power] 并<b>击退</b>。"
       },
       "rarity": "common",
       "class": "@ClassYokai",

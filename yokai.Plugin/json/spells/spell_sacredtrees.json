@@ -4,10 +4,12 @@
     {
       "id": "SacredTrees",
       "names": {
-        "english": "Sacred Trees"
+        "english": "Sacred Trees",
+        "chinese": "神木"
       },
       "descriptions": {
-        "english": "Apply [yokai.Plugin_haunt] [effect0.status0.power] to allied units then <b>Propagate</b> <b>3</b>."
+        "english": "Apply [yokai.Plugin_haunt] [effect0.status0.power] to allied units then <b>Propagate</b> <b>3</b>.",
+        "chinese": "为友方单位施加[yokai.Plugin_haunt] [effect0.status0.power] 然后<b>传播</b><b>3</b>。"
       },
       "rarity": "uncommon",
       "class": "@ClassYokai",
@@ -54,7 +56,6 @@
       "param_int": 3,
       "param_bool": false,
       "param_int_2": 1
-
     }
   ],
   "sprites": [

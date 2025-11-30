@@ -4,7 +4,8 @@
     {
       "id": "SpawnQilin",
       "names": {
-        "english": "Qilin"
+        "english": "Qilin",
+        "chinese": "麒麟"
       },
       "card_art": "@Qilin",
       "cost": 2,
@@ -19,7 +20,8 @@
       ],
       "lore_tooltips": [
         {
-          "english": "Flavour Text"
+          "english": "Flavour Text",
+          "chinese": "祥瑞神兽，身披鳞甲脚踏祥云，能为同伴带来福泽庇佑。"
         }
       ],
       "pools": [
@@ -29,10 +31,12 @@
     {
       "id": "QilinAbility",
       "names": {
-        "english": "Blessing of Protection"
+        "english": "Blessing of Protection",
+        "chinese": "祥瑞赐福"
       },
       "descriptions": {
-        "english": "Duplicate all buffs to other friendly units."
+        "english": "Duplicate all buffs to other friendly units.",
+        "chinese": "将所有增益效果复制给其他友方单位。"
       },
       "card_art": "@Qilin",
       "is_an_ability": true,
@@ -54,7 +58,8 @@
       "attack_damage": 35,
       "health": 40,
       "names": {
-        "english": "Qilin"
+        "english": "Qilin",
+        "chinese": "麒麟"
       },
       "character_art": "@QilinCharacterArt",
       "subtypes": [
@@ -73,7 +78,8 @@
     {
       "id": "QilinTrigger",
       "descriptions": {
-        "english": "Gain [regen] [effect0.status0.power] and [rage] [effect1.status0.power]."
+        "english": "Gain [regen] [effect0.status0.power] and [rage] [effect1.status0.power].",
+        "chinese": "获得 [regen] [effect0.status0.power] 和 [rage] [effect1.status0.power]。"
       },
       "trigger": "post_combat",
       "effects": [

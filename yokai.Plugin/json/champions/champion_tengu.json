@@ -4,7 +4,8 @@
     {
       "id": "SpawnTengu",
       "names": {
-        "english": "Tengu"
+        "english": "Tengu",
+        "chinese": "天狗"
       },
       "card_art": "@Tengu",
       "cost": 0,
@@ -18,17 +19,20 @@
       ],
       "lore_tooltips": [
         {
-          "english": "A malevolent spirit bird that guards the mountains."
+          "english": "A malevolent spirit bird that guards the mountains.",
+          "chinese": "守护山林的恶灵鸟妖，拥有操控风暴的力量。"
         }
       ]
     },
     {
       "id": "TenguBaseAbility",
       "names": {
-        "english": "Storm Leap"
+        "english": "Storm Leap",
+        "chinese": "风暴跃击"
       },
       "descriptions": {
-        "english": "<b>Advance</b>. Attack immediately and Apply [dazed] [effect2.status0.power] to self."
+        "english": "<b>Advance</b>. Attack immediately and Apply [dazed] [effect2.status0.power] to self.",
+        "chinese": "<b>前进</b>。立即攻击并对自身施加[dazed][effect2.status0.power]。"
       },
       "card_art": "@Tengu",
       "is_an_ability": true,
@@ -45,10 +49,12 @@
     {
       "id": "Fujin1Ability",
       "names": {
-        "english": "Hurricane Leap"
+        "english": "Hurricane Leap",
+        "chinese": "飓风跃击"
       },
       "descriptions": {
-        "english": "<b>Advance</b>. Attack immediately and Apply [dazed] [effect3.status0.power] to self. <b>Retreat</b> attacked enemy."
+        "english": "<b>Advance</b>. Attack immediately and Apply [dazed] [effect3.status0.power] to self. <b>Retreat</b> attacked enemy.",
+        "chinese": "<b>前进</b>。立即攻击并对自身施加[dazed][effect3.status0.power]。<b>击退</b>被攻击的敌人。"
       },
       "card_art": "@Tengu",
       "is_an_ability": true,
@@ -66,10 +72,12 @@
     {
       "id": "Fujin2Ability",
       "names": {
-        "english": "Hurricane Leap II"
+        "english": "Hurricane Leap II",
+        "chinese": "飓风跃击 II"
       },
       "descriptions": {
-        "english": "<b>Advance</b>. Attack immediately. <b>Retreat</b> attacked enemy."
+        "english": "<b>Advance</b>. Attack immediately. <b>Retreat</b> attacked enemy.",
+        "chinese": "<b>前进</b>。立即攻击。<b>击退</b>被攻击的敌人。"
       },
       "card_art": "@Tengu",
       "is_an_ability": true,
@@ -86,10 +94,12 @@
     {
       "id": "Fujin3Ability",
       "names": {
-        "english": "Hurricane Leap III"
+        "english": "Hurricane Leap III",
+        "chinese": "飓风跃击 III"
       },
       "descriptions": {
-        "english": "<b>Advance</b>. Attack immediately. <b>Retreat</b> attacked enemy and apply [damageshield] [effect3.status0.power] to self."
+        "english": "<b>Advance</b>. Attack immediately. <b>Retreat</b> attacked enemy and apply [damageshield] [effect3.status0.power] to self.",
+        "chinese": "<b>前进</b>。立即攻击。<b>击退</b>被攻击的敌人并对自身施加 [damageshield] [effect3.status0.power]。"
       },
       "card_art": "@Tengu",
       "is_an_ability": true,
@@ -105,12 +115,12 @@
       ]
     }
   ],
-
   "characters": [
     {
       "id": "Tengu",
       "names": {
-        "english": "Tengu"
+        "english": "Tengu",
+        "chinese": "天狗"
       },
       "character_art": "@TenguCharacterArt",
       "chatter": "@CTR_Tengu",
@@ -134,10 +144,12 @@
     {
       "id": "upg_Fujin1",
       "titles": {
-        "english": "Fujin"
+        "english": "Fujin",
+        "chinese": "风神"
       },
       "descriptions": {
-        "english": "Damage path"
+        "english": "Damage path",
+        "chinese": "伤害路线"
       },
       "bonus_damage": 8,
       "bonus_hp": 15,
@@ -146,10 +158,12 @@
     {
       "id": "upg_Fujin2",
       "titles": {
-        "english": "Fujin II"
+        "english": "Fujin II",
+        "chinese": "风神 II"
       },
       "descriptions": {
-        "english": "Even more damage path"
+        "english": "Even more damage path",
+        "chinese": "更高伤害路线"
       },
       "bonus_damage": 16,
       "bonus_hp": 45,
@@ -158,10 +172,12 @@
     {
       "id": "upg_Fujin3",
       "titles": {
-        "english": "Fujin III"
+        "english": "Fujin III",
+        "chinese": "风神 III"
       },
       "descriptions": {
-        "english": "So much damage path"
+        "english": "So much damage path",
+        "chinese": "极致伤害路线"
       },
       "bonus_damage": 35,
       "bonus_hp": 70,
@@ -170,10 +186,12 @@
     {
       "id": "upg_Raijin1",
       "titles": {
-        "english": "Raijin"
+        "english": "Raijin",
+        "chinese": "雷神"
       },
       "descriptions": {
-        "english": "Health path"
+        "english": "Health path",
+        "chinese": "生命路线"
       },
       "bonus_damage": 3,
       "bonus_hp": 20,
@@ -184,10 +202,12 @@
     {
       "id": "upg_Raijin2",
       "titles": {
-        "english": "Raijin II"
+        "english": "Raijin II",
+        "chinese": "雷神 II"
       },
       "descriptions": {
-        "english": "Even more health path"
+        "english": "Even more health path",
+        "chinese": "更高生命路线"
       },
       "bonus_damage": 10,
       "bonus_hp": 60,
@@ -198,10 +218,12 @@
     {
       "id": "upg_Raijin3",
       "titles": {
-        "english": "Raijin III"
+        "english": "Raijin III",
+        "chinese": "雷神 III"
       },
       "descriptions": {
-        "english": "So much health path"
+        "english": "So much health path",
+        "chinese": "极致生命路线"
       },
       "bonus_damage": 25,
       "bonus_hp": 80,
@@ -212,10 +234,12 @@
     {
       "id": "upg_Shadow1",
       "titles": {
-        "english": "Shadow"
+        "english": "Shadow",
+        "chinese": "影袭"
       },
       "descriptions": {
-        "english": "mixed path"
+        "english": "mixed path",
+        "chinese": "混合路线"
       },
       "bonus_damage": 10,
       "bonus_hp": 5,
@@ -226,10 +250,12 @@
     {
       "id": "upg_Shadow2",
       "titles": {
-        "english": "Shadow II"
+        "english": "Shadow II",
+        "chinese": "影袭 II"
       },
       "descriptions": {
-        "english": "even more mixed path"
+        "english": "even more mixed path",
+        "chinese": "更高混合路线"
       },
       "bonus_damage": 25,
       "bonus_hp": 15,
@@ -240,10 +266,12 @@
     {
       "id": "upg_Shadow3",
       "titles": {
-        "english": "Shadow III"
+        "english": "Shadow III",
+        "chinese": "影袭 III"
       },
       "descriptions": {
-        "english": "so much mixed path"
+        "english": "so much mixed path",
+        "chinese": "极致混合路线"
       },
       "bonus_damage": 55,
       "bonus_hp": 40,
@@ -260,7 +288,8 @@
         "mod_reference": "Conductor"
       },
       "descriptions": {
-        "english": "+1[attack]."
+        "english": "+1[attack].",
+        "chinese": "+1[attack]"
       },
       "effects": [
         "@Raijin1Evoke"
@@ -273,7 +302,8 @@
         "mod_reference": "Conductor"
       },
       "descriptions": {
-        "english": "+3[attack]."
+        "english": "+3[attack].",
+        "chinese": "+3[attack]"
       },
       "effects": [
         "@Raijin2Evoke"
@@ -286,7 +316,8 @@
         "mod_reference": "Conductor"
       },
       "descriptions": {
-        "english": "+5[attack]."
+        "english": "+5[attack].",
+        "chinese": "+5[attack]"
       },
       "effects": [
         "@Raijin3Evoke"
@@ -296,7 +327,8 @@
       "id": "Shadow1Trigger",
       "trigger": "on_own_ability_activated",
       "descriptions": {
-        "english": "<b>Retreat</b>. Apply [yokai.Plugin_panic] [effect1.status0.power] to enemy units."
+        "english": "<b>Retreat</b>. Apply [yokai.Plugin_panic] [effect1.status0.power] to enemy units.",
+        "chinese": "<b>后退</b>。为敌方单位施加[yokai.Plugin_panic] [effect1.status0.power]。"
       },
       "effects": [
         "@ShadowRetreat",
@@ -307,7 +339,8 @@
       "id": "Shadow2Trigger",
       "trigger": "on_own_ability_activated",
       "descriptions": {
-        "english": "<b>Retreat</b>. Apply [yokai.Plugin_panic] [effect1.status0.power] to enemy units."
+        "english": "<b>Retreat</b>. Apply [yokai.Plugin_panic] [effect1.status0.power] to enemy units.",
+        "chinese": "<b>后退</b>。为敌方单位施加[yokai.Plugin_panic] [effect1.status0.power]。"
       },
       "effects": [
         "@ShadowRetreat",
@@ -318,7 +351,8 @@
       "id": "Shadow3Trigger",
       "trigger": "on_own_ability_activated",
       "descriptions": {
-        "english": "<b>Retreat</b>. Apply [yokai.Plugin_panic] [effect1.status0.power] to enemy units."
+        "english": "<b>Retreat</b>. Apply [yokai.Plugin_panic] [effect1.status0.power] to enemy units.",
+        "chinese": "<b>后退</b>。为敌方单位施加[yokai.Plugin_panic] [effect1.status0.power]。"
       },
       "effects": [
         "@ShadowRetreat",
@@ -442,7 +476,6 @@
         }
       ]
     }
-
   ],
   "sprites": [
     {
@@ -492,33 +525,42 @@
       "gender": "male",
       "added_expressions": [
         {
-          "english": "SQUAWK"
+          "english": "SQUAWK",
+          "chinese": "嘎！"
         },
         {
-          "english": "CA-CAWW!"
+          "english": "CA-CAWW!",
+          "chinese": "嘎——啊！"
         },
         {
-          "english": "I'm AM really a fighter..."
+          "english": "I'm AM really a fighter...",
+          "chinese": "我可是真正的战士..."
         }
       ],
       "idle_expressions": [
         {
-          "english": "Aren't I scary?"
+          "english": "Aren't I scary?",
+          "chinese": "我很可怕吗？"
         },
         {
-          "english": "I don't like all this ground."
+          "english": "I don't like all this ground.",
+          "chinese": "我不喜欢这地面。"
         },
         {
-          "english": "Wanna fight me?"
+          "english": "Wanna fight me?",
+          "chinese": "想和我打一架吗？"
         },
         {
-          "english": "Don't be scared now!"
+          "english": "Don't be scared now!",
+          "chinese": "现在可别害怕！"
         },
         {
-          "english": "I want to slice off some wings."
+          "english": "I want to slice off some wings.",
+          "chinese": "撕碎你们！"
         },
         {
-          "english": "Are you feeling afraid?"
+          "english": "Are you feeling afraid?",
+          "chinese": "你感到害怕了吗？"
         }
       ]
     }

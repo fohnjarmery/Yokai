@@ -4,10 +4,12 @@
     {
       "id": "GashadokurosStride",
       "names": {
-        "english": "Gashadokuro's Stride"
+        "english": "Gashadokuro's Stride",
+        "chinese": "饿者骷髅之践踏"
       },
       "descriptions": {
-        "english": "[descend]. Deal [effect1.power] damage."
+        "english": "[descend]. Deal [effect1.power] damage.",
+        "chinese": "[descend]。造成[effect1.power]点伤害。"
       },
       "rarity": "rare",
       "class": "@ClassYokai",

@@ -4,7 +4,8 @@
       {
         "id": "SpawnIpponDatara",
         "names": {
-          "english": "Ippon Datara"
+          "english": "Ippon Datara",
+          "chinese": "一本踏鞴"
         },
         "card_art": "@IpponDatara",
         "cost": 1,
@@ -19,7 +20,8 @@
         ],
         "lore_tooltips": [
           {
-            "english": "Flavour Text"
+            "english": "Flavour Text",
+            "chinese": "独眼独脚的锻造妖怪，手持巨锤为同伴打造坚固护甲"
           }
         ],
         "pools": [
@@ -29,10 +31,12 @@
       {
         "id": "IpponDataraAbility",
         "names": {
-          "english": "Reinforce"
+          "english": "Reinforce",
+          "chinese": "锻造护甲"
         },
         "descriptions": {
-          "english": "Apply [damageshield] [effect0.status0.power] to the front friendly unit."
+          "english": "Apply [damageshield] [effect0.status0.power] to the front friendly unit.",
+          "chinese": "为前方友方单位施加 [damageshield] [effect0.status0.power]。"
         },
         "card_art": "@IpponDatara",
         "is_an_ability": true,
@@ -52,7 +56,8 @@
         "attack_damage": 10,
         "health": 20,
         "names": {
-          "english": "IpponDatara"
+          "english": "IpponDatara",
+          "chinese": "一本踏鞴"
         },
         "character_art": "@IpponDataraCharacterArt",
         "subtypes": [
@@ -71,7 +76,8 @@
       {
         "id": "IpponDataraTrigger",
         "descriptions": {
-          "english": "+8[attack]."
+          "english": "+8[attack].",
+          "chinese": "+8[attack]"
         },
         "trigger": {
           "id": "@Evoke",

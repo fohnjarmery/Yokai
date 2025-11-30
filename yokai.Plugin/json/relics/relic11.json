@@ -15,17 +15,21 @@
       "id": "ShrineStaff",
       "type": "collectable",
       "names": {
-        "english": "Shrine Staff"
+        "english": "Shrine Staff",
+        "chinese": "神社法杖"
       },
       "descriptions": {
-        "english": "After using an ability, deal [effect0.power] damage to a random enemy unit."
+        "english": "After using an ability, deal [effect0.power] damage to a random enemy unit.",
+        "chinese": "使用能力后，对随机敌方单位造成[effect0.power]点伤害。"
       },
       "relic_activated": {
-        "english": "Magic!"
+        "english": "Magic!",
+        "chinese": "魔力！"
       },
       "lore_tooltips": [
         {
-          "english": "Last relic here we gooooo"
+          "english": "Last relic here we gooooo",
+          "chinese": "最后的遗物，我们来了"
         }
       ],
       "lore_style": "herzal",

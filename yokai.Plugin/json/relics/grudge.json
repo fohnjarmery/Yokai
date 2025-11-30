@@ -21,17 +21,21 @@
       "id": "Grudge",
       "type": "collectable",
       "names": {
-        "english": "Grudge"
+        "english": "Grudge",
+        "chinese": "怨念"
       },
       "descriptions": {
-        "english": "When a unit gains [yokai.Plugin_panic] it gains <b>+1</b> Stack."
+        "english": "When a unit gains [yokai.Plugin_panic] it gains <b>+1</b> Stack.",
+        "chinese": "当单位获得[yokai.Plugin_panic]时，额外获得<b>+1</b>。"
       },
       "relic_activated": {
-        "english": "Grudge!"
+        "english": "Grudge!",
+        "chinese": "怨念爆发！"
       },
       "lore_tooltips": [
         {
-          "english": "Like the movie."
+          "english": "Like the movie.",
+          "chinese": "如同那部恐怖电影。"
         }
       ],
       "lore_style": "herzal",

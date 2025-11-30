@@ -4,14 +4,17 @@
     {
       "id": "DemonParade",
       "names": {
-        "english": "Demon Parade"
+        "english": "Demon Parade",
+        "chinese": "百鬼夜行"
       },
       "descriptions": {
-        "english": "When you play a unit, fill the floor with copies. Allied units die at the end of the turn."
+        "english": "When you play a unit, fill the floor with copies. Allied units die at the end of the turn.",
+        "chinese": "当你打出单位时，用复制品填满楼层。友方单位在回合结束时死亡。"
       },
       "lore_tooltips": [
         {
-          "english": "Lore stuff."
+          "english": "Lore stuff.",
+          "chinese": "百鬼夜行的传说在夜幕中流传。"
         }
       ],
       "card_art": "@DemonParadeArt",
@@ -36,10 +39,12 @@
     {
       "id": "DemonParadeRoomUpgrade",
       "titles": {
-        "english": "DemonParade"
+        "english": "DemonParade",
+        "chinese": "百鬼夜行"
       },
       "descriptions": {
-        "english": "When you play a unit, fill the floor with copies. Allied units die at the end of the turn."
+        "english": "When you play a unit, fill the floor with copies. Allied units die at the end of the turn.",
+        "chinese": "当你打出单位时，用复制品填满楼层。友方单位在回合结束时死亡。"
       },
       "trigger_upgrades": [
         "@DemonParadeTrigger",
@@ -57,7 +62,8 @@
     {
       "id": "DemonParadeTrigger",
       "descriptions": {
-        "english": "Create 3 duplicates when played."
+        "english": "Create 3 duplicates when played.",
+        "chinese": "打出时创建3个复制品"
       },
       "trigger": "on_spawn",
       "hide_visual_and_ignore_silence": true,
@@ -68,7 +74,8 @@
     {
       "id": "DemonParadeEndTurnTrigger",
       "descriptions": {
-        "english": "Die at the end of the turn."
+        "english": "Die at the end of the turn.",
+        "chinese": "回合结束时死亡"
       },
       "trigger": "post_combat",
       "hide_visual_and_ignore_silence": true,
@@ -77,7 +84,6 @@
       ]
     }
   ],
-  
   "effects": [
     {
       "id": "DemonParadeRoomEffect",
@@ -100,7 +106,6 @@
       "target_mode": "self"
     }
   ],
- 
   "sprites": [
     {
       "id": "DemonParadeArt",

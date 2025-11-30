@@ -13,17 +13,21 @@
       "id": "ParadeBanner",
       "type": "collectable",
       "names": {
-        "english": "Parade Banner"
+        "english": "Parade Banner",
+        "chinese": "百鬼夜行旗"
       },
       "descriptions": {
-        "english": "For every 6 Monsters in your deck, draw an additional card."
+        "english": "For every 6 Monsters in your deck, draw an additional card.",
+        "chinese": "牌组中每有6个怪物，额外抽一张牌。"
       },
       "relic_activated": {
-        "english": "March!"
+        "english": "March!",
+        "chinese": "前进！"
       },
       "lore_tooltips": [
         {
-          "english": "The parade must go on."
+          "english": "The parade must go on.",
+          "chinese": "百鬼夜行必须继续。"
         }
       ],
       "lore_style": "herzal",

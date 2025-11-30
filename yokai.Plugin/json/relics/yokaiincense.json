@@ -18,17 +18,21 @@
       "id": "YokaiIncense",
       "type": "collectable",
       "names": {
-        "english": "Yokai Incense"
+        "english": "Yokai Incense",
+        "chinese": "妖怪香"
       },
       "descriptions": {
-        "english": "<b>Evoke</b> triggers an additional time."
+        "english": "<b>Evoke</b> triggers an additional time.",
+        "chinese": "<b>营造</b>额外触发一次。"
       },
       "relic_activated": {
-        "english": "It stirs"
+        "english": "It stirs",
+        "chinese": "香气缭绕"
       },
       "lore_tooltips": [
         {
-          "english": "sniffu."
+          "english": "sniffu.",
+          "chinese": "香气诱人。"
         }
       ],
       "lore_style": "malicka",

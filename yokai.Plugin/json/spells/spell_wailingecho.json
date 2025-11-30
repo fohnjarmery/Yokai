@@ -4,10 +4,12 @@
     {
       "id": "WailingEcho",
       "names": {
-        "english": "Wailing Echo"
+        "english": "Wailing Echo",
+        "chinese": "哀嚎回响"
       },
       "descriptions": {
-        "english": "Restore [effect0.power] health to allied units. Damage all enemies per stack of <b>Haunt</b> on them."
+        "english": "Restore [effect0.power] health to allied units. Damage all enemies per stack of <b>Haunt</b> on them.",
+        "chinese": "恢复友方单位[effect0.power]生命值。根据敌方单位的<b>附灵</b>层数对所有敌人造成伤害。"
       },
       "rarity": "common",
       "class": "@ClassYokai",

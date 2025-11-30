@@ -5,19 +5,24 @@
       "id": "panic",
       "class_name": "@StatusEffectPanicState",
       "names": {
-        "english": "Panic"
+        "english": "Panic",
+        "chinese": "恐慌"
       },
       "stackable_names": {
-        "english": "Panic {0}"
+        "english": "Panic {0}",
+        "chinese": "恐慌 {0}"
       },
       "card_tooltips": {
-        "english": "Unit takes [codeint0] damage per stack each time it moves."
+        "english": "Unit takes [codeint0] damage per stack each time it moves.",
+        "chinese": "单位每次移动时，每层受到[codeint0]点伤害。"
       },
       "character_tooltips": {
-        "english": "Takes [codeint0] damage each time it moves."
+        "english": "Takes [codeint0] damage each time it moves.",
+        "chinese": "每次移动时受到[codeint0]点伤害。"
       },
       "replacement_texts": {
-        "english": "<b>Panic</b>"
+        "english": "<b>Panic</b>",
+        "chinese": "<b>恐慌</b>"
       },
       "display_category": "negative",
       "trigger_stage": {

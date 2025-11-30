@@ -4,10 +4,12 @@
     {
       "id": "Nightmare",
       "names": {
-        "english": "Nightmare"
+        "english": "Nightmare",
+        "chinese": "噩梦"
       },
       "descriptions": {
-        "english": "Deal [effect1.power] damage and apply [yokai.Plugin_panic] [effect0.status0.power], twice."
+        "english": "Deal [effect1.power] damage and apply [yokai.Plugin_panic] [effect0.status0.power], twice.",
+        "chinese": "造成[effect1.power]点伤害并施加[yokai.Plugin_panic] [effect0.status0.power]，重复两次。"
       },
       "rarity": "uncommon",
       "unlock_level": 7,

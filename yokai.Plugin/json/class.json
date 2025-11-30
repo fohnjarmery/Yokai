@@ -4,13 +4,16 @@
       {
         "id": "ClassYokai",
         "titles": {
-          "english": "Yokai"
+          "english": "Yokai",
+          "chinese": "妖怪"
         },
         "descriptions": {
-          "english": "The hundred-demon Parade of Yokai is marching through Heaven!"
+          "english": "The hundred-demon Parade of Yokai is marching through Heaven!",
+          "chinese": "百鬼夜行的妖怪队伍正在向天堂进军！"
         },
         "subclass_descriptions": {
-          "english": "Subclass description"
+          "english": "Subclass description",
+          "chinese": "妖怪氏族擅长操控附灵与恐慌状态"
         },
         "icons": {
           "small": "@YokaiLogo48",
@@ -111,10 +114,12 @@
             "minimap_icon": "@YokaiLogo48",
             "prefab": "@YokaiMapIcon",
             "titles": {
-                "english": "Yokai Banner"
+                "english": "Yokai Banner",
+                "chinese": "妖怪旗帜"
             },
             "descriptions": {
-                "english": "Summon a Yokai Unit"
+                "english": "Summon a Yokai Unit",
+                "chinese": "召唤一个妖怪单位"
             },
             "pools": [
                 "RandomChosenMainClassUnit",
@@ -176,13 +181,15 @@
         {
             "id": "Sub_Spirit",
             "names": {
-                "english": "Spirit"
+                "english": "Spirit",
+                "chinese": "灵体"
             }
         },
         {
             "id": "Sub_Demon",
             "names": {
-                "english": "Demon"
+                "english": "Demon",
+                "chinese": "恶魔"
             }
         }
     ],

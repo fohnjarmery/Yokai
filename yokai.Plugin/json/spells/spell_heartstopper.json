@@ -4,10 +4,12 @@
     {
       "id": "Heartstopper",
       "names": {
-        "english": "Heartstopper"
+        "english": "Heartstopper",
+        "chinese": "心脏骤停"
       },
       "descriptions": {
-        "english": "Apply [yokai.Plugin_panic] [effect0.status0.power]. Deal damage equal to <b>Panic</b> stacks."
+        "english": "Apply [yokai.Plugin_panic] [effect0.status0.power]. Deal damage equal to <b>Panic</b> stacks.",
+        "chinese": "施加 [yokai.Plugin_panic] [effect0.status0.power] 。造成等同于<b>恐慌</b>层数的伤害。"
       },
       "rarity": "rare",
       "class": "@ClassYokai",

@@ -4,10 +4,12 @@
     {
       "id": "OnmyojiTome",
       "names": {
-        "english": "Onmyoji Tome"
+        "english": "Onmyoji Tome",
+        "chinese": "阴阳师卷轴"
       },
       "descriptions": {
-        "english": "Apply <b>Ability</b>: Unleash Magic to a friendly unit."
+        "english": "Apply <b>Ability</b>: Unleash Magic to a friendly unit.",
+        "chinese": "为友方单位赋予<b>能力</b>：释放魔力。"
       },
       "rarity": "rare",
       "unlock_level": 8,
@@ -33,10 +35,12 @@
     {
       "id": "OnmyojiAbility",
       "names": {
-        "english": "Unleash Magic"
+        "english": "Unleash Magic",
+        "chinese": "释放魔力"
       },
       "descriptions": {
-        "english": "Apply [yokai.Plugin_haunt] [effect0.status0.power] to all units on every floor."
+        "english": "Apply [yokai.Plugin_haunt] [effect0.status0.power] to all units on every floor.",
+        "chinese": "为所有楼层的单位施加[yokai.Plugin_haunt] [effect0.status0.power]。"
       },
       "card_art": "@OnmyojiTomeArt",
       "is_an_ability": true,
