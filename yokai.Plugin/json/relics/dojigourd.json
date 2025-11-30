@@ -16,17 +16,21 @@
       "id": "DojiGourd",
       "type": "collectable",
       "names": {
-        "english": "Shuten Doji's Gourd'"
+        "english": "Shuten Doji's Gourd",
+        "chinese": "酒吞童子的葫芦"
       },
       "descriptions": {
-        "english": "Whenever a Demon unit activates their Ability, gain 1 [ember]."
+        "english": "Whenever a Demon unit activates their Ability, gain 1 [ember].",
+        "chinese": "每当恶魔单位激活技能时，获得1 [ember]。"
       },
       "relic_activated": {
-        "english": "Drank from the Gourd!"
+        "english": "Drank from the Gourd!",
+        "chinese": "畅饮葫芦美酒！"
       },
       "lore_tooltips": [
         {
-          "english": "Chug chug chug."
+          "english": "Chug chug chug.",
+          "chinese": "喝！喝！喝！欢醉于此！"
         }
       ],
       "lore_style": "herzal",

@@ -19,17 +19,21 @@
       "id": "OniMask",
       "type": "collectable",
       "names": {
-        "english": "Oni Mask"
+        "english": "Oni Mask",
+        "chinese": "鬼面"
       },
       "descriptions": {
-        "english": "All units enter with [yokai.Plugin_haunt] <b>1</b>."
+        "english": "All units enter with [yokai.Plugin_haunt] <b>1</b>.",
+        "chinese": "所有单位入场时带有[yokai.Plugin_haunt] <b>1</b>。"
       },
       "relic_activated": {
-        "english": "Haunted!"
+        "english": "Haunted!",
+        "chinese": "鬼气缠身！"
       },
       "lore_tooltips": [
         {
-          "english": "Lots of haunt applies to allies and enemies."
+          "english": "Lots of haunt applies to allies and enemies.",
+          "chinese": "无尽的怨念缠绕着友军和敌人。"
         }
       ],
       "disallow_in_deployment": false,
