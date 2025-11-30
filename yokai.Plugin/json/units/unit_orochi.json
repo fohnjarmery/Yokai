@@ -4,7 +4,8 @@
     {
       "id": "SpawnOrochi",
       "names": {
-        "english": "Orochi"
+        "english": "Orochi",
+        "chinese": "八岐大蛇"
       },
       "card_art": "@Orochi",
       "cost": 3,
@@ -20,7 +21,8 @@
       ],
       "lore_tooltips": [
         {
-          "english": "Flavour Text"
+          "english": "Flavour Text",
+          "chinese": "拥有八头八尾的巨型蛇妖，每次吞噬同伴都会变得更加强大。"
         }
       ],
       "pools": [
@@ -30,10 +32,12 @@
     {
       "id": "OrochiAbility",
       "names": {
-        "english": "Join the Snake"
+        "english": "Join the Snake",
+        "chinese": "蛇之融合"
       },
       "descriptions": {
-        "english": "Gain <b>Multistrike</b> [effect1.status0.power]."
+        "english": "Gain <b>Multistrike</b> [effect1.status0.power].",
+        "chinese": "获得<b>多重攻击</b>[effect1.status0.power]。"
       },
       "card_art": "@Orochi",
       "is_an_ability": true,
@@ -54,7 +58,8 @@
       "attack_damage": 33,
       "health": 33,
       "names": {
-        "english": "Orochi"
+        "english": "Orochi",
+        "chinese": "八岐大蛇"
       },
       "character_art": "@OrochiCharacterArt",
       "subtypes": [
@@ -79,7 +84,8 @@
     {
       "id": "OrochiTrigger",
       "descriptions": {
-        "english": "Apply [yokai.Plugin_panic] [effect0.status0.power] to all units."
+        "english": "Apply [yokai.Plugin_panic] [effect0.status0.power] to all units.",
+        "chinese": "为所有单位施加 [yokai.Plugin_panic] [effect0.status0.power]。"
       },
       "trigger": "on_own_ability_activated",
       "effects": [

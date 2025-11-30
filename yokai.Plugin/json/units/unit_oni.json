@@ -4,7 +4,8 @@
     {
       "id": "SpawnOni",
       "names": {
-        "english": "Oni"
+        "english": "Oni",
+        "chinese": "鬼"
       },
       "card_art": "@Oni",
       "cost": 2,
@@ -19,7 +20,8 @@
       ],
       "lore_tooltips": [
         {
-          "english": "Flavour Text"
+          "english": "Flavour Text",
+          "chinese": "拥有狂暴的力量的凶恶妖怪。"
         }
       ],
       "pools": [
@@ -34,7 +36,8 @@
       "attack_damage": 35,
       "health": 35,
       "names": {
-        "english": "Oni"
+        "english": "Oni",
+        "chinese": "鬼"
       },
       "character_art": "@OniCharacterArt",
       "subtypes": [
@@ -55,7 +58,8 @@
     {
       "id": "OniDeathwishTrigger",
       "descriptions": {
-        "english": "<b>+20</b>[attack].    On moving backward, restore <b>25</b> health and apply <b>-15</b>[attack]."
+        "english": "<b>+20</b>[attack].    On moving backward, restore <b>25</b> health and apply <b>-15</b>[attack].",
+        "chinese": "<b>+20</b>[attack]。向后移动时，恢复<b>25</b>生命值并施加<b>-15</b>[attack]。"
       },
       "trigger": "on_deathwish",
       "effects": [
@@ -98,7 +102,6 @@
       "target_team": "monsters",
       "param_upgrade": "@OniAttackDecrease"
     }
-
   ],
   "upgrades": [
     {

@@ -4,16 +4,18 @@
     {
       "id": "SpawnKasaObake",
       "names": {
-        "english": "Kasa-Obake"
+        "english": "Kasa-Obake",
+        "chinese": "伞妖"
+      },
+      "descriptions": {
+        "english": "+8[attack] for every stack of <b>Stealth</b>.",
+        "chinese": "每层<b>潜行</b>提供+8[attack]。"
       },
       "card_art": "@KasaObake",
       "cost": 1,
       "card_type": "monster",
       "rarity": "uncommon",
       "class": "@ClassYokai",
-      "descriptions": {
-        "english": "+8[attack] for every stack of <b>Stealth</b>."
-      },
       "targets_room": true,
       "effects": [
         {
@@ -22,7 +24,8 @@
       ],
       "lore_tooltips": [
         {
-          "english": "Flavour Text"
+          "english": "Flavour Text",
+          "chinese": "旧伞化成的妖怪，在阴影中积蓄力量发动致命一击。"
         }
       ],
       "pools": [
@@ -32,10 +35,12 @@
     {
       "id": "KasaAbility",
       "names": {
-        "english": "In The Shade"
+        "english": "In The Shade",
+        "chinese": "伞下阴影"
       },
       "descriptions": {
-        "english": "Apply [stealth] [effect0.status0.power] to friendly units."
+        "english": "Apply [stealth] [effect0.status0.power] to friendly units.",
+        "chinese": "为友方单位施加 [stealth] [effect0.status0.power]。"
       },
       "card_art": "@KasaObake",
       "is_an_ability": true,
@@ -57,7 +62,8 @@
       "attack_damage": 15,
       "health": 7,
       "names": {
-        "english": "KasaObake"
+        "english": "KasaObake",
+        "chinese": "伞妖"
       },
       "character_art": "@KasaObakeCharacterArt",
       "subtypes": [
@@ -101,7 +107,8 @@
       "id": "KasaScalingRoomModifier",
       "name": "RoomStateSelfDamagePerStatusEffectStack",
       "in_play_descriptions": {
-        "english": "+[power][attack] per stack of <b>Stealth</b>."
+        "english": "+[power][attack] per stack of <b>Stealth</b>.",
+        "chinese": "每层<b>潜行</b>提供+[power][attack]。"
       },
       "param_int": 8,
       "param_status_effects": [

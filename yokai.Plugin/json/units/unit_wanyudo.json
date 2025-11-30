@@ -4,8 +4,10 @@
     {
       "id": "SpawnWanyudo",
       "names": {
-        "english": "Wanyudo"
+        "english": "Wanyudo",
+        "chinese": "轮入道"
       },
+
       "card_art": "@Wanyudo",
       "cost": 1,
       "card_type": "monster",
@@ -19,7 +21,8 @@
       ],
       "lore_tooltips": [
         {
-          "english": "Flavour Text"
+          "english": "Flavour Text",
+          "chinese": "燃烧的人面车轮，在战场上横冲直撞的愤怒妖怪。"
         }
       ],
       "pools": [
@@ -29,10 +32,12 @@
     {
       "id": "WanyudoAbility",
       "names": {
-        "english": "Hot Headed"
+        "english": "Hot Headed",
+        "chinese": "怒火中烧"
       },
       "descriptions": {
-        "english": "Apply [rage] [effect0.status0.power] to self."
+        "english": "Apply [rage] [effect0.status0.power] to self.",
+        "chinese": "为自身施加 [rage] [effect0.status0.power] 。"
       },
       "card_art": "@Wanyudo",
       "is_an_ability": true,
@@ -54,7 +59,8 @@
       "attack_damage": 20,
       "health": 18,
       "names": {
-        "english": "Wanyudo"
+        "english": "Wanyudo",
+        "chinese": "轮入道"
       },
       "character_art": "@WanyudoCharacterArt",
       "subtypes": [
@@ -73,7 +79,8 @@
     {
       "id": "WanyudoTrigger",
       "descriptions": {
-        "english": "Reduce friendly units <b>cooldown</b> by 1."
+        "english": "Reduce friendly units <b>cooldown</b> by 1.",
+        "chinese": "减少友方单位<b>冷却</b>1。"
       },
       "trigger": "on_kill",
       "effects": [

@@ -4,8 +4,10 @@
     {
       "id": "SpawnNurikabe",
       "names": {
-        "english": "Nurikabe"
+        "english": "Nurikabe",
+        "chinese": "涂壁"
       },
+
       "card_art": "@Nurikabe",
       "cost": 2,
       "card_type": "monster",
@@ -19,7 +21,8 @@
       ],
       "lore_tooltips": [
         {
-          "english": "Flavour Text"
+          "english": "Flavour Text",
+          "chinese": "突然出现在道路上的墙壁妖怪，阻挡去路并伤害靠近者。"
         }
       ],
       "pools": [
@@ -29,10 +32,12 @@
     {
       "id": "NurikabeAbility",
       "names": {
-        "english": "Structural Damage"
+        "english": "Structural Damage",
+        "chinese": "结构破坏"
       },
       "descriptions": {
-        "english": "Deal [effect1.power] damage to enemy units and [effect0.power] damage to self."
+        "english": "Deal [effect1.power] damage to enemy units and [effect0.power] damage to self.",
+        "chinese": "对敌方单位造成[effect1.power]点伤害，对自身造成[effect0.power]点伤害。"
       },
       "card_art": "@Nurikabe",
       "is_an_ability": true,
@@ -53,7 +58,8 @@
       "attack_damage": 0,
       "health": 110,
       "names": {
-        "english": "Nurikabe"
+        "english": "Nurikabe",
+        "chinese": "涂壁"
       },
       "character_art": "@NurikabeCharacterArt",
       "subtypes": [
@@ -78,7 +84,8 @@
     {
       "id": "NurikabeTrigger",
       "descriptions": {
-        "english": "Restore [effect0.power] health."
+        "english": "Restore [effect0.power] health.",
+        "chinese": "恢复[effect0.power]生命值。"
       },
       "trigger": {
         "id": "@Evoke",

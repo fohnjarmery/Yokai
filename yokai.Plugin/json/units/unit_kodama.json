@@ -4,7 +4,8 @@
     {
       "id": "SpawnKodama",
       "names": {
-        "english": "Kodama"
+        "english": "Kodama",
+        "chinese": "木灵"
       },
       "card_art": "@Kodama",
       "cost": 1,
@@ -22,17 +23,20 @@
       ],
       "lore_tooltips": [
         {
-          "english": "Flavour Text"
+          "english": "Flavour Text",
+          "chinese": "寄宿于古树中的森林精灵，能够为同伴注入自然之力。"
         }
       ]
     },
     {
       "id": "KodamaAbility",
       "names": {
-        "english": "Spirits Up!"
+        "english": "Spirits Up!",
+        "chinese": "魂灵鼓舞"
       },
       "descriptions": {
-        "english": "Apply [yokai.Plugin_haunt] [effect0.status0.power] to a random non-Morsel unit."
+        "english": "Apply [yokai.Plugin_haunt] [effect0.status0.power] to a random non-Morsel unit.",
+        "chinese": "为随机非影裔单位施加 [yokai.Plugin_haunt] [effect0.status0.power] 。"
       },
       "card_art": "@Kodama",
       "is_an_ability": true,
@@ -46,7 +50,6 @@
         }
       ]
     }
-
   ],
   "characters": [
     {
@@ -55,7 +58,8 @@
       "attack_damage": 3,
       "health": 2,
       "names": {
-        "english": "Kodama"
+        "english": "Kodama",
+        "chinese": "木灵"
       },
       "character_art": "@KodamaCharacterArt",
       "subtypes": [
@@ -73,7 +77,8 @@
     {
       "id": "KodamaTrigger",
       "descriptions": {
-        "english": "<b>Propagate 1</b> on a random friendly non-Morsel unit."
+        "english": "<b>Propagate 1</b> on a random friendly non-Morsel unit.",
+        "chinese": "在随机友方非影裔单位上<b>传播 1</b>"
       },
       "trigger": {
         "id": "@Evoke",

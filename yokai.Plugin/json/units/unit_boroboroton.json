@@ -4,7 +4,8 @@
     {
       "id": "SpawnBoroboroton",
       "names": {
-        "english": "Boroboroton"
+        "english": "Boroboroton",
+        "chinese": "反枕"
       },
       "card_art": "@Boroboroton",
       "cost": 2,
@@ -13,7 +14,8 @@
       "unlock_level": 6,
       "class": "@ClassYokai",
       "descriptions": {
-        "english": "When applying a stack of <b>Panic</b>, apply one more."
+        "english": "When applying a stack of <b>Panic</b>, apply one more.",
+        "chinese": "敌方获得<b>恐慌</b>时，获得的层数+1。"
       },
       "targets_room": true,
       "effects": [
@@ -23,7 +25,8 @@
       ],
       "lore_tooltips": [
         {
-          "english": "Flavour Text"
+          "english": "Flavour Text",
+          "chinese": "在睡梦中作祟的妖怪，让敌人的阵型陷入混乱"
         }
       ],
       "pools": [
@@ -33,10 +36,12 @@
     {
       "id": "BoroAbility",
       "names": {
-        "english": "Rugpull"
+        "english": "Rugpull",
+        "chinese": "搅乱阵型"
       },
       "descriptions": {
-        "english": "Shuffle enemy units."
+        "english": "Shuffle enemy units.",
+        "chinese": "打乱敌方单位。"
       },
       "card_art": "@Boroboroton",
       "is_an_ability": true,
@@ -59,7 +64,8 @@
       "attack_damage": 0,
       "health": 12,
       "names": {
-        "english": "Boroboroton"
+        "english": "Boroboroton",
+        "chinese": "反枕"
       },
       "character_art": "@BoroborotonCharacterArt",
       "subtypes": [
@@ -95,7 +101,8 @@
       "id": "BoroScalingRoomModifier",
       "name": "RoomStateAddStatusEffectOnStatusApplied",
       "in_play_descriptions": {
-        "english": "When applying a stack of <b>Panic</b>, apply one more."
+        "english": "When applying a stack of <b>Panic</b>, apply one more.",
+        "chinese": "敌方获得<b>恐慌</b>时，获得的层数+1。"
       },
       "param_int": 1,
       "param_int_2": 0,

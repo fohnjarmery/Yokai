@@ -4,8 +4,10 @@
     {
       "id": "SpawnKappa",
       "names": {
-        "english": "Kappa"
+        "english": "Kappa",
+        "chinese": "河童"
       },
+
       "card_art": "@Kappa",
       "cost": 1,
       "card_type": "monster",
@@ -20,7 +22,8 @@
       ],
       "lore_tooltips": [
         {
-          "english": "Flavour Text"
+          "english": "Flavour Text",
+          "chinese": "居住在水边的调皮妖怪，喜欢与人交易和恶作剧。"
         }
       ],
       "pools": [
@@ -30,10 +33,12 @@
     {
       "id": "KappaAbility",
       "names": {
-        "english": "Dark Bargain"
+        "english": "Dark Bargain",
+        "chinese": "黑暗交易"
       },
       "descriptions": {
-        "english": "Spend 3 [soul]. Gain [effect1.powerabs] [coin]. Apply [stealth] [effect2.status0.power] to allied units."
+        "english": "Spend 3 [soul]. Gain [effect1.powerabs] [coin]. Apply [stealth] [effect2.status0.power] to allied units.",
+        "chinese": "消耗 3 [soul]。获得 [effect1.powerabs] [coin]。为友方单位施加 [stealth] [effect2.status0.power]。"
       },
       "card_art": "@Kappa",
       "is_an_ability": true,
@@ -56,7 +61,8 @@
       "attack_damage": 3,
       "health": 3,
       "names": {
-        "english": "Kappa"
+        "english": "Kappa",
+        "chinese": "河童"
       },
       "character_art": "@KappaCharacterArt",
       "subtypes": [
@@ -84,7 +90,8 @@
     {
       "id": "KappaTrigger",
       "descriptions": {
-        "english": "Gain [soul] [effect0.status0.power]."
+        "english": "Gain [soul] [effect0.status0.power].",
+        "chinese": "获得 [soul] [effect0.status0.power]。"
       },
       "trigger": "on_attacking",
       "effects": [

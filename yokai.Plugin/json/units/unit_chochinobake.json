@@ -4,8 +4,10 @@
     {
       "id": "SpawnChochinObake",
       "names": {
-        "english": "Chochin-Obake"
+        "english": "Chochin-Obake",
+        "chinese": "提灯小僧"
       },
+
       "card_art": "@ChochinObake",
       "cost": 1,
       "card_type": "monster",
@@ -19,7 +21,8 @@
       ],
       "lore_tooltips": [
         {
-          "english": "Flavour Text"
+          "english": "Flavour Text",
+          "chinese": "灯笼化成的调皮妖怪，能为持有者带来好运和财富。"
         }
       ],
       "pools": [
@@ -29,10 +32,12 @@
     {
       "id": "ChochinAbility",
       "names": {
-        "english": "Lucky Lantern"
+        "english": "Lucky Lantern",
+        "chinese": "幸运灯笼"
       },
       "descriptions": {
-        "english": "Gain 1 [ember] and 10 [coin]."
+        "english": "Gain 1 [ember] and 10 [coin].",
+        "chinese": "获得 1 [ember]和 10 [coin] 。"
       },
       "card_art": "@ChochinObake",
       "is_an_ability": true,
@@ -54,7 +59,8 @@
       "attack_damage": 7,
       "health": 3,
       "names": {
-        "english": "ChochinObake"
+        "english": "ChochinObake",
+        "chinese": "提灯小僧"
       },
       "character_art": "@ChochinObakeCharacterArt",
       "subtypes": [

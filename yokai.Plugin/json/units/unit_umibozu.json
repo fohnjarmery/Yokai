@@ -4,7 +4,8 @@
     {
       "id": "SpawnUmibozu",
       "names": {
-        "english": "Umibozu"
+        "english": "Umibozu",
+        "chinese": "海坊主"
       },
       "card_art": "@Umibozu",
       "cost": 3,
@@ -19,7 +20,8 @@
       ],
       "lore_tooltips": [
         {
-          "english": "Flavour Text"
+          "english": "Flavour Text",
+          "chinese": "出没于海上的巨大妖怪，能将敌人拖入深渊。"
         }
       ],
       "pools": [
@@ -29,10 +31,12 @@
     {
       "id": "UmiBozuAbility",
       "names": {
-        "english": "Submerge"
+        "english": "Submerge",
+        "chinese": "沉没"
       },
       "descriptions": {
-        "english": "<b>Descend</b> a unit on any floor to the bottom floor."
+        "english": "<b>Descend</b> a unit on any floor to the bottom floor.",
+        "chinese": "<b>下降</b>任意楼层的单位至底层。"
       },
       "card_art": "@Umibozu",
       "is_an_ability": true,
@@ -55,7 +59,8 @@
       "attack_damage": 30,
       "health": 50,
       "names": {
-        "english": "Umibozu"
+        "english": "Umibozu",
+        "chinese": "海坊主"
       },
       "character_art": "@UmibozuCharacterArt",
       "subtypes": [
@@ -74,7 +79,8 @@
     {
       "id": "UmibozuTrigger",
       "descriptions": {
-        "english": "Apply [yokai.Plugin_panic] [effect0.status0.power] to enemy units."
+        "english": "Apply [yokai.Plugin_panic] [effect0.status0.power] to enemy units.",
+        "chinese": "为敌方施加 [yokai.Plugin_panic] [effect0.status0.power]。"
       },
       "trigger": "after_spawn_enchant",
       "effects": [
