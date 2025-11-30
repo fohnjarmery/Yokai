@@ -3,10 +3,12 @@
     "cards": [{
         "id": "Darkness",
         "names": {
-            "english": "Darkness"
+            "english": "Darkness",
+            "chinese": "黑暗"
         },
       "descriptions": {
-        "english": "<b>Shuffle</b> enemy units. Apply [yokai.Plugin_panic] [effect1.status0.power]."
+        "english": "<b>Shuffle</b> enemy units. Apply [yokai.Plugin_panic] [effect1.status0.power].",
+        "chinese": "<b>打乱</b>敌方单位。施加[yokai.Plugin_panic] [effect1.status0.power]。"
       },
         "rarity": "common",
         "class": "@ClassYokai",

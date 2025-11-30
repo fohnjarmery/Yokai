@@ -1,13 +1,15 @@
 {
-    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.deref.json",
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.deref.json",
   "cards": [
     {
       "id": "Parade",
       "names": {
-        "english": "Parade"
+        "english": "Parade",
+        "chinese": "百鬼夜行"
       },
       "descriptions": {
-        "english": "Apply [yokai.Plugin_haunt] [effect0.status0.power] to all units."
+        "english": "Apply [yokai.Plugin_haunt] [effect0.status0.power] to all units.",
+        "chinese": "为所有单位施加[yokai.Plugin_haunt] [effect0.status0.power]。"
       },
       "rarity": "common",
       "class": "@ClassYokai",
@@ -25,20 +27,20 @@
       ]
     }
   ],
-    "effects": [
-      {
-        "id": "ParadeHaunt",
-        "name": "CardEffectAddStatusEffect",
-        "target_mode": "room",
-        "target_team": "both",
-        "param_status_effects": [
-          {
-            "status": "@haunt",
-            "count": 2
-          }
-        ]
-      }
-    ],
+  "effects": [
+    {
+      "id": "ParadeHaunt",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "room",
+      "target_team": "both",
+      "param_status_effects": [
+        {
+          "status": "@haunt",
+          "count": 2
+        }
+      ]
+    }
+  ],
   "sprites": [
     {
       "id": "ParadeArt",

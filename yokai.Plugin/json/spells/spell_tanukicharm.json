@@ -4,10 +4,12 @@
     {
       "id": "TanukiCharm",
       "names": {
-        "english": "Tanuki Charm"
+        "english": "Tanuki Charm",
+        "chinese": "狸猫护符"
       },
       "descriptions": {
-        "english": "Trigger a unit's <b>Resolve</b> and <b>Evoke</b> triggers."
+        "english": "Trigger a unit's <b>Resolve</b> and <b>Evoke</b> triggers.",
+        "chinese": "触发一个单位的<b>结算</b>和<b>营造</b>效果。"
       },
       "rarity": "common",
       "class": "@ClassYokai",

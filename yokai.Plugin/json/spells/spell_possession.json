@@ -4,10 +4,12 @@
     {
       "id": "Possession",
       "names": {
-        "english": "Possession"
+        "english": "Possession",
+        "chinese": "附身"
       },
       "descriptions": {
-        "english": "<b>Advance</b>. Apply [yokai.Plugin_haunt] [effect1.status0.power]."
+        "english": "<b>Advance</b>. Apply [yokai.Plugin_haunt] [effect1.status0.power].",
+        "chinese": "<b>前进</b>。施加[yokai.Plugin_haunt] [effect1.status0.power]。"
       },
       "rarity": "common",
       "class": "@ClassYokai",

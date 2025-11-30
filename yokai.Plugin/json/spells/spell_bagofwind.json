@@ -4,10 +4,12 @@
     {
       "id": "BagOfWind",
       "names": {
-        "english": "Bag of Wind"
+        "english": "Bag of Wind",
+        "chinese": "风神袋"
       },
       "descriptions": {
-        "english": "<b>Shuffle</b> enemy units <b>3</b> times and apply [dazed] [effect3.status0.power]."
+        "english": "<b>Shuffle</b> enemy units <b>3</b> times and apply [dazed] [effect3.status0.power].",
+        "chinese": "<b>打乱</b>敌方单位<b>3</b>次并施加[dazed] [effect3.status0.power]。"
       },
       "rarity": "uncommon",
       "unlock_level": 5,

@@ -4,10 +4,12 @@
     {
       "id": "FuriousAnger",
       "names": {
-        "english": "Furious Anger"
+        "english": "Furious Anger",
+        "chinese": "狂怒"
       },
       "descriptions": {
-        "english": "Deal [effect0.power] damage. Apply 5 additional damage per target <b>Haunt</b> stacks."
+        "english": "Deal [effect0.power] damage. Apply 5 additional damage per target <b>Haunt</b> stacks.",
+        "chinese": "造成[effect0.power]点伤害。目标每层<b>附灵</b>额外造成5点伤害。"
       },
       "rarity": "uncommon",
       "class": "@ClassYokai",

@@ -4,10 +4,12 @@
     {
       "id": "ShrineDance",
       "names": {
-        "english": "Shrine Dance"
+        "english": "Shrine Dance",
+        "chinese": "神社之舞"
       },
       "descriptions": {
-        "english": "+[effect0.power][capacity] on this floor. Restore [effect1.power] health to friendly units and cleanse negative status effects. Increase the cost of this card by 1 permanently. "
+        "english": "+[effect0.power][capacity] on this floor. Restore [effect1.power] health to friendly units and cleanse negative status effects. Increase the cost of this card by 1 permanently.",
+        "chinese": "此楼层+[capacity] [effect0.power]。为友方单位恢复[effect1.power]生命值并清除负面状态效果。此卡牌费用永久增加1点。"
       },
       "rarity": "uncommon",
       "unlock_level": 4,
@@ -38,7 +40,6 @@
       ]
     }
   ],
-
   "effects": [
     {
       "id": "ShrineDanceCapacity",

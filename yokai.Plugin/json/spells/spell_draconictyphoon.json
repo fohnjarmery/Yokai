@@ -4,10 +4,12 @@
     {
       "id": "DraconicTyphoon",
       "names": {
-        "english": "Draconic Typhoon"
+        "english": "Draconic Typhoon",
+        "chinese": "龙卷飓风"
       },
       "descriptions": {
-        "english": "Deal [effect0.power] damage to enemy units, three times."
+        "english": "Deal [effect0.power] damage to enemy units, three times.",
+        "chinese": "对敌方单位造成[effect0.power]点伤害，重复三次。"
       },
       "rarity": "rare",
       "class": "@ClassYokai",
