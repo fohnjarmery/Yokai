@@ -15,7 +15,7 @@
         }
       ],
       "card_art": "@DemonParadeArt",
-      "cost": 2,
+      "cost": 3,
       "card_type": "room",
       "rarity": "rare",
       "class": "@ClassYokai",

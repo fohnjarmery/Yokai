@@ -32,7 +32,7 @@ namespace yokai.Plugin
                 {
                     RoomModifierData setRoomModifierData = new RoomModifierData();
                     damageModifier = new RoomStateHauntModifier();
-                    damageModifier.Initialize(setRoomModifierData, coreGameManagers);
+                    damageModifier.Initialize(setRoomModifierData, coreGameManagers.GetSaveManager());
                     damageModifier.IsPreviewModeCopy = IsPreviewModeCopy();
                     damageModifier.TeamType = character.GetTeamType();
                     character.AddNewCharacterRoomModifierState(damageModifier);

@@ -7,7 +7,7 @@
         "english": "Torii Gate"
       },
       "descriptions": {
-        "english": "Friendly units gain [yokai.Plugin_haunt] <b>5</b> and cleanse negative status effects on <b>Resolve</b>."
+        "english": "Friendly units gain [yokai.Plugin_haunt] <b>5</b>. Friendly units cleanse negative status effects on <b>Resolve</b>."
       },
       "lore_tooltips": [
         {
@@ -39,7 +39,7 @@
         "english": "ToriiGate"
       },
       "descriptions": {
-        "english": "Friendly units gain [yokai.Plugin_haunt] <b>5</b> and cleanse negative status effects on <b>Resolve</b>."
+        "english": "Friendly units gain [yokai.Plugin_haunt] <b>5</b>. Friendly units cleanse negative status effects on <b>Resolve</b>."
       },
       "trigger_upgrades": [
         "@ToriiGateTrigger"

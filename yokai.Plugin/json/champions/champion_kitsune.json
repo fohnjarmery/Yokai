@@ -381,24 +381,21 @@
       "name": "CardEffectFloorRearrange",
       "target_mode": "drop_target_character",
       "target_team": "both",
-      "param_int": 0,
-      "target_ignore_bosses": true
+      "param_int": 0
     },
     {
       "id": "FoxCharmPull2",
       "name": "CardEffectFloorRearrange",
       "target_mode": "drop_target_character",
       "target_team": "both",
-      "param_int": 0,
-      "target_ignore_bosses": true
+      "param_int": 0
     },
     {
       "id": "FoxCharmPull3",
       "name": "CardEffectFloorRearrange",
       "target_mode": "drop_target_character",
       "target_team": "both",
-      "param_int": 0,
-      "target_ignore_bosses": true
+      "param_int": 0
     },
     {
       "id": "Haunting1Enchant",

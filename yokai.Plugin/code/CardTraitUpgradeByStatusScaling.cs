@@ -20,9 +20,9 @@ namespace yokai.Plugin
             I had to borrow this from the Sandscourged mod as the Pyreblooded Ability code doesn't appear to work for targeted spells.
             Changed the name of the trait to prevent possible conflicts with Sandscourged mod.
             */
-        public override void OnApplyingCardUpgradeToUnit(CardState thisCard, CharacterState targetUnit, CardUpgradeState upgradeState, ICoreGameManagers coreGameManagers)
+        public override void OnApplyingCardUpgradeToUnit(CardState thisCard, CharacterState targetUnit, CharacterTriggerState? characterTriggerState, CardUpgradeState upgradeState, ICoreGameManagers coreGameManagers)
         {
-            base.OnApplyingCardUpgradeToUnit(thisCard, targetUnit, upgradeState, coreGameManagers);
+            base.OnApplyingCardUpgradeToUnit(thisCard, targetUnit, characterTriggerState, upgradeState, coreGameManagers);
             string statusId = GetParamStatusEffects().First().statusId;
             int stackCount = targetUnit.GetStatusEffectStacks(statusId);
             upgradeState.SetAttackDamage(upgradeState.GetAttackDamage() * stackCount);

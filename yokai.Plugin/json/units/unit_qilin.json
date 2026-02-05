@@ -122,7 +122,7 @@
       "name": "CardEffectTransferAllStatusEffectsFromUnit",
       "target_mode": "room",
       "target_team": "monsters",
-      "param_int": 7,
+      "param_int": 8,
       "param_int_2":  2,
       "use_status_effect_multiplier":  false,
       "param_bool":  false,

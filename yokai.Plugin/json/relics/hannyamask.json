@@ -19,7 +19,7 @@
         "english": "Hannya Mask"
       },
       "descriptions": {
-        "english": "Friendly units apply [yokai.Plugin_panic] <b>2</b> on <b>Resolve</b>."
+        "english": "Friendly units apply [yokai.Plugin_panic] <b>2</b> to enemy units on <b>Resolve</b>."
       },
       "relic_activated": {
         "english": "Spooked!"
