@@ -32,7 +32,7 @@
         "english": "Hot Headed"
       },
       "descriptions": {
-        "english": "Apply [rage] [effect0.status0.power] to self."
+        "english": "Apply [rage] [effect2.status0.power] to self."
       },
       "card_art": "@Wanyudo",
       "is_an_ability": true,

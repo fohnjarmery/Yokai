@@ -110,7 +110,7 @@
       "param_status_effects": [
         {
           "status": "@panic",
-          "count": 1
+          "count": 3
         }
       ]
     },

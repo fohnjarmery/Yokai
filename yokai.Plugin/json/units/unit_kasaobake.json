@@ -12,7 +12,7 @@
       "rarity": "uncommon",
       "class": "@ClassYokai",
       "descriptions": {
-        "english": "+8[attack] for every stack of <b>Stealth</b>."
+        "english": "+10[attack] for every stack of <b>Stealth</b>."
       },
       "targets_room": true,
       "effects": [
@@ -103,7 +103,7 @@
       "in_play_descriptions": {
         "english": "+[power][attack] per stack of <b>Stealth</b>."
       },
-      "param_int": 8,
+      "param_int": 10,
       "param_status_effects": [
         {
           "status": "stealth",

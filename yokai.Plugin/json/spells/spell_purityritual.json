@@ -45,7 +45,7 @@
       "param_status_effects": [
         {
           "status": "cooldown",
-          "count": 1
+          "count": 2
         }
       ]
     },

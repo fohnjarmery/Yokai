@@ -71,7 +71,7 @@
       {
         "id": "IpponDataraTrigger",
         "descriptions": {
-          "english": "+8[attack]."
+          "english": "+5[attack]."
         },
         "trigger": {
           "id": "@Evoke",
@@ -96,7 +96,7 @@
             "name": "CardEffectAddTempCardUpgradeToUnits",
             "target_mode": "self",
             "target_team": "none",
-            "param_upgrade": "@IpponDataraTenAttack"
+            "param_upgrade": "@IpponDataraFiveAttack"
         },
         {
             "id": "IpponDataraApplyShield",
@@ -106,15 +106,15 @@
             "param_status_effects": [
                 {
                     "status": "damage shield",
-                    "count": 2
+                    "count": 3
                 }
             ]
         }
     ],
     "upgrades": [
         {
-            "id": "IpponDataraTenAttack",
-            "bonus_damage": 8
+            "id": "IpponDataraFiveAttack",
+            "bonus_damage": 5
         }
     ],
     "sprites": [

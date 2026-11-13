@@ -33,7 +33,7 @@
       "id": "YukiOnna",
       "size": 2,
       "attack_damage": 12,
-      "health": 7,
+      "health": 9,
       "names": {
         "english": "YukiOnna"
       },
@@ -87,7 +87,7 @@
       "param_status_effects": [
         {
           "status": "@haunt",
-          "count": 2
+          "count": 3
         }
       ]
     }

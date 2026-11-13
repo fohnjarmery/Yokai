@@ -17,7 +17,7 @@
       "pools": [
         "MegaPool"
       ],
-      "cost": 2,
+      "cost": 1,
       "traits": [
         {
           "id": "@TraitEchoDamage"

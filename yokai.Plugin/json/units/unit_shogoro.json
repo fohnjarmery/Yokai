@@ -32,7 +32,7 @@
         "english": "Soul Guardian"
       },
       "descriptions": {
-        "english": "Spend [effect0.status0.power] [soul] to apply [damageshield] [effect1.status0.power] to allied units."
+        "english": "Spend 3 [soul] to apply [damageshield] [effect1.status0.power] to allied units."
       },
       "card_art": "@Shogoro",
       "is_an_ability": true,

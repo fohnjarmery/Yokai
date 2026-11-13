@@ -19,8 +19,10 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="BepInEx.PluginInfoProps" Version="2.*" />
-    <PackageReference Include="TrainworksReloaded.Base" Version="0.7.1" />
-    <PackageReference Include="Conductor" Version="0.4.1" />
+    <PackageReference Include="Conductor.MonsterTrain2" Version="0.6.0" />
+    <PackageReference Include="MonsterTrain2.Api" Version="5.0.26572199" />
+    <PackageReference Include="TrainworksReloaded.Base" Version="0.8.0" />
+    <PackageReference Include="TrainworksReloaded.Core" Version="0.8.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -36,7 +38,7 @@
     <Folder Include="textures\character_art\" />
   </ItemGroup>
 
-  <ProjectExtensions><VisualStudio><UserProperties json_4units_4unit_3boroboroton_1json__JsonSchema="https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.deref.json" /></VisualStudio></ProjectExtensions>
+  <ProjectExtensions><VisualStudio><UserProperties json_4units_4unit_3boroboroton_1json__JsonSchema="https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.deref.json" json_4units_4unit_3oni_1json__JsonSchema="https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.deref.json" /></VisualStudio></ProjectExtensions>
 </Project>
 
 

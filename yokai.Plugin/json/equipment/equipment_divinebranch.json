@@ -25,7 +25,7 @@
         "EquipmentPoolNonEnemy",
         "FreeEquipmentMutatorPool"
       ],
-      "cost": 2,
+      "cost": 1,
       "effects": [
         "@EquipBranch"
       ]
@@ -34,8 +34,8 @@
   "upgrades": [
     {
       "id": "UpgradeBranch",
-      "bonus_damage": 12,
-      "bonus_hp": 12,
+      "bonus_damage": 10,
+      "bonus_hp": 10,
       "trigger_upgrades": [
         "@TriggerBranch"
       ],

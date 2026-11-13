@@ -7,7 +7,7 @@
         "english": "Furious Anger"
       },
       "descriptions": {
-        "english": "Deal [effect0.power] damage. Apply 5 additional damage per target <b>Haunt</b> stacks."
+        "english": "Deal [effect0.power] damage. Deal 5 additional damage per target <b>Haunt</b> stacks."
       },
       "rarity": "uncommon",
       "class": "@ClassYokai",
